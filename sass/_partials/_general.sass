@@ -1,0 +1,41 @@
+// HTML color for loading purposes
+html
+    height: 100%
+    background-color: $html-bg !important
+    box-sizing: border-box
+    
+*, *:before, *:after
+    box-sizing: inherit
+    
+// Body
+body
+    height: 100%
+    margin: 0 !important
+    background-color: white
+    display: flex
+    flex-direction: column
+    &.home
+        opacity: 0
+        transition: opacity 200ms ease-out 500ms
+        &.loaded
+            opacity: 1
+            
+header, main, footer
+    flex: 1 0 auto
+            
+main.page-content
+    background-color: white
+
+// Random fonts
+h1
+    font-family: $hero-header
+    font-size: 6em
+    
+h2
+    font-family: $section-header
+    font-size: 3em
+    font-weight: normal
+
+p
+    font-family: $hero-subtext
+    font-size: 1.5em

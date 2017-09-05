@@ -1,0 +1,71 @@
+// General landing page stuff
+section.landing-section
+    width: 100%
+    @include padding(40px 96px)
+    background: white
+    text-align: center
+    h2.section-header
+        text-align: center
+        letter-spacing: 0.25em
+        
+p.text-body
+        @include margin(0)
+        text-align: center
+
+a.button
+    display: inline-block
+    font-family: $hero-subtext
+    text-transform: uppercase
+    text-decoration: none
+    font-size: 1.5em
+    padding: 1em 2em
+    margin: 2em
+    border-radius: 1.75em
+    border: 2px solid
+    transition: background-color 100ms linear, color 100ms linear
+     
+// "Who" section
+section#who
+    background-color: $landing-grabber-fill
+    p#description
+        color: $landing-grabber-text
+        
+// "Teams" section
+section#teams
+    @include grid-container
+    text-align: center
+    h2.section-header
+        @include margin(0 0 1em 0)
+    div.three-column
+        @include grid-column(1, $three-columns)
+        img.logo
+            width: 50%
+            
+// "Sponsors" section
+section#sponsors
+    background-image: url('./images/sponsorbg.jpg')
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    h2.section-header, p#call, a.button
+        color: white
+    a.button
+        border-color: white
+        &:hover
+            background-color: white
+            color: $a-button-text-hover
+        
+// "Members" section
+section#members
+    background-color: white
+    h2.section-header, p#call, a.button
+        color: black
+    a.button
+        border-color: black
+        &:hover
+            background-color: black
+            color: $a-button-text-hover
+        
+    
+        

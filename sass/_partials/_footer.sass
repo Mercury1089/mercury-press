@@ -1,0 +1,46 @@
+footer
+    @include clearfix
+    @include padding(40px 96px)
+    background-color: $footer-bg
+    display: flex
+    flex-direction: column
+    justify-content: center
+    p, li, a
+        font-family: $footer-widget-body
+        font-size: 1em
+    p
+        margin: 0
+    p, h1, h2, h3, h4, h5, li, a 
+        color: $footer-text
+    h1, h2, h3, h4, h5
+        font-family: $footer-widget-header
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 0.5em
+        margin: 0 0 0.5em
+    ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li a
+                text-decoration: none
+    & > section.footer-section
+        display: flex
+        flex-direction: row
+        justify-content: center
+        flex: auto
+        &:not(:last-child)
+            @include margin(0 0 20px)
+        &#footer-widgets > div.footer-widget
+            @include margin(0 50px)
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+        &#social-links > a.social-link 
+            height: 32px
+            @include margin(0 20px)
+            & > svg
+                height: 100%
+                > circle
+                    fill: $footer-text
+                

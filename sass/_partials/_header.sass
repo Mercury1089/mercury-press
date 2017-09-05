@@ -1,0 +1,146 @@
+// Header
+.site-header
+    position: fixed
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include size(100% 128px)
+    @include padding(32px 50px)
+    z-index: 3
+    background-color: transparent
+    transition: all 100ms linear
+    &.opaque
+        background-color: black
+        @include size(100% 96px)
+        @include padding(20px)
+        a.home-link > span
+            font-size: 1.5em
+    
+// Home-Link (base)
+a.home-link
+    white-space: nowrap
+    text-decoration: none
+    height: 100%
+    width: auto
+    div.logo
+        display: inline-block
+        height: 100%
+        vertical-align: middle
+        svg
+            height: 100%
+            path
+                fill: white
+    span
+        font-family: $diavlo
+        font-weight: bold
+        font-size: 2em
+        @include padding(0px 10px)
+        vertical-align: middle
+        color: white
+        transition: font-size 100ms linear
+        white-space: nowrap
+        
+// Header Menu
+div.menu-header-container
+    height: 100%
+    width: auto
+    ul
+        &#menu-header
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            height: 100%
+            list-style: none
+            @include margin(0)
+            @include padding(0)
+            justify-content: flex-end
+            li a
+                text-decoration: none
+                color: white
+            & > li
+                position: relative
+                margin: 0 1em 0 0
+                background: linear-gradient(to top, transparent 50%, $navbar-selected 50%)
+                background-size: 100% 200%
+                background-position-y: -101%
+                background-repeat: no-repeat
+                transition: all 200ms $ease-out-circ
+                a
+                    font-family: $header-nav-item
+                    text-transform: uppercase
+                    padding: 1em 0.5em
+                &:last-child > ul.sub-menu
+                    right: 0
+                    text-align: right
+                    & li
+                        @include padding(0.2em 0 0.2em 1em)
+                &:hover 
+                    background-position-y: 0%
+                    & > ul.sub-menu
+                        display: block !important
+        &.sub-menu
+            display: none
+            position: absolute
+            padding: 0
+            margin: 0.25em 0
+            border: $navbar-border solid 1px
+            z-index: 6
+            list-style: none
+            background-color: $navbar-submenu-fill
+            overflow: hidden
+            animation:
+                name: header-submenu
+                fill-mode: forwards
+                duration: 200ms
+                timing-function: $ease-out-circ
+            & li
+                @include padding(0.2em 1em 0.2em 0)
+                cursor: pointer
+                white-space: nowrap
+                & > a
+                    color: $navbar-submenu-item !important
+            & li:hover
+                background-color: $navbar-submenu-fill-selected
+                > a
+                    color: $navbar-submenu-item-selected !important
+                
+
+// Menu animations
+@keyframes header-submenu
+    0%
+        transform: translateY(30px)
+        opacity: 0
+    100%
+        opacity: 1
+                
+// Hero Landing
+#hero-image
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    @include size(100% 50vh)
+    @include padding(0 10%)
+    background-image: url("./images/hero_test.jpg")
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    #hero-content
+        text-align: center
+        color: white
+        width: 100%
+        h1
+            font-family: $hero-header
+            font-size: 6em
+            font-weight: bold
+            @include margin(0)
+            word-wrap: break-word
+        p
+            font-family: $hero-subtext
+            font-size: 2em
+            @include margin(0)
+
+// Full height landing
+#hero-image.full-height
+    height: 100vh !important

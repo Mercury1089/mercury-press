@@ -1,0 +1,16 @@
+{
+    "sass.enabled": false,
+    "path": {
+        "sass/style.sass": {
+            "sass.enabled": true,
+            "sass.compiler": "libsass",
+            "sass.options": {
+                "outputDir": "..",
+                "sourceComments": false,
+                "outputStyle": "nested"
+            },
+            "linting.collapsed": false,
+            "eqFTP.projectsPaths": []
+        }
+    }
+}
