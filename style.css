@@ -217,7 +217,7 @@ div.menu-header-container {
 
 section.landing-section {
   width: 100%;
-  padding: 40px 96px;
+  padding: 40px 128px;
   background: white;
   text-align: center; }
   section.landing-section h2.section-header {
@@ -254,9 +254,14 @@ section#teams {
   section#teams h2.section-header {
     margin: 0 0 1em; }
   section#teams div.three-column {
-    width: calc(33.3333333333% - 106.6666666667px);
+    width: calc(33.3333333333% - 13.3333333333%);
     float: left;
-    margin-left: 80px; }
+    margin-left: 10%; }
+    @media (max-width: 768px) {
+      section#teams div.three-column {
+        width: calc(100% - 40px);
+        float: left;
+        margin-left: 20px; } }
     section#teams div.three-column img.logo {
       width: 50%; }
 

@@ -1,7 +1,7 @@
 // General landing page stuff
 section.landing-section
     width: 100%
-    @include padding(40px 96px)
+    @include padding(40px 128px)
     background: white
     text-align: center
     h2.section-header
@@ -37,7 +37,9 @@ section#teams
     h2.section-header
         @include margin(0 0 1em 0)
     div.three-column
-        @include grid-column(1, $three-columns)
+        @include grid-column(1, $team-display-grid)
+        @include grid-media($team-display-grid-small)
+            @include grid-column(1)
         img.logo
             width: 50%
             
