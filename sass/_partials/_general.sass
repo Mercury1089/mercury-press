@@ -1,24 +1,29 @@
 // HTML color for loading purposes
 html
-    height: 100%
+    @include size(100%)
     background-color: $html-bg !important
     box-sizing: border-box
     
-*, *:before, *:after
+*, *::before, *::after
     box-sizing: inherit
+    @include clearfix;
+    margin: 0
+    padding: 0
     
 // Body
 body
-    height: 100%
-    margin: 0 !important
-    background-color: white
     display: flex
+    position: absolute
+    @include size(100% 100%)
+    margin: 0 !important
     flex-direction: column
-    &.home
-        opacity: 0
-        transition: opacity 200ms ease-out 500ms
-        &.loaded
-            opacity: 1
+
+.home
+    opacity: 0
+    transition: opacity 200ms ease-out 500ms
+
+.loaded
+    opacity: 1
             
 header, main, footer
     flex: 1 0 auto

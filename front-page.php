@@ -14,7 +14,7 @@
         </div>
         <div class="landing-section__team-column">
             <img class="team-column__logo" src="<?php echo get_template_directory_uri() ?>/images/3944logo.png"/>
-            <h2 class="team-column__team">FLL 3944</h2>
+            <h2 class="team-column__team">FTC 3944</h2>
         </div>
         <div class="landing-section__team-column">
             <img class="team-column__logo" src="<?php echo get_template_directory_uri() ?>/images/FLLlogo.png"/>

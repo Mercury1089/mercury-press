@@ -40,4 +40,5 @@ if ( function_exists('register_sidebar') )
 );
 
 add_action('wp_enqueue_scripts', 'resources');
+add_theme_support( 'post-thumbnails' ); 
 ?>

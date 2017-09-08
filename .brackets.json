@@ -1,16 +1,19 @@
 {
     "sass.enabled": false,
+    "sass.compiler": "sass",
     "path": {
         "sass/style.sass": {
             "sass.enabled": true,
-            "sass.compiler": "libsass",
             "sass.options": {
-                "outputDir": "..",
+                "outputDir": "../",
+                "includePaths": [
+                    "../sass/_partials",
+                    "../sass/bourbon",
+                    "../sass/neat"
+                ],
                 "sourceComments": false,
                 "outputStyle": "nested"
-            },
-            "linting.collapsed": false,
-            "eqFTP.projectsPaths": []
+            }
         }
     }
 }

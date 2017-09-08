@@ -2,12 +2,12 @@
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
-        <meta name="viewport" content="width=device-width">
-        <title><?php get_the_title(); ?> &mdash; <?php bloginfo('name');?></title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title><?php single_post_title(); ?> &mdash; <?php bloginfo('name');?></title>
         <?php wp_head(); ?>
     </head>
     
-    <body <?php body_class(); ?>>
+    <body <?php echo body_class(); ?>>
         
         <nav class="site-nav">
             <a href="<?php echo get_site_url(); ?>" class="home-link">
@@ -31,19 +31,35 @@
                 </svg>
                 <span class="home-link__title">MERCURY 1089</span>
             </a>
-            <?php 
-                bem_menu('header', 'site-nav-menu')
-            ?>
+            <?php bem_menu('header', 'site-nav-menu'); ?>
         </nav>
         
-        <?php if (is_front_page()) { ?>
-            <header class="hero hero--full-height">
-                <h1 class="hero__content hero__large-text">#NEVERLASTALWAYSFIRST</h1>
-                <p class="hero__content hero__small-text">We don't just build robots, we build people.</p>
-            </header>
-        <?php } else { ?>
-            <header id="hero">
-                <h1 class="hero__content hero__large-text"><?php echo the_title(); ?></h1>
-            </header>
+        <?php
+            if (!is_front_page() && !is_home() && has_post_thumbnail() ) {
+        ?>
+        <style>
+            .hero {
+                background-image: url(<?php get_the_post_thumbnail_url( null, 'full' ); ?>);
+            }
+        </style>
         <?php } ?>
-        <main class="page-content">
+        
+        <?php if (is_front_page()) { ?>
+            <header class="hero hero--landing">
+                <h1 class="hero__content hero__large-text">TEAM MERCURY</h1>
+                <p class="hero__content hero__small-text">TEAM MERCURY</p>
+            </header>
+            <main class="page-content">
+        <?php } else if ( is_home() ) { ?>
+            <header class="hero hero--blog">
+                <h1 class="hero__content hero__large-text">Team Mercury Blog</h1>
+                <p class="hero__content hero__small-text">Your source of info on our current events.</p>
+            </header>
+            <main class="page-content page-content--three-column">
+        <?php } else { ?>
+            <header class="hero">
+                <h1 class="hero__content hero__large-text"><?php echo single_post_title(); ?></h1>
+            </header>
+            <main class="page-content">
+        <?php } ?>
+        

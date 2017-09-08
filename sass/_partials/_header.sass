@@ -20,6 +20,8 @@
     text-decoration: none
     height: 100%
     width: auto
+    color: $navbar-item
+    fill: $navbar-item
 
 .home-link__logo
     display: inline-block
@@ -27,7 +29,7 @@
     vertical-align: middle
 
 .home-link__logo
-    fill: white
+    fill: inherit
     
 .home-link__title
     font-family: $diavlo
@@ -35,7 +37,7 @@
     font-size: 1.5em
     @include padding(0px 10px)
     vertical-align: middle
-    color: white
+    color: inherit
     transition: font-size 100ms linear
     white-space: nowrap
     
@@ -126,14 +128,19 @@
     justify-content: center
     @include size(100% 50vh)
     @include padding(0 10%)
-    background-image: url("./images/hero_test.jpg")
+    background-image: url('./images/hero_test.jpg')
     background-attachment: fixed
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+
+.hero--landing
+    height: 100vh
+    background-image: url('./images/hero_test.jpg')
     
-.hero--full-height
-    height: 100vh !important
+.hero--blog
+    height: 75vh
+    background-image: url('./images/hero_test.jpg')
     
 .hero__content
     text-align: center
