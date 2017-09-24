@@ -1,25 +1,37 @@
 // Google Fonts
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,500,600,700|PT+Sans:400,400i,700,700i|Abel)
+@import url('https://fonts.googleapis.com/css?family=Abel|Lato:400,400i,700,700i|Open+Sans:400,400i,700,700i|Oswald:400,700|Roboto:400,400i,700,700i')
 
 // Diavlo font
 @include font-face("Diavlo", "./fonts/diavlo/light", $file-formats: ttf)
-@include font-face("diavlo", "./fonts/diavlo/bold", bold, $file-formats: ttf)
-
-// Built Tilting font
-@include font-face("Built Titling", "./fonts/built-titling/light", $file-formats: ttf)
-@include font-face("Built Titling", "./fonts/built-titling/light_italic", normal, italic, $file-formats: ttf)
-@include font-face("Built Titling", "./fonts/built-titling/regular", bold, $file-formats: ttf)
-@include font-face("Built Titling", "./fonts/built-titling/regular_italic", bold, italic, $file-formats: ttf)
+@include font-face("Diavlo", "./fonts/diavlo/bold", bold, $file-formats: ttf)
 
 // Font Variables
-$diavlo: "Diavlo", sans-serif
+$f-home-link-title: bold 1.5em 'Diavlo', sans-serif
 
-$hero-header: 'Oswald', sans-serif
-$hero-subtext: 'PT Sans', sans-serif
+$f-default-text: 1em 'Open Sans', sans-serif
+$f-default-h1: bold 6em 'Oswald', sans-serif
+$f-default-h2: 3em 'Abel', sans-serif
 
-$section-header: "Abel", sans-serif
+$f-header-nav-item: 1em 'Oswald', sans-serif
 
-$footer-widget-header: 'Abel', sans-serif
-$footer-widget-body: 'PT Sans', sans-serif
+$f-hero-large-text: bold 6em 'Oswald', sans-serif
+$f-hero-small-text: 2em/1.65em 'Open Sans', sans-serif
+$f-hero-button-text: 1em 'Roboto', sans-serif
 
-$header-nav-item: 'Oswald', sans-serif
+$f-footer-widget-header: 1.5em 'Abel', sans-serif
+$f-footer-widget-body: 'Open Sans', sans-serif
+
+$f-landing-section-header: 3em 'Abel', sans-serif
+
+$f-blog-post-title: 3em 'Oswald', sans-serif
+$f-blog-post-author: bold 1em 'Open Sans', sans-serif
+$f-blog-post-date-span: bold 1em/1.1em 'Oswald', sans-serif
+
+$f-post-body: 1em 'Open Sans', sans-serif
+
+$f-comment-field: 1.25em monospace
+$f-submit-comment: bold 1em 'Roboto', sans-serif
+$f-comments-author: bold 1em/32px 'Roboto', sans-serif
+
+$f-robot-pages-box: 0.75em 'Open Sans', sans-serif
+$f-robot-pages-caption: 0.75em 'Open Sans', sans-serif

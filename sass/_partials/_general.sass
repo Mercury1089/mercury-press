@@ -1,14 +1,15 @@
 // HTML color for loading purposes
 html
     @include size(100%)
-    background-color: $html-bg !important
+    background-color: $c-html-bg !important
     box-sizing: border-box
     
 *, *::before, *::after
     box-sizing: inherit
-    @include clearfix;
+    @include clearfix
     margin: 0
     padding: 0
+    outline: 0 !important
     
 // Body
 body
@@ -28,19 +29,38 @@ body
 header, main, footer
     flex: 1 0 auto
             
-main.page-content
+.page-content
     background-color: white
-
-// Random fonts
+    padding: 3% 20%
+    
+// Defaults
 h1
-    font-family: $hero-header
-    font-size: 6em
+    font: $f-default-h1
     
 h2
-    font-family: $section-header
-    font-size: 3em
-    font-weight: normal
+    font: $f-default-h2
 
+p, 
+li
+    font: $f-default-text
+    
 p
-    font-family: $hero-subtext
-    font-size: 1.5em
+    line-height: 1.65em
+    
+a
+    color: inherit
+    font: inherit
+    text-decoration: none
+    
+svg, 
+svg > path,
+svg > circle,
+svg > rect
+    fill: inherit
+    
+// Parallax Backgrounds
+.parallax
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover

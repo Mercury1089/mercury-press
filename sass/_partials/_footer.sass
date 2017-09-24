@@ -2,7 +2,7 @@
 .site-footer
     @include clearfix
     @include padding(40px 96px)
-    background-color: $footer-bg
+    background-color: $c-footer-bg
     display: flex
     flex-direction: column
     justify-content: center
@@ -22,14 +22,15 @@
 .footer-section p, 
 .footer-section li, 
 .footer-section a
-    font-family: $footer-widget-body
+    font-family: $f-footer-widget-body
     font-size: 1em
-    
+
 .footer-section h3,
 .footer-section p,
-.footer-section li, 
+.footer-section li,
 .footer-section a
-    color: $footer-text
+    color: $c-footer-text
+    line-height: initial
     
 .footer-section:not(:last-child)
     @include margin(0 0 20px)
@@ -42,8 +43,7 @@
     justify-content: flex-start
 
 .footer-widget__title
-    font-family: $footer-widget-header
-    font-weight: bold
+    font: $f-footer-widget-header
     text-transform: uppercase
     letter-spacing: 0.5em
     margin: 0 0 0.5em
@@ -52,6 +52,16 @@
     list-style: none
     margin: 0
     padding: 0
+    
+// Footer links widget
+.footer-widget li a
+    transition: 100ms all linear
+
+.footer-widget ul:hover li a
+    color: $c-footer-link-unfocused
+    
+.footer-widget li a:hover
+    color: $c-footer-link-focused !important
 
 // Social links
 .site-footer__social-link
@@ -60,7 +70,13 @@
 
 .social-link__svg
     height: 100%
+
+.site-footer__social-link
+    fill: $c-footer-link-normal
+    transition: 100ms all linear
     
-.social-link__path
-    fill: $footer-text
-                
+.site-footer__social-link:hover
+    fill: $c-footer-link-focused !important
+    
+.site-footer__social-links:hover .site-footer__social-link
+    fill: $c-footer-link-unfocused

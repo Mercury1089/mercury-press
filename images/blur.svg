@@ -1,0 +1,10 @@
+<svg> 
+    <filter id="blur">
+        <feGaussianBlur stdDeviation="5px"/>
+        <feComponentTransfer>
+      <feFuncR type="linear" slope="0.5"/>
+      <feFuncG type="linear" slope="0.5"/>
+      <feFuncB type="linear" slope="0.5"/>
+  </feComponentTransfer>
+    </filter> 
+</svg>

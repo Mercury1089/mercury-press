@@ -1,19 +1,20 @@
 {
     "sass.enabled": false,
     "sass.compiler": "sass",
+    "sass.options": {
+        "outputDir": "../",
+        "includePaths": [
+            "../sass/_partials",
+            "../sass/bourbon",
+            "../sass/neat"
+        ],
+        "sourceComments": false,
+        "outputStyle": "nested"
+    },
     "path": {
         "sass/style.sass": {
             "sass.enabled": true,
-            "sass.options": {
-                "outputDir": "../",
-                "includePaths": [
-                    "../sass/_partials",
-                    "../sass/bourbon",
-                    "../sass/neat"
-                ],
-                "sourceComments": false,
-                "outputStyle": "nested"
-            }
+            "eqFTP.projectsPaths": []
         }
     }
 }

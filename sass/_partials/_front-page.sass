@@ -1,32 +1,37 @@
 // Landing Page Section formatting
+.page-content--landing
+    padding: 0 !important
+    
 .landing-section
     width: 100%
-    @include padding(40px 128px)
-    background: $landing-fill
+    padding: 3% 20%
+    background-color: $landing-fill
     text-align: center
 
 .landing-section__header
+    font: $f-landing-section-header !important
     text-align: center
     letter-spacing: 0.25em
     color: $landing-text
         
 .landing-section__text-body
-    @include margin(0)
+    margin: 1em 0 2em
     text-align: center
     color: $landing-text
+    
+.landing-section__text-body--no-margin
+    margin: 0
 
 .landing-section__button
     display: inline-block
-    font-family: $hero-subtext
+    font: $f-hero-button-text
     color: $landing-text
     text-transform: uppercase
     text-decoration: none
-    font-size: 1.5em
     padding: 1em 2em
-    margin: 2em 0
     border-radius: 999px
     border: 2px solid
-    transition: all 100ms $ease-out-circ
+    transition: all 100ms linear
     border-color: $landing-text
     
 .landing-section__button:hover
@@ -38,7 +43,7 @@
     background-color: $landing-grabber-fill
     
 .landing-section--grabber .landing-section__text-body
-        color: $landing-grabber-text
+    color: $landing-grabber-text
         
 // Team Display section
 .landing-section--team-display
@@ -46,8 +51,8 @@
     text-align: center
     
 .landing-section__team-column
-        @include grid-column(1, $team-display-grid)
-        @include grid-media($team-display-grid-small)
+        @include grid-column(1, $g-team-display-grid)
+        @include grid-media($g-team-display-grid-small)
             @include grid-column(1)
                 
 .team-column__logo
@@ -56,20 +61,16 @@
 // Light-text stuff
 .landing-section--light
     background-image: url('./images/sponsorbg.jpg')
-    background-attachment: fixed
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
 
 .landing-section--light .landing-section__header, 
 .landing-section--light .landing-section__text-body, 
-.landing-section--light .landing-section__button
+.landing-section__button--light
     color: $landing-light-text
     
-.landing-section--light .landing-section__button
+.landing-section__button--light
     border-color: $landing-light-text
     
-.landing-section--light .landing-section__button:hover
+.landing-section__button--light:hover
     background-color: $landing-light-text
         
 // BGs

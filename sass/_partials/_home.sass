@@ -1,9 +1,20 @@
+// Main container
+.page-content--blog
+    @include grid-container
+    padding: 30px 5%
+
+// Blog feed section
+.blog-feed
+    @include grid-column(2 of 3, $g-blog-grid)
+    
 .blog-post
-    margin: 1% 10%
     display: flex
     flex-direction: row
     align-items: flex-start
     justify-items: center
+
+.blog-post:not(:last-child)
+    margin-bottom: 4em
     
 .blog-post__date
     padding: 0.5em 0.5em 0.5em 0
@@ -15,12 +26,48 @@
     
 .blog-post__date-span
     display: block
+    font: $f-blog-post-date-span
+    text-align: center
     
+.blog-post-date__month
+    font-size: 1.2em;
+ 
+.blog-post-date__day
+    font-size: 1.6em;
+
 .blog-post__title
-    margin: 0
+    font: $f-blog-post-title
+    display: inline-block
+
+.blog-post__title:hover
+    color: $davys-grey
     
 .blog-post__author
-    margin: 0
+    font: $f-blog-post-author
+    color: $davys-grey
 
 .blog-post__excerpt
     margin-top: 1em
+    
+// Blog widgets section
+.blog-widgets
+    @include grid-column(1 of 3, $g-blog-grid)
+        
+.blog-sidebar-widget:not(:last-child)
+    margin-bottom: 1.5em
+        
+.blog-sidebar-widget__title
+    font: bold 1.5em "Abel", sans-serif
+    text-transform: uppercase
+    letter-spacing: 0.1em
+    padding-left: 0.5em
+    margin-bottom: 0.5em
+    color: white
+    background-color: $lightning-orange
+    
+.blog-sidebar-widget ul
+    list-style: none
+    padding-left: 2em
+    
+.blog-sidebar-widget li
+    font-size: 1em

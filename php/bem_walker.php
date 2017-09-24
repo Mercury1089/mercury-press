@@ -5,7 +5,7 @@
  * 
  * Author: roikles
  */
-class walker_texas_ranger extends Walker_Nav_Menu {
+class Walker_Texas_Ranger extends Walker_Nav_Menu {
     function __construct($css_class_prefix) {
         $this->css_class_prefix = $css_class_prefix;
         
@@ -107,7 +107,7 @@ class walker_texas_ranger extends Walker_Nav_Menu {
  * @param  arr/string $css_class_modifiers Provide either a string or array of values to apply extra classes to the <ul> but not the <li's>
  * @return [type]
  */
-function bem_menu($location = "main_menu", $css_class_prefix = 'main-menu', $css_class_modifiers = null){  
+function bem_menu($location = "main_menu", $css_class_prefix = 'main-menu', $css_class_modifiers = null) {  
     
     // Check to see if any css modifiers were supplied
     if($css_class_modifiers){
@@ -132,3 +132,4 @@ function bem_menu($location = "main_menu", $css_class_prefix = 'main-menu', $css
         echo "<p>You need to first define a menu in WP-admin<p>";
     }
 }
+?>

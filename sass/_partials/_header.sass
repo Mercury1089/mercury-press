@@ -32,9 +32,7 @@
     fill: inherit
     
 .home-link__title
-    font-family: $diavlo
-    font-weight: bold
-    font-size: 1.5em
+    font: $f-home-link-title
     @include padding(0px 10px)
     vertical-align: middle
     color: inherit
@@ -61,6 +59,8 @@
     position: relative
     margin: 0 1em 0 0
     background: linear-gradient(to top, transparent 50%, $navbar-selected 50%)
+    color: $navbar-item
+    font: $f-header-nav-item
     background-size: 100% 200%
     background-position-y: -101%
     background-repeat: no-repeat
@@ -78,8 +78,6 @@
 
 .site-nav-menu-link
     text-decoration: none
-    color: $navbar-item
-    font-family: $header-nav-item
     text-transform: uppercase
     padding: 1em 0.5em
     
@@ -101,6 +99,8 @@
         
 .site-nav-menu__sub-menu-item
     @include padding(0.2em 1em 0.2em 0)
+    color: $navbar-submenu-item
+    font: $f-header-nav-item
     cursor: pointer
     white-space: nowrap
         
@@ -112,8 +112,6 @@
     
 .site-nav-menu__sub-menu-link
     text-decoration: none
-    color: $navbar-submenu-item
-    font-family: $header-nav-item
     text-transform: uppercase
     padding: 1em 0.5em
     
@@ -126,21 +124,27 @@
     flex-direction: column
     align-items: center
     justify-content: center
-    @include size(100% 50vh)
+    @include size(100% 75vh)
     @include padding(0 10%)
     background-image: url('./images/hero_test.jpg')
-    background-attachment: fixed
+        
+.hero--custom-image:before
+    content: ''
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: -1
     background-position: center
     background-repeat: no-repeat
     background-size: cover
-
-.hero--landing
-    height: 100vh
-    background-image: url('./images/hero_test.jpg')
     
-.hero--blog
-    height: 75vh
-    background-image: url('./images/hero_test.jpg')
+.hero--full-height
+    height: 100vh
+    
+.hero--medium-height
+    height: 85vh
     
 .hero__content
     text-align: center
@@ -148,17 +152,16 @@
     width: 100%
 
 .hero__large-text
-    font-family: $hero-header
-    font-size: 6em
-    font-weight: bold
+    font: $f-hero-large-text
     @include margin(0)
     word-wrap: break-word
         
 .hero__small-text
-    font-family: $hero-subtext
-    font-size: 2em
-    @include margin(0)
-        
+    font: $f-hero-small-text
+    
+.hero__call-to-action
+    margin-top: 1em    
+    
 // Animations
 @keyframes header-submenu
     0%
