@@ -1,23 +1,20 @@
-/*
- *Theme Name: Mercury2017
+/*Theme Name: Mercury2017
  *Author: Jared Tulayan
  *Description: A more modern look for the Team Mercury website. This includes having a more modular and customizable approach without having to go too far into the markup of the theme. Great for all the people that just want to make little changes without having to learn too much HTML or JavaScript or anything. Included support for an updated version of the Robot Pages plugin.
  *Version: 1.0
  *Tags: orange, silver, black, robots, modern
- * */
+ */
 @import url("https://fonts.googleapis.com/css?family=Abel|Lato:400,400i,700,700i|Open+Sans:400,400i,700,700i|Oswald:400,700|Roboto:400,400i,700,700i");
 @font-face {
   font-family: "Diavlo";
   font-style: normal;
   font-weight: normal;
   src: url("./fonts/diavlo/light.ttf") format("truetype"); }
-
 @font-face {
   font-family: "Diavlo";
   font-style: normal;
   font-weight: bold;
   src: url("./fonts/diavlo/bold.ttf") format("truetype"); }
-
 html {
   height: 100%;
   width: 100%;
@@ -216,7 +213,7 @@ svg > rect {
   background-image: url("./images/hero_test.jpg"); }
 
 .hero--custom-image:before {
-  content: '';
+  content: "";
   position: fixed;
   width: 100%;
   height: 100%;
@@ -255,7 +252,6 @@ svg > rect {
     opacity: 0; }
   100% {
     opacity: 1; } }
-
 .site-footer {
   padding: 40px 96px;
   background-color: #111111;
@@ -435,7 +431,7 @@ svg > rect {
     display: block; }
 
 .landing-section__team-column {
-  width: calc(33.33333% - 6.66667%);
+  width: calc(33.3333333333% - 6.6666666667%);
   float: left;
   margin-left: 5%; }
   @media (max-width: 768px) {
@@ -465,16 +461,13 @@ svg > rect {
   background-image: url("./images/sponsorbg.jpg"); }
 
 .page-content--blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 30px 5%; }
-  .page-content--blog::after {
-    clear: both;
-    content: "";
-    display: block; }
 
 .blog-feed {
-  width: calc(66.66667% - 5%);
-  float: left;
-  margin-left: 3%; }
+  margin: auto 20%; }
 
 .blog-post {
   display: flex;
@@ -506,7 +499,8 @@ svg > rect {
 
 .blog-post__title {
   font: 3em "Oswald", sans-serif;
-  display: inline-block; }
+  display: inline-block;
+  white-space: nowrap; }
 
 .blog-post__title:hover {
   color: #585858; }
@@ -518,29 +512,28 @@ svg > rect {
 .blog-post__excerpt {
   margin-top: 1em; }
 
-.blog-widgets {
-  width: calc(33.33333% - 4%);
-  float: left;
-  margin-left: 3%; }
-
-.blog-sidebar-widget:not(:last-child) {
-  margin-bottom: 1.5em; }
-
-.blog-sidebar-widget__title {
-  font: bold 1.5em "Abel", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding-left: 0.5em;
-  margin-bottom: 0.5em;
-  color: white;
-  background-color: #f7941e; }
-
-.blog-sidebar-widget ul {
-  list-style: none;
-  padding-left: 2em; }
-
-.blog-sidebar-widget li {
-  font-size: 1em; }
+.page-template-default .page-content h1, .post-template-default .page-content h1 {
+  font: bold 6em "Oswald", sans-serif;
+  line-height: 2em !important; }
+.page-template-default .page-content h2, .post-template-default .page-content h2 {
+  font: 3em "Abel", sans-serif;
+  line-height: 2em !important;
+  letter-spacing: 0.25em;
+  text-transform: uppercase; }
+.page-template-default .page-content h3, .post-template-default .page-content h3 {
+  font: bold 2em "Open Sans", sans-serif;
+  line-height: 2em !important; }
+.page-template-default .page-content h4, .post-template-default .page-content h4 {
+  font: bold 2em "Roboto", sans-serif;
+  line-height: 2em !important; }
+.page-template-default .page-content h5, .post-template-default .page-content h5 {
+  font: bold 1em "Open Sans", sans-serif;
+  line-height: 2em !important; }
+.page-template-default .page-content p,
+.page-template-default .page-content li, .post-template-default .page-content p,
+.post-template-default .page-content li {
+  font: 1em "Open Sans", sans-serif;
+  line-height: 2em !important; }
 
 .post__section {
   padding: 3% 20%; }

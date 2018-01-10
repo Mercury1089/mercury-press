@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-    
     <section class="blog-feed">
     <?php 
         if (have_posts()) {
@@ -25,9 +24,4 @@
         }
     ?>
     </section>
-    <section class="blog-widgets">
-        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Blog Sidebar") ) ?>
-    </section>
-
-
 <?php get_footer(); ?>

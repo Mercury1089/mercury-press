@@ -14,7 +14,8 @@
     "path": {
         "sass/style.sass": {
             "sass.enabled": true,
-            "eqFTP.projectsPaths": []
+            "eqFTP.projectsPaths": [],
+            "linting.collapsed": false
         }
     }
 }

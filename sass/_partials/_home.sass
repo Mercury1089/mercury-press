@@ -1,11 +1,13 @@
 // Main container
 .page-content--blog
-    @include grid-container
+    display: flex
+    flex-direction: column
+    align-items: center
     padding: 30px 5%
 
 // Blog feed section
 .blog-feed
-    @include grid-column(2 of 3, $g-blog-grid)
+    margin: auto 20%
     
 .blog-post
     display: flex
@@ -30,14 +32,15 @@
     text-align: center
     
 .blog-post-date__month
-    font-size: 1.2em;
+    font-size: 1.2em
  
 .blog-post-date__day
-    font-size: 1.6em;
+    font-size: 1.6em
 
 .blog-post__title
     font: $f-blog-post-title
     display: inline-block
+    white-space: nowrap
 
 .blog-post__title:hover
     color: $davys-grey
@@ -50,24 +53,24 @@
     margin-top: 1em
     
 // Blog widgets section
-.blog-widgets
-    @include grid-column(1 of 3, $g-blog-grid)
-        
-.blog-sidebar-widget:not(:last-child)
-    margin-bottom: 1.5em
-        
-.blog-sidebar-widget__title
-    font: bold 1.5em "Abel", sans-serif
-    text-transform: uppercase
-    letter-spacing: 0.1em
-    padding-left: 0.5em
-    margin-bottom: 0.5em
-    color: white
-    background-color: $lightning-orange
-    
-.blog-sidebar-widget ul
-    list-style: none
-    padding-left: 2em
-    
-.blog-sidebar-widget li
-    font-size: 1em
+//.blog-widgets
+//    @include grid-column(1 of 3, $g-blog-grid)
+//        
+//.blog-sidebar-widget:not(:last-child)
+//    margin-bottom: 1.5em
+//        
+//.blog-sidebar-widget__title
+//    font: bold 1.5em "Abel", sans-serif
+//    text-transform: uppercase
+//    letter-spacing: 0.1em
+//    padding-left: 0.5em
+//    margin-bottom: 0.5em
+//    color: white
+//    background-color: $lightning-orange
+//    
+//.blog-sidebar-widget ul
+//    list-style: none
+//    padding-left: 2em
+//    
+//.blog-sidebar-widget li
+//    font-size: 1em
