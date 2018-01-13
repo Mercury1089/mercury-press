@@ -4,7 +4,11 @@
     if (have_posts()) {
         while (have_posts()) {
             the_post();
-            the_content();
+?>
+        <section class="page__section page__body">
+            <?php echo the_content(); ?>
+        </section>
+<?php
         }
     } else {
         echo 'No content!';
