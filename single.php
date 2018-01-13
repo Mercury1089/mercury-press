@@ -13,6 +13,7 @@
         <?php comments_template(); ?>
     </section>
 <?php
+            wp_reset_postdata();
         }
     } else {
         echo '<p>No content found</p>';

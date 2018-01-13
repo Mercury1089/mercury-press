@@ -24,7 +24,7 @@ function resources() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 
-// Require BEM nav walker
+// Walker Section
 require 'php/bem_walker.php';
 
 // Register nav menus

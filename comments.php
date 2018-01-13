@@ -2,7 +2,7 @@
 <?php
     $form_args = array(
         'id_form'           => '',
-        'class_form'      => 'post-comments__comment-form',
+        'class_form'        => 'post-comments__comment-form',
         'id_submit'         => '',
         'class_submit'      => 'post-comments__submit-comment',
         'name_submit'       => '',
@@ -30,10 +30,11 @@
     
     //Get only the approved comments 
     $args = array(
-        'status' => 'approve'
+        'status' => 'approve',
+        'post_id' => get_the_ID()
     );
 
-    // The comment Query
+    // The comment query
     $comments_query = new WP_Comment_Query;
     $comments = $comments_query->query( $args );
 

@@ -9,9 +9,9 @@
         <h2 class="landing-section__header">
             OUR TEAMS
         </h2>
-        <h3 class="landing-section__text-body">
+        <h4 class="landing-section__text-body">
             Team Mercury has various teams for every age and interest. No matter who you are, Team Mercury has a home for every kind of student!
-        </h3>
+        </h4>
         <div class="landing-section__team-column">
             <img class="team-column__logo" src="<?php echo get_template_directory_uri() ?>/images/1089logo.png"/>
             <h3 class="team-column__team">FRC 1089</h3>
@@ -36,7 +36,7 @@
     </section>
     <section class="landing-section landing-section--two-column">
         <section class="landing-section landing-section--light landing-section__bg--kids"> <!-- "JOIN US" -->
-            <h2 class="landing-section__header">JOIN US</h2>
+            <h2 class="landing-section__header">STUDENTS</h2>
             <p class="landing-section__text-body">
                 Are you a student looking to join a FIRST robotics team? Look no further! We are always looking for new students to join our teams!
             </p>

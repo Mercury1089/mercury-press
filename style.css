@@ -57,16 +57,17 @@ h1 {
   font: bold 6em "Oswald", sans-serif; }
 
 h2 {
-  font: 3em "Abel", sans-serif; }
+  font: bold 3.5em "Abel", sans-serif;
+  letter-spacing: 0.25em; }
 
 h3 {
   font: bold 2em "Cabin", sans-serif; }
 
 h4 {
-  font: bold 2em "Roboto", sans-serif; }
+  font: 2em "Cabin", sans-serif; }
 
 h4 {
-  font: bold 2em "Roboto", sans-serif; }
+  font: 2em "Cabin", sans-serif; }
 
 p,
 li {
@@ -394,9 +395,8 @@ svg > rect {
   text-align: center; }
 
 .landing-section__header {
-  font: 3em "Abel", sans-serif !important;
+  text-indent: 0.25em !important;
   text-align: center;
-  letter-spacing: 0.25em;
   color: black; }
 
 .landing-section__text-body {
@@ -434,8 +434,7 @@ svg > rect {
   color: #111111; }
 
 .grabber__header {
-  line-height: 1.5em;
-  font-weight: bold; }
+  line-height: 1.5em; }
 
 .landing-section--team-display {
   text-align: center; }
@@ -487,6 +486,9 @@ svg > rect {
   align-content: center;
   justify-content: center; }
 
+@media screen and (max-width: 768px) {
+  .landing-section--two-column {
+    flex-direction: column; } }
 .page-content--blog {
   display: flex;
   flex-direction: column;
@@ -539,31 +541,31 @@ svg > rect {
 .blog-post__excerpt {
   margin-top: 1em; }
 
-.page-template-default .page__section h1, .post-template-default .page__section h1 {
+.page__body h1, .post__body h1 {
   font: bold 6em "Oswald", sans-serif;
   line-height: 2em !important; }
-.page-template-default .page__section h2, .post-template-default .page__section h2 {
-  font: 3em "Abel", sans-serif;
+.page__body h2, .post__body h2 {
+  font: bold 3.5em "Abel", sans-serif;
   line-height: 2em !important;
   letter-spacing: 0.25em;
   text-transform: uppercase; }
-.page-template-default .page__section h3, .post-template-default .page__section h3 {
+.page__body h3, .post__body h3 {
   font: bold 2em "Cabin", sans-serif;
   line-height: 2em !important; }
-.page-template-default .page__section h4, .post-template-default .page__section h4 {
-  font: bold 2em "Roboto", sans-serif;
+.page__body h4, .post__body h4 {
+  font: 2em "Cabin", sans-serif;
   line-height: 2em !important; }
-.page-template-default .page__section h5, .post-template-default .page__section h5 {
+.page__body h5, .post__body h5 {
   font: bold 1em "Cabin", sans-serif;
   line-height: 2em !important; }
-.page-template-default .page__section p,
-.page-template-default .page__section li, .post-template-default .page__section p,
-.post-template-default .page__section li {
+.page__body p,
+.page__body li, .post__body p,
+.post__body li {
   font: 1.2em "Cabin", sans-serif;
   line-height: 2em !important; }
 
 .post__section {
-  padding: 3% 20%; }
+  padding: 3% 0%; }
 
 .page-content--robot-page::after {
   clear: both;

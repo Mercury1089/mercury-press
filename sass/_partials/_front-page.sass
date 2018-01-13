@@ -9,10 +9,11 @@
     text-align: center
 
 .landing-section__header
-    font: $f-landing-section-header !important
+    text-indent: 0.25em !important
     text-align: center
-    letter-spacing: 0.25em
     color: $landing-text
+//    font: $f-landing-section-header !important
+//    letter-spacing: 0.25em
         
 .landing-section__text-body
     margin: 1em 0 2em
@@ -51,7 +52,6 @@
 
 .grabber__header
     line-height: 1.5em
-    font-weight: bold
         
 // Team Display section
 .landing-section--team-display
@@ -98,3 +98,7 @@
     flex-direction: row
     align-content: center
     justify-content: center
+
+@media screen and (max-width: 768px)
+    .landing-section--two-column
+        flex-direction: column
