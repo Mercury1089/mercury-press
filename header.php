@@ -44,9 +44,9 @@
                         background-image: url(<?php echo get_the_post_thumbnail_url( null, 'full' ); ?>) !important;
                     }
                 </style>
-                <header class="hero hero--medium-height hero--custom-image">
+                <header class="hero hero--small-height hero--custom-image">
             <?php } else { ?>
-                <header class="parallax hero hero--medium-height">
+                <header class="parallax hero hero--small-height">
             <?php } ?>
                 <h1 class="hero__content hero__large-text"><?php echo single_post_title(); ?></h1>
             </header>

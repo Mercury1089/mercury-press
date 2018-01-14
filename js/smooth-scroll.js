@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function ($) {
     $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (event) {
         // On-page links
         if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {

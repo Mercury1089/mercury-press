@@ -1,0 +1,26 @@
+.year-nav
+    display: flex
+    padding: 1em 0
+    justify-content: center
+    font: $f-default-text
+
+.year-nav__year
+    padding-left: 0.75em
+
+.gallery__year
+    display: grid
+    grid-template-columns: 20% 20% 20% 20%
+    grid-gap: 3em 5%
+    justify-content: center
+    justify-items: center
+    text-align: center
+
+.gallery__year:not(:first-child)
+    padding-top: 3em
+
+.gallery-year__header
+    grid-column: span 4
+
+.album__thumbnail
+    border-radius: 50%
+    border: black 5px solid

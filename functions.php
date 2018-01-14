@@ -3,11 +3,11 @@
 // Register and enqueue resources
 function resources() {
     // Deregister WordPress's jQuery plugin; it's out of date anyway
-    wp_deregister_script( 'jquery' );
+    //wp_deregister_script( 'jquery' );
     
     // Register dependencies
     // These do not need to be enqueued
-    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' );
+    // wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' );
     wp_register_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js' );
     wp_register_script( 'jquery-scrollTo', get_template_directory_uri() . '/js/jquery.scrollTo.js', array( 'jquery' ) );
     wp_register_script( 'easing', get_template_directory_uri() . '/js/easing.js', array( 'jquery' ) );
@@ -18,6 +18,7 @@ function resources() {
     wp_register_script( 'header-transition', get_template_directory_uri() . '/js/header-transition.js', array( 'jquery' ));
 
     // Enqueue resources
+    wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'smooth-scroll' );
     wp_enqueue_script( 'load-transition' );
     wp_enqueue_script( 'header-transition' );

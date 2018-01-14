@@ -1,14 +1,15 @@
 .page-content--archive-robot
+    padding: 3% 10%
     display: grid
-    grid-template-columns: auto auto auto
-    grid-gap: 6em 10%
+    grid-template-columns: 30% 30% 30%
+    grid-gap: 5em 3%
     justify-content: center
     
 .robot
     text-align: center
     
 .robot__icon
-    @include size(256px)
+    @include size(196px)
     object-fit: cover
     object-position: center
     background-color: $c-bg-robot-icon
@@ -16,3 +17,5 @@
     
 .robot__name
     text-transform: uppercase
+    padding-left: 0.25em
+    font-size: 2em

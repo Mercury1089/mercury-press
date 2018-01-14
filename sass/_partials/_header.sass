@@ -71,15 +71,16 @@
     text-align: right
 
 .site-nav-menu__item:hover 
-        background-position-y: 0%
+    background-position-y: 0%
     
 .site-nav-menu__item:hover .site-nav-menu__sub-menu
-            display: block !important
+    display: block !important
 
 .site-nav-menu-link
     text-decoration: none
     text-transform: uppercase
-    padding: 1em 0.5em
+    margin: 0 0.5em
+    padding-bottom: 1em
     
 .site-nav-menu__sub-menu
     display: none
@@ -127,6 +128,9 @@
     @include size(100% 75vh)
     @include padding(0 10%)
     background-image: url('./images/hero_test.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
         
 .hero--custom-image:before
     content: ''
@@ -145,6 +149,9 @@
     
 .hero--medium-height
     height: 85vh
+    
+.hero--small-height
+    height: 50vh
     
 .hero__content
     text-align: center
