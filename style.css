@@ -56,8 +56,10 @@
   grid-column: span 4; }
 
 .album__thumbnail {
-  border-radius: 50%;
-  border: black 5px solid; }
+  border: #111111 5px solid; }
+
+.album__thumbnail--no-thumbnail {
+  border-color: #585858; }
 
 html {
   height: 100%;
@@ -663,10 +665,12 @@ svg > rect {
 .robot-page__section--full-width {
   width: calc(100% - 6%);
   float: left;
-  margin-left: 3%;
-  margin-top: 1em;
-  padding-top: 1em;
-  border-top: #a0a0a0 solid 1px; }
+  margin-left: 3%; }
+
+.robot-page__section--full-width:not(:last-child) {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: #a0a0a0 solid 1px; }
 
 .robot-page__section--boxed {
   background-color: rgba(247, 148, 30, 0.5);

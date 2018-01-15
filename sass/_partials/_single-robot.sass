@@ -37,9 +37,11 @@
         
 .robot-page__section--full-width
     @include grid-column(2 of 2, $g-robot-page)
-    margin-top: 1em
-    padding-top: 1em
-    border-top: $c-robot-page-section-border solid 1px
+
+.robot-page__section--full-width:not(:last-child)
+    margin-bottom: 1em
+    padding-bottom: 1em
+    border-bottom: $c-robot-page-section-border solid 1px
         
 .robot-page__section--boxed
     background-color: rgba($lightning-orange, 0.5)

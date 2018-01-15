@@ -1,8 +1,8 @@
 <?php
-    /**
-     * Template Name: Robot (default)
-     * Template Post Type: robot
-     */
+/**
+ * Template Name: Robot (video-first)
+ * Template Post Type: robot
+ */
     get_header();
     if (have_posts()) {
         while(have_posts()) {
@@ -50,14 +50,6 @@
             
 			$content = split_content();
 ?>
-    <section class="robot-page__section robot-page__section--full-width">
-        <section class="robot-page__section robot-page__section--half-width">
-            <?php print array_shift($content); ?>
-        </section>
-        <section class="robot-page__section robot-page__section--half-width robot-page__section--boxed">
-            <?php print array_shift($content); ?>
-        </section>
-    </section>
     <?php if (!empty($youtubeID)) { ?>
     <section class="robot-page__section robot-page__section--full-width">
         <div class="robot-page__video-container">
@@ -65,6 +57,14 @@
         </div>
     </section>
     <?php } ?>
+    <section class="robot-page__section robot-page__section--full-width">
+        <section class="robot-page__section robot-page__section--half-width">
+            <?php print array_shift($content); ?>
+        </section>
+        <section class="robot-page__section robot-page__section--half-width">
+            <?php print array_shift($content); ?>
+        </section>
+    </section>
     <?php if (!empty($content)) {?>
     <section class="robot-page__section robot-page__section--full-width">
         <?php print implode($content); ?>

@@ -64,15 +64,14 @@
 			$albums .= "<section class=\"gallery__year\" id=\"$year\">\r\n";
 			$albums .= "\t<h2 class=\"gallery-year__header\">$year</h2>\r\n";
 			
-			
 			foreach($children as $child) {
                 $id = $child->ID;
 				$gallery = get_post_gallery( $id, false );
 				$galIDs = explode( ",", $gallery['ids'] );
+				$galSize = count($galIDs);
 
 				$albums .= "\t<div class=\"gallery-year__album\">";
-
-				$galSize = count($galIDs); 
+				
 
 				for($i = 0; $i < $galSize; $i++) {
 					$imgID = $galIDs[$i];
@@ -84,8 +83,16 @@
 					$albums .= "\t\t<a data-rel=\"lightbox-gallery-" . $galNum . "\" href=\"" . $imgSrc . "\" class=\"album__image\">\r\n";
 
 					if ($i === 0) {
-						$imgThumb = wp_get_attachment_image_src( $imgID, 'thumbnail', true )[0]; 
-						$albums .= "\t\t<img class=\"album__thumbnail\" src=" . $imgThumb . "></img>\r\n";
+						$imgThumb = wp_get_attachment_image_src( $imgID, 'thumbnail', false )[0];
+
+						$albums .= "\t\t<img class=\"album__thumbnail";
+
+						if (!isset($imgThumb)) {
+							$imgThumb = get_theme_file_uri("/images/default.jpg"); // default/missing img
+							$albums .= " album__thumbnail--no-thumbnail";
+						}
+							
+						$albums .= "\" src=" . $imgThumb . "></img>\r\n";
 					}
 
 					$albums .= "\t\t</a>\n";
