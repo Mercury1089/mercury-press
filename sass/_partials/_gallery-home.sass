@@ -3,9 +3,23 @@
     padding: 1em 0
     justify-content: center
     font: $f-default-text
+    color: $c-year-nav-link
 
 .year-nav__year
-    padding-left: 0.75em
+    transition: color 100ms linear
+
+.year-nav__year:hover
+    color: $c-year-nav-link-hover !important
+
+.year-nav__nav:hover .year-nav__year
+    color: $c-year-nav-link-focus
+
+.year-nav__year:not(:last-child)
+    padding-right: 0.375em
+
+.year-nav__year:not(:first-child)
+    padding-left: 0.375em
+    border-left: 2px solid $c-year-nav-separator
 
 .gallery__year
     display: grid
@@ -15,8 +29,11 @@
     justify-items: center
     text-align: center
 
-.gallery__year:not(:first-child)
-    padding-top: 3em
+.gallery__year
+    padding-top: 1em
+
+.gallery__year:not(:last-child)
+    padding-bottom: 1em
 
 .gallery-year__header
     grid-column: span 4

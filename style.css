@@ -19,10 +19,24 @@
   display: flex;
   padding: 1em 0;
   justify-content: center;
-  font: 1.2em "Cabin", sans-serif; }
+  font: 1.2em "Cabin", sans-serif;
+  color: #585858; }
 
 .year-nav__year {
-  padding-left: 0.75em; }
+  transition: color 100ms linear; }
+
+.year-nav__year:hover {
+  color: #f7941e !important; }
+
+.year-nav__nav:hover .year-nav__year {
+  color: #a0a0a0; }
+
+.year-nav__year:not(:last-child) {
+  padding-right: 0.375em; }
+
+.year-nav__year:not(:first-child) {
+  padding-left: 0.375em;
+  border-left: 2px solid #585858; }
 
 .gallery__year {
   display: grid;
@@ -32,8 +46,11 @@
   justify-items: center;
   text-align: center; }
 
-.gallery__year:not(:first-child) {
-  padding-top: 3em; }
+.gallery__year {
+  padding-top: 1em; }
+
+.gallery__year:not(:last-child) {
+  padding-bottom: 1em; }
 
 .gallery-year__header {
   grid-column: span 4; }
@@ -658,6 +675,17 @@ svg > rect {
 .robot-page__section--boxed p,
 .robot-page__section--boxed li {
   font: 0.75em "Cabin", sans-serif; }
+
+.robot-page__nav {
+  display: grid;
+  grid-auto-columns: 50% 50%; }
+
+.robot-page-nav__button {
+  font: bold 1em "Cabin", sans-serif; }
+
+.robot-page-nav__button--next {
+  text-align: right;
+  grid-column: 2; }
 
 .page-content--archive-robot {
   padding: 3% 10%;

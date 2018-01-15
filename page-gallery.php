@@ -30,7 +30,6 @@
 	function render_nav() {
 		$nav = "
         <section class=\"year-nav\">
-            <label for=\"year-nav__nav\" class=\"year-nav__label\">Year:</label>\n
             <nav class=\"year-nav__nav\">\n
         ";
 		
