@@ -19,7 +19,7 @@
             $robot_name = get_the_title();
 
             if (empty($post_img))
-                $post_img = get_template_directory_uri() . "/images/1089logo.png";
+                $post_img = get_theme_file_uri('/images/default.jpg');
 ?>
     <a href="<?php echo get_post_permalink(); ?>" class="robot">
         <img class="robot__icon" src="<?php echo $post_img; ?>" /> 

@@ -1,4 +1,8 @@
+# Wordpress Stuff
 *.zip
 *.s*ssc
 .vscode/
 .sass-cache/
+
+# Config stuff
+*.json

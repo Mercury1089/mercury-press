@@ -9,9 +9,9 @@
         <h2 class="landing-section__header">
             OUR TEAMS
         </h2>
-        <h4 class="landing-section__text-body">
+        <h5 class="landing-section__text-body">
             Team Mercury has various teams for every age and interest. No matter who you are, Team Mercury has a home for every kind of student!
-        </h4>
+        </h5>
         <div class="landing-section__team-column">
             <img class="team-column__logo" src="<?php echo get_template_directory_uri() ?>/images/1089logo.png"/>
             <h3 class="team-column__team">FRC 1089</h3>

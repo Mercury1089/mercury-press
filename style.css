@@ -19,7 +19,7 @@
   display: flex;
   padding: 1em 0;
   justify-content: center;
-  font: 1.2em "Cabin", sans-serif;
+  font: 1.2em/1.65em "Cabin", sans-serif;
   color: #585858; }
 
 .year-nav__year {
@@ -100,24 +100,24 @@ header, main, footer {
   padding: 3% 20%; }
 
 h1 {
-  font: bold 6em "Oswald", sans-serif; }
+  font: bold 6em/1.65em "Oswald", sans-serif; }
 
 h2 {
-  font: bold 3.5em "Abel", sans-serif;
+  font: bold 3.5em/1.65em "Abel", sans-serif;
   letter-spacing: 0.25em; }
 
 h3 {
-  font: bold 2em "Cabin", sans-serif; }
+  font: bold 2em/1.65em "Cabin", sans-serif; }
 
 h4 {
-  font: 2em "Cabin", sans-serif; }
+  font: 2em/1.65em "Cabin", sans-serif; }
 
-h4 {
-  font: 2em "Cabin", sans-serif; }
+h5 {
+  font: bold 1.65em/1.65em "Cabin", sans-serif; }
 
 p,
 li {
-  font: 1.2em "Cabin", sans-serif; }
+  font: 1.2em/1.65em "Cabin", sans-serif; }
 
 p {
   line-height: 1.65em; }
@@ -398,7 +398,9 @@ svg > rect {
   fill: #585858; }
 
 .post-comments__head {
-  letter-spacing: 0.25em; }
+  font-size: 2em !important;
+  padding: 0 !important;
+  line-height: 1em; }
 
 .post-comments__comment-form {
   margin-top: 1em;
@@ -441,6 +443,9 @@ svg > rect {
 .comment__container {
   padding-left: 1.5em; }
 
+h3#reply-title {
+  display: none; }
+
 .page-content--landing {
   padding: 0 !important; }
 
@@ -453,10 +458,11 @@ svg > rect {
 .landing-section__header {
   text-indent: 0.25em !important;
   text-align: center;
-  color: black; }
+  color: black;
+  line-height: 1em; }
 
 .landing-section__text-body {
-  margin: 1em 0 2em;
+  margin: 1em 0;
   text-align: center;
   color: black; }
 
@@ -508,6 +514,9 @@ svg > rect {
       width: calc(100% - 40px);
       float: left;
       margin-left: 20px; } }
+
+.team-column__team {
+  line-height: 1em; }
 
 .team-column__logo {
   width: 50%; }
@@ -595,28 +604,32 @@ svg > rect {
 .blog-post__excerpt {
   margin-top: 1em; }
 
-.page__body h1, .post__body h1 {
-  font: bold 6em "Oswald", sans-serif;
-  line-height: 2em !important; }
-.page__body h2, .post__body h2 {
-  font: bold 3.5em "Abel", sans-serif;
-  line-height: 2em !important;
+.page__section h1, .post__section h1 {
+  padding-bottom: 1em; }
+.page__section h2, .post__section h2 {
+  padding-bottom: 1em;
   letter-spacing: 0.25em;
   text-transform: uppercase; }
-.page__body h3, .post__body h3 {
-  font: bold 2em "Cabin", sans-serif;
-  line-height: 2em !important; }
-.page__body h4, .post__body h4 {
-  font: 2em "Cabin", sans-serif;
-  line-height: 2em !important; }
-.page__body h5, .post__body h5 {
-  font: bold 1em "Cabin", sans-serif;
-  line-height: 2em !important; }
-.page__body p,
-.page__body li, .post__body p,
-.post__body li {
-  font: 1.2em "Cabin", sans-serif;
-  line-height: 2em !important; }
+.page__section h3, .post__section h3 {
+  padding-bottom: 1em; }
+.page__section h4, .post__section h4 {
+  padding-bottom: 1em; }
+.page__section h5, .post__section h5 {
+  padding-bottom: 1em; }
+.page__section p,
+.page__section li, .post__section p,
+.post__section li {
+  padding-bottom: 1em; }
+
+.page-template-page-two-column .page-content::after {
+  clear: both;
+  content: "";
+  display: block; }
+
+.page__body--half-width {
+  width: calc(50% - 4.5%);
+  float: left;
+  margin-left: 3%; }
 
 .post__section {
   padding: 3% 0%; }

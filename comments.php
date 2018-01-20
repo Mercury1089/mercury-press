@@ -12,7 +12,7 @@
         'label_submit'      => __( 'Post' ),
         'format'            => 'xhtml',
 
-        'comment_field' =>  '<textarea class="post-comments__comment-field" cols="45" rows="8" aria-required="true">' .
+        'comment_field' =>  '<textarea name="comment" class="post-comments__comment-field" cols="45" rows="8" aria-required="true">' .
         '</textarea>',
 
         'must_log_in' => '',
