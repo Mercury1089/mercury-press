@@ -1,20 +1,23 @@
-/*Theme Name: Mercury2017
+/*
+ *Theme Name: Mercury2017
  *Author: Jared Tulayan
  *Description: A more modern look for the Team Mercury website. This includes having a more modular and customizable approach without having to go too far into the markup of the theme. Great for all the people that just want to make little changes without having to learn too much HTML or JavaScript or anything. Included support for an updated version of the Robot Pages plugin.
  *Version: 1.0
  *Tags: orange, silver, black, robots, modern
- */
+ * */
 @import url("https://fonts.googleapis.com/css?family=Abel|Lato:400,400i,700,700i|Cabin:400,400i,500,500i,700,700i|Oswald:400,700|Roboto:400,400i,700,700i");
 @font-face {
   font-family: "Diavlo";
   font-style: normal;
   font-weight: normal;
   src: url("./fonts/diavlo/light.ttf") format("truetype"); }
+
 @font-face {
   font-family: "Diavlo";
   font-style: normal;
   font-weight: bold;
   src: url("./fonts/diavlo/bold.ttf") format("truetype"); }
+
 .year-nav {
   display: flex;
   padding: 1em 0;
@@ -270,7 +273,7 @@ svg > rect {
   background-size: cover; }
 
 .hero--custom-image:before {
-  content: "";
+  content: '';
   position: fixed;
   width: 100%;
   height: 100%;
@@ -312,6 +315,7 @@ svg > rect {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
 .site-footer {
   padding: 40px 96px;
   background-color: #111111;
@@ -506,7 +510,7 @@ h3#reply-title {
     display: block; }
 
 .landing-section__team-column {
-  width: calc(33.3333333333% - 6.6666666667%);
+  width: calc(33.33333% - 6.66667%);
   float: left;
   margin-left: 5%; }
   @media (max-width: 768px) {
@@ -554,6 +558,7 @@ h3#reply-title {
 @media screen and (max-width: 768px) {
   .landing-section--two-column {
     flex-direction: column; } }
+
 .page-content--blog {
   display: flex;
   flex-direction: column;
@@ -606,16 +611,21 @@ h3#reply-title {
 
 .page__section h1, .post__section h1 {
   padding-bottom: 1em; }
+
 .page__section h2, .post__section h2 {
   padding-bottom: 1em;
   letter-spacing: 0.25em;
   text-transform: uppercase; }
+
 .page__section h3, .post__section h3 {
   padding-bottom: 1em; }
+
 .page__section h4, .post__section h4 {
   padding-bottom: 1em; }
+
 .page__section h5, .post__section h5 {
   padding-bottom: 1em; }
+
 .page__section p,
 .page__section li, .post__section p,
 .post__section li {
