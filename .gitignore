@@ -6,3 +6,7 @@
 
 # Config stuff
 *.json
+
+# Gradle
+.gradle/
+gradle/.launch/
