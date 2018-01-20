@@ -8,7 +8,7 @@ To make building SASS easier for those without it,
 a Gradle plugin has been included to allow those to
 compile the source.
 
-In a command line, run:
+In a command line at the root of the project, run:
 
 ### Linux/macOS
 `$ ./gradlew compileLibSass`
