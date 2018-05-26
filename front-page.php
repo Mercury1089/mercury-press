@@ -9,7 +9,7 @@
         <h2 class="landing-section__header">
             OUR TEAMS
         </h2>
-        <h5 class="landing-section__text-body">
+        <p class="landing-section__text-body">
             Team Mercury has various teams for every age and interest. No matter who you are, Team Mercury has a home for every kind of student!
         </h5>
         <div class="landing-section__team-column">

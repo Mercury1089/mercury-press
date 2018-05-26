@@ -5,7 +5,7 @@
  *Version: 1.0
  *Tags: orange, silver, black, robots, modern
  * */
-@import url("https://fonts.googleapis.com/css?family=Abel|Lato:400,400i,700,700i|Cabin:400,400i,500,500i,700,700i|Oswald:400,700|Roboto:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Abel|Lato:400,400i,700,700i|Cabin:400,400i,500,500i,700,700i|Oswald:400,700|Roboto:400,400i,700,700i|Montserrat:300,300i");
 @font-face {
   font-family: "Diavlo";
   font-style: normal;
@@ -22,7 +22,7 @@
   display: flex;
   padding: 1em 0;
   justify-content: center;
-  font: 1.2em/1.65em "Cabin", sans-serif;
+  font: 1.2em/1.65em "Roboto Condensed", sans-serif;
   color: #585858; }
 
 .year-nav__year {
@@ -107,20 +107,23 @@ h1 {
 
 h2 {
   font: bold 3.5em/1.65em "Abel", sans-serif;
+  text-transform: uppercase;
   letter-spacing: 0.25em; }
 
 h3 {
-  font: bold 2em/1.65em "Cabin", sans-serif; }
+  font: bold 2em/1.65em "Abel", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em; }
 
 h4 {
-  font: 2em/1.65em "Cabin", sans-serif; }
+  font: bold 2em/1.65em "Roboto Condensed", sans-serif; }
 
 h5 {
-  font: bold 1.65em/1.65em "Cabin", sans-serif; }
+  font: bold 1.65em/1.65em "Roboto Condensed", sans-serif; }
 
 p,
 li {
-  font: 1.2em/1.65em "Cabin", sans-serif; }
+  font: 1.2em/1.65em "Roboto Condensed", sans-serif; }
 
 p {
   line-height: 1.65em; }
@@ -301,10 +304,11 @@ svg > rect {
 .hero__large-text {
   font: bold 6em "Oswald", sans-serif;
   margin: 0;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  text-transform: uppercase; }
 
 .hero__small-text {
-  font: bold 2em/1.65em "Cabin", sans-serif; }
+  font: 2em/1.65em "Roboto Condensed", sans-serif; }
 
 .hero__call-to-action {
   margin-top: 1em; }
@@ -345,8 +349,7 @@ svg > rect {
 .footer-section p,
 .footer-section li,
 .footer-section a {
-  font-family: "Cabin", sans-serif;
-  font-size: 1em; }
+  font: 1em "Roboto Condensed", sans-serif; }
 
 .footer-section h3,
 .footer-section p,
@@ -429,7 +432,7 @@ svg > rect {
   border: none;
   background-color: #111111;
   color: #585858;
-  font: bold 1em "Roboto", sans-serif;
+  font: bold 1em "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   transition: all 100ms linear; }
 
@@ -441,7 +444,7 @@ svg > rect {
   color: white; }
 
 .comment__author {
-  font: bold 1em/32px "Roboto", sans-serif;
+  font: bold 1em/32px "Roboto Condensed", sans-serif;
   color: #a0a0a0; }
 
 .comment__container {
@@ -478,7 +481,7 @@ h3#reply-title {
 
 .landing-section__button {
   display: inline-block;
-  font: 1em "Roboto", sans-serif;
+  font: bold 1em "Roboto Condensed", sans-serif;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
@@ -584,7 +587,7 @@ h3#reply-title {
 
 .blog-post__date-span {
   display: block;
-  font: bold 1em/1.1em "Oswald", sans-serif;
+  font: bold 1em/1em "Roboto Condensed", sans-serif;
   text-align: center; }
 
 .blog-post-date__month {
@@ -594,7 +597,7 @@ h3#reply-title {
   font-size: 1.6em; }
 
 .blog-post__title {
-  font: 3em "Oswald", sans-serif;
+  font: bold 2em/1.65em "Roboto Condensed", sans-serif;
   letter-spacing: 0em;
   display: inline-block;
   white-space: nowrap; }
@@ -603,7 +606,7 @@ h3#reply-title {
   color: #585858; }
 
 .blog-post__author {
-  font: bold 1em "Cabin", sans-serif;
+  font: bold 1.65em/1.65em "Roboto Condensed", sans-serif;
   color: #585858; }
 
 .blog-post__excerpt {
@@ -703,7 +706,7 @@ h3#reply-title {
   height: 100%; }
 
 .robot-page__section .wp-caption-text {
-  font: 0.75em "Cabin", sans-serif;
+  font: 0.75em "Roboto Condensed", sans-serif;
   text-align: center; }
 
 .robot-page__section--half-width {
@@ -727,14 +730,14 @@ h3#reply-title {
 
 .robot-page__section--boxed p,
 .robot-page__section--boxed li {
-  font: 0.75em "Cabin", sans-serif; }
+  font: 0.75em "Roboto Condensed", sans-serif; }
 
 .robot-page__nav {
   display: grid;
   grid-auto-columns: 50% 50%; }
 
 .robot-page-nav__button {
-  font: bold 1em "Cabin", sans-serif; }
+  font: bold 1em "Roboto Condensed", sans-serif; }
 
 .robot-page-nav__button--next {
   text-align: right;
