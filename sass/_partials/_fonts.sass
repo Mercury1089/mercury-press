@@ -1,7 +1,11 @@
 // Google Fonts
-@import url('https://fonts.googleapis.com/css?family=Abel|Lato:400,400i,700,700i|Cabin:400,400i,500,500i,700,700i|Oswald:400,700|Roboto:400,400i,700,700i|Montserrat:300,300i')
+// For readability, each typeface is imported per line
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700')
+@import url('https://fonts.googleapis.com/css?family=Abel')
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i')
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:700,700i')
 
-// Diavlo font
+// Diavlo typeface
 @include font-face("Diavlo", "./fonts/diavlo/light", $file-formats: ttf)
 @include font-face("Diavlo", "./fonts/diavlo/bold", bold, $file-formats: ttf)
 
@@ -9,11 +13,12 @@
 $f-home-link-title: bold 1.5em 'Diavlo', sans-serif
 
 $f-default-h1: bold 6em/1.65em 'Oswald', sans-serif
-$f-default-h2: bold 3.5em/1.65em 'Abel', sans-serif
+$f-default-h2: bold 3em/1.65em 'Abel', sans-serif
 $f-default-h3: bold 2em/1.65em 'Abel', sans-serif
-$f-default-h4: bold 2em/1.65em 'Roboto Condensed', sans-serif
-$f-default-h5: bold 1.65em/1.65em 'Roboto Condensed', sans-serif
-$f-default-text: 1.2em/1.65em 'Roboto Condensed', sans-serif
+$f-default-h4: bold 1.65em/1.65em 'Roboto Mono', sans-serif
+$f-default-h5: bold 1.2em/1.65em 'Roboto Mono', sans-serif
+$f-default-h6: bold 1.15em/1.65em 'Roboto Condensed', sans-serif
+$f-default-text: 1em/1.65em 'Roboto Condensed', sans-serif
 
 $f-header-nav-item: 1em 'Oswald', sans-serif
 
@@ -26,16 +31,21 @@ $f-footer-widget-body: 1em 'Roboto Condensed', sans-serif
 
 $f-landing-section-header: 3em 'Abel', sans-serif
 
-$f-blog-post-title: bold 2em/1.65em 'Roboto Condensed', sans-serif
-$f-blog-post-author: bold 1.65em/1.65em 'Roboto Condensed', sans-serif
+$f-blog-post-title: bold 1.65em/1.65em 'Roboto Condensed', sans-serif
+$f-blog-post-author: bold 1.2em/1.65em 'Roboto Mono', sans-serif
 $f-blog-post-date-span: bold 1em/1em 'Roboto Condensed', sans-serif
 
 $f-post-body: 1em 'Roboto Condensed', sans-serif
 
+$f-comments-head: bold 1.65em/1.65em 'Roboto Mono', sans-serif
 $f-comment-field: 1.25em monospace
 $f-submit-comment: bold 1em 'Roboto Condensed', sans-serif
 $f-comments-author: bold 1em/32px 'Roboto Condensed', sans-serif
 
+$f-robot-archive-robot-name: bold 1.2em/1.65em 'Roboto Mono', sans-serif
+
 $f-robot-pages-box: 0.75em 'Roboto Condensed', sans-serif
 $f-robot-pages-caption: 0.75em 'Roboto Condensed', sans-serif
-$f-robot-pages-nav: bold 1em 'Roboto Condensed', sans-serif
+$f-robot-pages-nav: bold 1em 'Roboto Mono', sans-serif
+
+$f-album-caption: bold 1em 'Roboto Mono', sans-serif

@@ -23,7 +23,7 @@
 ?>
     <a href="<?php echo get_post_permalink(); ?>" class="robot">
         <img class="robot__icon" src="<?php echo $post_img; ?>" /> 
-        <h2 class="robot__name"><?php echo $robot_name; ?></h2>
+        <h5 class="robot__name"><?php echo $robot_name; ?></h2>
     </a>
 <?php
         }
