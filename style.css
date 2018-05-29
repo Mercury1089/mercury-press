@@ -272,6 +272,13 @@ svg > rect {
 .site-nav-menu__sub-menu-item:hover .site-nav-menu__sub-menu-link {
   color: #ffa100 !important; }
 
+@keyframes header-submenu {
+  0% {
+    transform: translateY(30px);
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -322,13 +329,6 @@ svg > rect {
 
 .hero__call-to-action {
   margin-top: 1em; }
-
-@keyframes header-submenu {
-  0% {
-    transform: translateY(30px);
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 
 .site-footer {
   padding: 40px 96px;

@@ -38,7 +38,7 @@
         <section class="landing-section landing-section--light landing-section__bg--kids"> <!-- "JOIN US" -->
             <h2 class="landing-section__header">STUDENTS</h2>
             <p class="landing-section__text-body">
-                Are you a student looking to join a FIRST robotics team? Look no further! We are always looking for new students to join our teams!
+                Are you a Hightstown student looking to join a FIRST robotics team? Look no further! We are always looking for new students to join our teams!
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3UGBnHzwgEufM4HYTq2zWJq_tYcaEVFNWHFp5d2Zw9sVdag/viewform?c=0&w=1" target="_blank" class="button landing-section__button landing-section__button--light" id="call">SIGN UP</a>
         </section>
