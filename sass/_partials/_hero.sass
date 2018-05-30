@@ -6,12 +6,9 @@
     justify-content: center
     @include size(100% 75vh)
     @include padding(0 10%)
-    background-image: url('./images/hero_test.jpg')
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
+    background-color: rgba(0,0,0,.5)
         
-.hero--custom-image:before
+.hero:before
     content: ''
     position: fixed
     width: 100%
@@ -19,9 +16,14 @@
     top: 0
     left: 0
     z-index: -1
+    background-image: url('./images/hero_test.jpg')
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+
+// Parallax Backgrounds
+.hero--parallax:before
+    background-attachment: fixed
     
 .hero--full-height
     height: 100vh
@@ -47,4 +49,4 @@
     font: $f-hero-small-text
     
 .hero__call-to-action
-    margin-top: 1em    
+    margin-top: 1em

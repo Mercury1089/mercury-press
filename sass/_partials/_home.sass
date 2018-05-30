@@ -53,6 +53,36 @@
 .blog-post__excerpt
     margin-top: 1em
     
+// Posts Nav
+.screen-reader-text
+    clip-path: rect(1px, 1px, 1px, 1px)
+    height: 1px
+    overflow: hidden
+    position: absolute !important
+    width: 1px
+    word-wrap: normal !important
+
+.navigation.pagination
+    padding-top: 1em
+    margin-top: 2em
+    width: 100%
+    text-align: center
+    border-top: 1px solid grey
+
+.page-numbers
+    font: $f-posts-nav-page-numbers
+    transition: color 100ms linear
+    color: $c-page-numbers
+
+.navigation.pagination:hover a.page-numbers
+    color: $c-page-numbers-focus
+
+a.page-numbers:hover
+    color: $c-page-numbers-hover !important
+
+.page-numbers.current
+    color: $c-current-page
+
 // Blog widgets section
 //.blog-widgets
 //    @include grid-column(1 of 3, $g-blog-grid)

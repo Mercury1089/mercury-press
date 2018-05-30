@@ -17,14 +17,23 @@
                 <p class="blog-post__excerpt"><?php echo get_the_excerpt(); ?></p>
             </div>
         </article>
-    <?php        
-            }
+    <?php 
+            } 
+    ?>
+       
+    <?php 
         } else {
             echo '<p>No content found</p>';
         }
     ?>
     </section>
-    <section>
-    
-    </section>
+    <?php 
+        if (have_posts) {
+            echo the_posts_pagination(array(
+                'mid-size' => 4,
+                'prev_text'          => "«",
+                'next_text'          => "»",
+            )); 
+        }
+    ?>
 <?php get_footer(); ?>
