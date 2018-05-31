@@ -14,4 +14,4 @@
 gradle/.launch/
 
 ## Easy ignore with directories starting with "."
-**/.*/
+.*/
