@@ -806,7 +806,11 @@ a.page-numbers:hover {
 
 .robot__name {
   font: bold 1.2em/1.65em "Roboto Mono", sans-serif;
+  text-transform: uppercase; }
+
+.robot__year {
+  font: bold 1em/1.65em "Roboto Mono", sans-serif;
   text-transform: uppercase;
-  padding-left: 0.25em; }
+  color: #585858; }
 
 /*# sourceMappingURL=style.css.map */

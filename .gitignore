@@ -1,6 +1,8 @@
 # Wordpress Stuff
 *.zip
 *.s*ssc
+
+## IDE
 .vscode/
 .sass-cache/
 
@@ -10,3 +12,6 @@
 # Gradle
 .gradle/
 gradle/.launch/
+
+## Easy ignore with directories starting with "."
+**/.*/
