@@ -28,7 +28,7 @@
     ?>
     </section>
     <?php 
-        if (have_posts) {
+        if (have_posts()) {
             echo the_posts_pagination(array(
                 'mid-size' => 4,
                 'prev_text'          => "«",
