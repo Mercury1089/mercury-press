@@ -4,9 +4,19 @@
      * Template Post Type: robot
      */
     get_header();
-    if (have_posts()) {
-        while(have_posts()) {
-            the_post();
+
+    $args = array(
+        'post_type' => 'robot',
+        'orderby' => 'meta_value_num',
+        'order' => 'DESC',
+        'meta_key' => 'robot-year-meta',
+        'posts_per_page' => 1
+    );
+    $query = new WP_Query( $args );
+
+    if ($query->have_posts()) {
+        while($query->have_posts()) {
+            $query->the_post();
             
             $postID = get_the_ID();
             
@@ -23,28 +33,18 @@
                 $prevYear = $currentYear - 1;
                 $nextYear = $currentYear + 1;
 
-                $lastYearRobot = get_posts(array(
-                    'numberposts' => 1,
-                    'post_type' => 'robot',
-                    'meta_key' => 'robot-year-meta',
-                    'meta_value' => intval($prevYear)
-                ));
+                $lastYearRobot = get_previous_post( );
                 
-                $nextYearRobot = get_posts(array(
-                    'numberposts' => 1,
-                    'post_type' => 'robot',
-                    'meta_key' => 'robot-year-meta',
-                    'meta_value' => intval($nextYear)
-                ));
+                $nextYearRobot = get_next_post(  );
                 
                 if (!empty($lastYearRobot)) {
-                    $prevLink = $lastYearRobot[0]->post_name;
-                    $prevLabel = $prevYear . ": " . get_post_meta( $lastYearRobot[0]->ID, 'robot-game-meta', true );
+                    $prevLink = $lastYearRobot->ID;
+                    $prevLabel = $prevYear . ": " . get_post_meta( $lastYearRobot->ID, 'robot-game-meta', true );
                 }
                 
                 if (!empty($nextYearRobot)) {
-                    $nextLink = $nextYearRobot[0]->post_name;
-                    $nextLabel = $nextYear . ": " . get_post_meta( $nextYearRobot[0]->ID, 'robot-game-meta', true );
+                    $nextLink = $nextYearRobot->ID;
+                    $nextLabel = $nextYear . ": " . get_post_meta( $nextYearRobot->ID, 'robot-game-meta', true );
                 }
             }
             
@@ -72,13 +72,13 @@
     <?php } ?>
     <nav class="robot-page__section robot-page__nav robot-page__section--full-width">
         <?php if (!empty($prevLink)) { ?>
-            <a class="robot-page-nav__button robot-page-nav__button--prev" href="<?php echo get_site_url() . "/robot/" . $prevLink; ?>"><?php echo "« " . $prevLabel ?></a>
+            <a class="robot-page-nav__button robot-page-nav__button--prev" href="<?php echo esc_url( get_permalink( $prevLink ) ); ?>"><?php echo "« " . $prevLabel ?></a>
         <?php 
             }
             
             if (!empty($nextLink)) { 
         ?>
-            <a class="robot-page-nav__button robot-page-nav__button--next" href="<?php echo get_site_url() . "/robot/" . $nextLink; ?>"><?php echo $nextLabel . " »" ?></a>
+            <a class="robot-page-nav__button robot-page-nav__button--next" href="<?php echo esc_url( get_permalink( $nextLink ) ); ?>"><?php echo $nextLabel . " »" ?></a>
         <?php } ?>
     </nav>
 <?php
