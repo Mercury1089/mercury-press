@@ -1,7 +1,7 @@
 <?php 
     get_header();
 
-    // Gotta create our own WP_Query 
+    // Gotta create our own WP_Query
     // so we can do our own custom sorting and post limit
     $query = new WP_Query( array(
         'post_type' => 'robot',
