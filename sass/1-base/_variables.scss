@@ -1,0 +1,66 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:700,700i');
+
+@include font-face("Diavlo", "./fonts/diavlo/light") {
+    font-style: normal;
+    font-weight: 300;
+};
+
+@include font-face("Diavlo", "./fonts/diavlo/bold") {
+    font-style: normal;
+    font-weight: 700;
+};
+
+$diavlo: ('Diavlo', sans-serif);
+$oswald: ('Oswald', sans-serif);
+$abel: ('Abel', sans-serif);
+$roboto-mono: ('Roboto Mono', $font-stack-courier-new);
+
+// Typography
+$title-font-family: $diavlo;
+$base-font-family: $font-stack-system;
+$heading-font-family: $base-font-family;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: 1.5em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Color Palette
+// See https://coolors.co/ffa100-d2d2d4-a0a0a0-000000-ffffff for full palette
+$orange: #ffa100;
+$dark-gray: #333;
+$medium-gray: #a0a0a0;
+$light-gray: #d2d2d4;
+$black: #000;
+$white: #fff;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$base-font-color-dark: $medium-gray;
+$action-color: $orange;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$viewport-background-color: #fff;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
