@@ -5,11 +5,17 @@ $fg-color-nav: contrast-switch($bg-color-nav)
 $bg-color-menu: $dark-gray
 $fg-color-menu: contrast-switch($bg-color-menu)
 
+$bg-color-submenu: $dark-gray
+$fg-color-submenu: $light-gray
+
+$menu-font: 1em $oswald
+
 $nav-ms-base: 1em
 $nav-ms-ratio: $perfect-fifth
 
 $bg-color-nav-button-selected: $orange
-$bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-selected 50%)
+$bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-selected 50%) center -100%/100% 200% no-repeat
+$bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-button-selected 50%) 100% center/200% 100% no-repeat
 
 @keyframes slideout-menu
     0%
@@ -48,6 +54,7 @@ $bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-se
 .site-nav-menu
     display: none
     +position(fixed, 0 100vw 0 0)
+    padding-top: 1em
     background-color: $bg-color-menu
     animation:
         name: slideout-menu
@@ -55,15 +62,32 @@ $bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-se
         duration: $base-duration
         timing-function: $base-timing
 
+.site-nav-menu--open
+    display: block
+    position: fixed
+    +size(250px, 100%)
+
+.site-nav-menu-link,
+.site-nav-menu__sub-menu-link
+    display: inline-block
+    width: 100%
+    padding: 0.5em
+    text-decoration: none
+    text-transform: uppercase
+    font: $menu-font
+
+.site-nav-menu-link
+    color: $fg-color-menu
+
+.site-nav-menu__sub-menu-link
+    color: $fg-color-submenu
+    padding-left: 1em
+
+// Mobile Menu Toggle
 .site-nav__menu-toggle
     +hmbrgr()
     +padding(10px)
-    // font: modular-scale(2, $nav-ms-base, $nav-ms-ratio) $roboto-condensed
-    // text-decoration: none
-    // color: $fg-color-nav
-    background: $bg-nav-button
-    background-size: 100% 200%
-    background-position-y: -100%
+    background: $bg-nav-button-mobile
     transition: all $base-duration $base-timing
 
 .site-nav__menu-toggle:focus,
@@ -71,11 +95,7 @@ $bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-se
     color: $fg-color-nav
     
 .site-nav__menu-toggle--active
-    background-position-y: 0%
-
-.site-nav-menu--open
-    display: block
-    +position(fixed, 0 calc(100vw - 256px) 0 0)
+    background-position-x: 0%
     
 //--------Tablet media query--------
 +mq(tablet)
@@ -90,7 +110,7 @@ $bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-se
     .site-nav--transparent .home-link__title
         font-size: modular-scale(2, $nav-ms-base, $nav-ms-ratio)
     
-    .site-nav__menu-toggle-container
+    .site-nav__menu-toggle
         display: none
 
 // Random bits and pieces to ignore
