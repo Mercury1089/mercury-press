@@ -1,0 +1,38 @@
+@mixin hmbrgr() {
+    position: relative;
+    display: inline-block;
+
+    span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        display: inline-block;
+    }
+    
+    &.expand { 
+        span:nth-child(1) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        span:nth-child(2) {
+            zoom: 1;
+            filter: alpha(opacity=0);
+            -webkit-opacity: 0;
+            -moz-opacity: 0;
+            opacity: 0;
+        }
+        
+        span:nth-child(3) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+}

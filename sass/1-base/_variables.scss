@@ -18,10 +18,11 @@ $diavlo: ('Diavlo', sans-serif);
 $oswald: ('Oswald', sans-serif);
 $abel: ('Abel', sans-serif);
 $roboto-mono: ('Roboto Mono', $font-stack-courier-new);
+$roboto-condensed: ('Roboto Condensed', $font-stack-system);
 
 // Typography
 $title-font-family: $diavlo;
-$base-font-family: $font-stack-system;
+$base-font-family: $roboto-condensed;
 $heading-font-family: $base-font-family;
 
 // Line height
@@ -63,4 +64,4 @@ $focus-outline-offset: 2px;
 
 // Animations
 $base-duration: 150ms;
-$base-timing: ease;
+$base-timing: $ease-out-circ;
