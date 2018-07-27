@@ -5,11 +5,11 @@ $nav-ms-ratio: $perfect-fifth
 $bg-color-nav: $black
 $fg-color-nav: contrast-switch($bg-color-nav)
 
-$bg-color-submenu: $dark-gray
-$fg-color-submenu: $light-gray
-
 $bg-color-menu: $dark-gray
 $fg-color-menu: contrast-switch($bg-color-menu)
+
+$bg-color-submenu: $light-gray
+$fg-color-submenu: contrast-switch($bg-color-submenu)
 
 $menu-font: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
 
@@ -62,6 +62,7 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
 
 .site-nav-menu__sub-menu
     display: none
+    background: $bg-color-submenu
 
 .site-nav-menu__sub-menu--open
     display: block
@@ -80,10 +81,17 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
 
 .site-nav-menu-link
     color: $fg-color-menu
+    background: $bg-nav-button-mobile
+    transition: all $base-duration $base-timing
+
+.site-nav-menu__item:hover .site-nav-menu-link,
+.site-nav-menu__item:focus .site-nav-menu-link
+    color: $fg-color-menu
+    background-position-x: 0%
 
 .site-nav-menu__sub-menu-link
-    color: $fg-color-submenu
     padding-left: 1em
+    color: $fg-color-submenu
 
 // Mobile Menu Toggle
 .site-nav__menu-toggle
