@@ -1,17 +1,17 @@
 // Site Nav Stylings
+$nav-ms-base: 1em
+$nav-ms-ratio: $perfect-fifth
+
 $bg-color-nav: $black
 $fg-color-nav: contrast-switch($bg-color-nav)
-
-$bg-color-menu: $dark-gray
-$fg-color-menu: contrast-switch($bg-color-menu)
 
 $bg-color-submenu: $dark-gray
 $fg-color-submenu: $light-gray
 
-$menu-font: 1em $oswald
+$bg-color-menu: $dark-gray
+$fg-color-menu: contrast-switch($bg-color-menu)
 
-$nav-ms-base: 1em
-$nav-ms-ratio: $perfect-fifth
+$menu-font: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
 
 $bg-color-nav-button-selected: $orange
 $bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-selected 50%) center -100%/100% 200% no-repeat
@@ -52,20 +52,22 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
 
 // Navigation Menu
 .site-nav-menu
-    display: none
+    display: inline-block
     +position(fixed, 0 100vw 0 0)
     padding-top: 1em
+    overflow-x: hidden 
+    overflow-y: overlay
     background-color: $bg-color-menu
-    animation:
-        name: slideout-menu
-        fill-mode: forwards
-        duration: $base-duration
-        timing-function: $base-timing
+    transition: all $base-duration $base-timing
+
+.site-nav-menu__sub-menu
+    display: none
+
+.site-nav-menu__sub-menu--open
+    display: block
 
 .site-nav-menu--open
-    display: block
-    position: fixed
-    +size(250px, 100%)
+    right: calc(100vw - 256px)
 
 .site-nav-menu-link,
 .site-nav-menu__sub-menu-link

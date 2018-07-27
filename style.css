@@ -557,24 +557,26 @@ hr {
   margin: 0 0 0 0.5em; }
 
 .site-nav-menu {
-  display: none;
+  display: inline-block;
   position: fixed;
   top: 0;
   right: 100vw;
   bottom: 0;
   left: 0;
   padding-top: 1em;
+  overflow-x: hidden;
+  overflow-y: overlay;
   background-color: #333;
-  animation-name: slideout-menu;
-  animation-fill-mode: forwards;
-  animation-duration: 150ms;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+  transition: all 150ms cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.site-nav-menu__sub-menu {
+  display: none; }
+
+.site-nav-menu__sub-menu--open {
+  display: block; }
 
 .site-nav-menu--open {
-  display: block;
-  position: fixed;
-  height: 100%;
-  width: 250px; }
+  right: calc(100vw - 256px); }
 
 .site-nav-menu-link,
 .site-nav-menu__sub-menu-link {
@@ -583,7 +585,7 @@ hr {
   padding: 0.5em;
   text-decoration: none;
   text-transform: uppercase;
-  font: 1em "Oswald", sans-serif; }
+  font: 1.5em "Oswald", sans-serif; }
 
 .site-nav-menu-link {
   color: #fff; }

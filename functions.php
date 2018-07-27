@@ -21,6 +21,7 @@ function resources() {
 
     // Enqueue resources
     wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'easing' );
     wp_enqueue_script( 'hamburger' );
     wp_enqueue_script( 'smooth-scroll' );
     wp_enqueue_script( 'load-transition' );
