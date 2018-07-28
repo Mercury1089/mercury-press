@@ -19,10 +19,6 @@ task initNpm(type: NpmTask) {
     args = ['init', '-y']
 }
 
-task installCssNano(type: NpmTask) {
-    args = ['install', '--save-prod', 'cssnano']
-}
-
 task compileSass( type: GulpTask, dependsOn: installGulp ) {
     args = ["sass"]
 }
