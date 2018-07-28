@@ -29,3 +29,14 @@ With the `gradle-node-plugin`, running Gulp tasks are as easy as
 ./gradlew gulp_<task>
 ```
 Do note that because of the nature of Gradle, these tasks cannot take in arguments.
+
+
+
+### Tasks
+#### Gradle
+- `compileSass`: Run-once compilation of all SASS files
+- `watchSass`: Continuous watch over SASS edits, runs a SASS compile on every edit of SASS
+
+#### Gulp
+- `sass`: Compilation task for SASS, runs through autoprefixer and cssnano as well
+- `sass:Watch`: Watch task that runs `sass` on SASS edits
