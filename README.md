@@ -19,9 +19,13 @@ many tools for building web apps and such.
 
 ### How to use
 Gradle is checked into the project, so running Gradle tasks are as easy as
-```gradlew <task>```
+```
+gradlew <task>
+```
 
 
 With the `gradle-node-plugin`, running Gulp tasks are as easy as
-```./gradlew gulp_<task>```
+```
+./gradlew gulp_<task>
+```
 Do note that because of the nature of Gradle, these tasks cannot take in arguments.
