@@ -2,9 +2,10 @@
 *.zip
 *.s*ssc
 
-# Style.css should not be checked in;
-# technically it's a build artifact.
+# Style.css or its maps should not be checked in;
+# technically they're a build artifact.
 style.css
+style.css.map
 
 ## IDE
 .vscode/

@@ -5,18 +5,20 @@ $nav-ms-ratio: $perfect-fifth
 $bg-color-nav: $black
 $fg-color-nav: contrast-switch($bg-color-nav)
 
+$bg-color-nav-button-selected: $orange
+$bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-selected 50%) center -100%/100% 200% no-repeat
+$bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-button-selected 50%) 100% center/200% 100% no-repeat
+
 $bg-color-menu: $dark-gray
 $fg-color-menu: contrast-switch($bg-color-menu)
 
 $bg-color-submenu: $light-gray
 $fg-color-submenu: contrast-switch($bg-color-submenu)
 
+$bg-color-submenuitem-selected: $medium-gray
+
 $menu-font: modular-scale(0, $nav-ms-base, $nav-ms-ratio) $oswald
 $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
-
-$bg-color-nav-button-selected: $orange
-$bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-selected 50%) center -100%/100% 200% no-repeat
-$bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-button-selected 50%) 100% center/200% 100% no-repeat
 
 @keyframes slideout-menu
     0%
@@ -42,6 +44,11 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
     text-decoration: none
     color: $fg-color-nav
     fill: $fg-color-nav
+
+.site-nav__home-link:hover,
+.site-nav__home-link:focus,
+.site-nav__home-link:active
+    color: $fg-color-nav
 
 .home-link__logo
     +size(auto, 100%)
@@ -92,6 +99,10 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
 .site-nav-menu__item:focus .site-nav-menu-link
     color: $fg-color-menu
     background-position-x: 0%
+
+.site-nav-menu__sub-menu-item:hover,
+.site-nav-menu__sub-menu-item:focus
+    background-color: $bg-color-submenuitem-selected
 
 .site-nav-menu__sub-menu-link
     padding-left: 1em
@@ -157,17 +168,20 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
         +size(fit-content, 0)
         +position(absolute, null null null 0)
         transform: translateY(20px)
-        +padding(null 2em null 0.5em)
+        +padding(0)
         opacity: 0
         transition: all $base-duration $base-timing
 
     .site-nav-menu__sub-menu-link
-        +padding(0.5em 0)
+        +padding(0.5em 2em 0.5em 0.5em)
 
-    .site-nav-menu__item:last-child .site-nav-menu__sub-menu
-        +position(absolute, null 0 null initial)
-        +padding(null 0.5em null 2em)
-        text-align: right
+    .site-nav-menu__item:last-child 
+        .site-nav-menu__sub-menu
+            +position(absolute, null 0 null initial)
+            text-align: right
+
+        .site-nav-menu__sub-menu-link
+            +padding(0.5em 0.5em 0.5em 2em)
 
     .site-nav-menu__item:hover,
     .site-nav-menu__item:focus

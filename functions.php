@@ -31,7 +31,7 @@ function resources() {
 }
 
 // Walker Section
-require 'php/bem_walker.php';
+require 'php/functions/bem_walker.php';
 
 // Register nav menus
 register_nav_menus(array(
