@@ -2,6 +2,10 @@
 *.zip
 *.s*ssc
 
+# Style.css should not be checked in;
+# technically it's a build artifact.
+style.css
+
 ## IDE
 .vscode/
 .sass-cache/

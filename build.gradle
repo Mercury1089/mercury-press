@@ -15,9 +15,7 @@ node {
     download = true
 }
 
-task initNpm(type: NpmTask) {
-    args = ['init', '-y']
-}
+gulp_install.dependsOn 'npmInstall'
 
 task compileSass( type: GulpTask, dependsOn: installGulp ) {
     args = ["sass"]
