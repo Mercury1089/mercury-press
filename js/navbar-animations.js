@@ -48,6 +48,7 @@ $j(window).on("resize", function() {
     });
   } else {
     $j(".site-nav-menu").removeClass('site-nav-menu--open');
-    $j(".site-nav-menu__sub-menu").removeClass('.site-nav-menu__sub-menu--open');
+    $j(".site-nav-menu__sub-menu").removeClass('.site-nav-menu__sub-menu--open')
+    $j(".site-nav-menu__sub-menu").removeAttr("style");
   }
 })
