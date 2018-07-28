@@ -11,7 +11,7 @@ gulp.task('sass', function() {
   .pipe(sass.sync())
 });
 
-gulp.task('default', function () {
+gulp.task('sass', function () {
   var processors = [
     autoprefixer,
     cssnano
@@ -21,4 +21,8 @@ gulp.task('default', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(gulp.dest('./'));
+});
+
+gulp.task('sass:watch', function() {
+  gulp.watch('./sass/**/*.s*ss', ['sass']);
 });

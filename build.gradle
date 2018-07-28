@@ -24,7 +24,11 @@ task installCssNano(type: NpmTask) {
 }
 
 task compileSass( type: GulpTask, dependsOn: installGulp ) {
-    
+    args = ["sass"]
+}
+
+task watchSass( type: GulpTask, dependsOn: installGulp ) {
+    args = ["sass:watch"]
 }
 
 task wrapper(type: Wrapper) {
