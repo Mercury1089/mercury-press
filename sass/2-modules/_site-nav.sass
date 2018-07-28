@@ -11,7 +11,8 @@ $fg-color-menu: contrast-switch($bg-color-menu)
 $bg-color-submenu: $light-gray
 $fg-color-submenu: contrast-switch($bg-color-submenu)
 
-$menu-font: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
+$menu-font: modular-scale(0, $nav-ms-base, $nav-ms-ratio) $oswald
+$menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
 
 $bg-color-nav-button-selected: $orange
 $bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-selected 50%) center -100%/100% 200% no-repeat
@@ -57,17 +58,20 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
     padding-top: 1em
     overflow-x: hidden 
     overflow-y: overlay
+    visibility: hidden
     background-color: $bg-color-menu
     transition: all $base-duration $base-timing
 
 .site-nav-menu__sub-menu
     display: none
+    overflow: hidden
     background: $bg-color-submenu
 
 .site-nav-menu__sub-menu--open
     display: block
 
 .site-nav-menu--open
+    visibility: visible
     right: calc(100vw - 256px)
 
 .site-nav-menu-link,
@@ -77,7 +81,7 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
     padding: 0.5em
     text-decoration: none
     text-transform: uppercase
-    font: $menu-font
+    font: $menu-font-mobile
 
 .site-nav-menu-link
     color: $fg-color-menu
@@ -112,6 +116,8 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
     // Master Bar
     .site-nav--transparent
         background-color: transparent
+        +size(100%, 128px)
+        padding: 32px 50px
 
     // Home Link
     .home-link__title
@@ -120,9 +126,63 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
     .site-nav--transparent .home-link__title
         font-size: modular-scale(2, $nav-ms-base, $nav-ms-ratio)
     
+    // Navigation Menu
+    .site-nav-menu
+        display: flex
+        justify-content: flex-end
+        +position(relative, auto)
+        +size(25em, auto)
+        padding: 0
+        overflow: unset
+        visibility: visible
+        background: none
+
+    .site-nav-menu__item
+        position: relative
+        height: 100%
+        margin-left: 1.5em
+
+    .site-nav-menu-link,
+    .site-nav-menu__sub-menu-link
+        display: inline-block
+        width: 100%
+        font: $menu-font
+
+    .site-nav-menu-link
+        +padding(0 0.5em)
+        background: $bg-nav-button
+    
+    .site-nav-menu__sub-menu
+        display: block
+        +size(fit-content, 0)
+        +position(absolute, null null null 0)
+        transform: translateY(20px)
+        +padding(null 2em null 0.5em)
+        opacity: 0
+        transition: all $base-duration $base-timing
+
+    .site-nav-menu__sub-menu-link
+        +padding(0.5em 0)
+
+    .site-nav-menu__item:last-child .site-nav-menu__sub-menu
+        +position(absolute, null 0 null initial)
+        +padding(null 0.5em null 2em)
+        text-align: right
+
+    .site-nav-menu__item:hover,
+    .site-nav-menu__item:focus
+        .site-nav-menu-link
+            background-position-y: 0%
+
+        .site-nav-menu__sub-menu
+            // display: block
+            transform: translateY(0px)
+            +size(fit-content, auto)
+            opacity: 1
+
+    .site-nav-menu__sub-menu-item
+        white-space: nowrap
+
+    // Mobile Menu Toggle
     .site-nav__menu-toggle
         display: none
-
-// Random bits and pieces to ignore
-.site-nav__menu-toggle-dummy
-    display: none

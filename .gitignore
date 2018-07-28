@@ -6,12 +6,12 @@
 .vscode/
 .sass-cache/
 
-# Config stuff
-*.json
-
 # Gradle
 .gradle/
 gradle/.launch/
+
+# Node/NPM-related stuff
+node_modules/
 
 ## Easy ignore with directories starting with "."
 .*

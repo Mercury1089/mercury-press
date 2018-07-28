@@ -1,5 +1,24 @@
-var grunt = require('grunt');
+var gulp = require('gulp');
 
-grunt.registerTask('default', 'default task description', function () {
-    console.log('hello world');
+var sass = require('gulp-sass');
+var postcss = require('gulp-postcss');
+
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
+
+gulp.task('sass', function() {
+  gulp.src("./sass/style.sass")
+  .pipe(sass.sync())
+});
+
+gulp.task('default', function () {
+  var processors = [
+    autoprefixer,
+    cssnano
+  ];
+
+  return gulp.src('./sass/style.sass')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./'));
 });

@@ -15,6 +15,18 @@ node {
     download = true
 }
 
+task initNpm(type: NpmTask) {
+    args = ['init', '-y']
+}
+
+task installCssNano(type: NpmTask) {
+    args = ['install', '--save-prod', 'cssnano']
+}
+
+task compileSass( type: GulpTask, dependsOn: installGulp ) {
+    
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '4.7'
 }

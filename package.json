@@ -1,0 +1,28 @@
+{
+  "name": "Mercury2017",
+  "version": "1.0.0",
+  "description": "Website theme for Mercury1089's WordPress site",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^9.0.1",
+    "cssnano": "^4.0.4",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mercury1089/Mercury2017.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mercury1089/Mercury2017/issues"
+  },
+  "homepage": "https://github.com/Mercury1089/Mercury2017#readme"
+}
