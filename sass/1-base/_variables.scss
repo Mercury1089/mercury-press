@@ -14,11 +14,11 @@
     font-weight: 700;
 };
 
-$diavlo: ('Diavlo', sans-serif);
-$oswald: ('Oswald', sans-serif);
-$abel: ('Abel', sans-serif);
-$roboto-mono: ('Roboto Mono', $font-stack-courier-new);
-$roboto-condensed: ('Roboto Condensed', $font-stack-system);
+$diavlo: 'Diavlo', sans-serif;
+$oswald: 'Oswald', sans-serif;
+$abel: 'Abel', sans-serif;
+$roboto-mono: 'Roboto Mono', $font-stack-courier-new;
+$roboto-condensed: 'Roboto Condensed', $font-stack-system;
 
 // Typography
 $title-font-family: $diavlo;

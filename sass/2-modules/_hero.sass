@@ -1,0 +1,43 @@
+// Hero Style
+$bg-tint-hero: 0.5
+$bg-hero-default: url('./images/hero_test.jpg') center/cover no-repeat
+
+$fg-color-hero: $white
+
+$font-hero-largetext: $oswald
+$font-hero-smalltext: $roboto-condensed
+
+// Hero Container
+.hero
+    display: flex
+    min-height: 25em
+    +padding(2em)
+    background-color: rgba(0, 0, 0, $bg-tint-hero)
+
+.hero:before
+    content: ''
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: -1
+    background: $bg-hero-default
+
+.hero--large
+    min-height: 100vh
+
+// Hero Content Wrapper
+.hero__content
+    +margin(auto auto auto 0)
+
+// Hero Text
+.hero-content__text
+    color: $fg-color-hero
+
+.hero-content__text--large
+    font: bold modular-scale(3) $font-hero-largetext
+    text-transform: uppercase
+
+.hero-content__text--small
+    font: modular-scale(1) $font-hero-smalltext
