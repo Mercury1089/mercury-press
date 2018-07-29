@@ -27,7 +27,7 @@ $j(window).on("load", function() {
   });
 });
 
-$j(window).on("resize", function() {
+$j(window).on("load resize", function() {
   var menulink = $j(".site-nav-menu-link");
   menulink.unbind("click");
 
