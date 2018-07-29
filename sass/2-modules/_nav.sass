@@ -12,10 +12,10 @@ $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-b
 $bg-color-menu: $dark-gray
 $fg-color-menu: contrast-switch($bg-color-menu)
 
-$bg-color-submenu: $light-gray
+$bg-color-submenu: $medium-gray
 $fg-color-submenu: contrast-switch($bg-color-submenu)
 
-$bg-color-submenuitem-selected: $medium-gray
+$bg-color-submenuitem-selected: $light-gray
 
 $menu-font: modular-scale(0, $nav-ms-base, $nav-ms-ratio) $oswald
 $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
@@ -24,8 +24,7 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
     0%
         transform: translateX(-256px)        
 
-// Master Bar
-.site-nav
+.nav // Nav Container
     display: flex
     justify-content: space-between
     align-items: center
@@ -35,39 +34,62 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
     background-color: $bg-color-nav
     transition: all $base-duration $base-timing
 
-// Home Link
-.site-nav__home-link
-    display: flex
-    align-items: center
-    +size(auto, 100%)
-    white-space: nowrap
-    text-decoration: none
-    color: $fg-color-nav
-    fill: $fg-color-nav
+    &__item // All Nav Items
+        display: flex
+        align-items: center
+        +size(auto, 100%)
+        white-space: nowrap
+        text-decoration: none
+        color: $fg-color-nav
+        fill: $fg-color-nav
+        transition: all $base-duration $base-timing
 
-.site-nav__home-link:hover,
-.site-nav__home-link:focus,
-.site-nav__home-link:active
-    color: $fg-color-nav
+        &--type--home-link // Nav Home Link
+            &:hover,
+            &:focus,
+            &:active
+                color: $fg-color-nav
 
-.home-link__logo
-    +size(auto, 100%)
+            .home-link__part
+                &:last-child
+                    +margin(0 0 0 0.5em)
+                &--type--img
+                    +size(auto, 100%)
+                &--type--text
+                    display: none
+                    font: bold modular-scale(1, $nav-ms-base, $nav-ms-ratio) $diavlo
+        
+        &--type--menu-toggle
+            +hmbrgr()
+            +padding(10px)
+            background: $bg-nav-button-mobile
 
-.home-link__title
-    display: none
-    font: bold modular-scale(1, $nav-ms-base, $nav-ms-ratio) $diavlo
-    +margin(0 0 0 0.5em)
+        &--active
+            background-position-x: 0%
 
-// Navigation Menu
-.site-nav-menu
-    display: inline-block
-    +position(fixed, 0 100vw 0 0)
-    padding-top: 1em
-    overflow-x: hidden 
-    overflow-y: overlay
-    visibility: hidden
-    background-color: $bg-color-menu
-    transition: all $base-duration $base-timing
+    &__menu // Nav Menu
+        display: inline-block
+        +position(fixed, 0 100vw 0 0)
+        right: calc(100vw - 256px)
+        transform: translateX(-256px)
+        padding-top: 1em
+        overflow-x: hidden 
+        overflow-y: overlay
+        visibility: hidden
+        background-color: $bg-color-menu
+        transition: all $base-duration $base-timing
+
+        &--open
+            transform: translateX(0px)
+
+        .nav-menu__item // All nav menu items
+            transition: all $base-duration $base-timing
+        
+        .nav-menu__sub-item // All nav menu sub-items
+            transition: all $base-duration $base-timing
+
+        .nav-sub-menu__item // All nav sub-menu items
+            transition: all $base-duration $base-timing
 
 .site-nav-menu__sub-menu
     display: none
@@ -110,9 +132,6 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
 
 // Mobile Menu Toggle
 .site-nav__menu-toggle
-    +hmbrgr()
-    +padding(10px)
-    background: $bg-nav-button-mobile
     transition: all $base-duration $base-timing
 
 .site-nav__menu-toggle:focus,

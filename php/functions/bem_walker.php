@@ -1,135 +1,107 @@
 <?php
 /**
- * Walker Texas Ranger
- * Inserts some BEM naming sensibility into Wordpress menus
- * 
- * Author: roikles
+ * Plugin Name: BEM Walker Nav Menu
+ * Plugin URI:  https://github.com/benjamincrozat/bem-walker-nav-menu
+ * Description: BEM Walker Nav Menu for WordPress.
+ * Version:     1.0.0
+ * Author:      Benjamin Crozat
+ * Author URI:  https://benjamincrozat.com
+ * License:     WTFPL
+ * License URI: http://www.wtfpl.net/about/
  */
-class Walker_Texas_Ranger extends Walker_Nav_Menu {
-    function __construct($css_class_prefix) {
-        $this->css_class_prefix = $css_class_prefix;
-        
-        // Define menu item names appropriately
-        $this->item_css_class_suffixes = array(
-            'item'                      => '__item',  
-            'parent_item'               => '__item--parent',
-            'active_item'               => '__item--active',
-            'parent_of_active_item'     => '__item--parent--active',
-            'ancestor_of_active_item'   => '__item--ancestor--active',
-            'sub_menu'                  => '__sub-menu',
-            'sub_menu_item'             => '__sub-menu-item',
-            'link'                      => '-link',
-        );
+
+if (!defined('WPINC')) {
+    exit;
+}
+class BEMWalkerNavMenu extends \Walker_Nav_Menu
+{
+    /**
+     * @var string
+     */
+    protected $prefix = '';
+    /**
+     * @var string
+     */
+    protected $navListClass = 'nav__list';
+    /**
+     * @var string
+     */
+    protected $navItemClass = 'nav__item';
+    /**
+     * @var string
+     */
+    protected $navLinkClass = 'nav__link';
+    /**
+     * @var string
+     */
+    protected $subNavClass = 'sub-nav';
+    /**
+     * @var string
+     */
+    protected $subNavItemClass = 'sub-nav__item';
+    /**
+     * @var string
+     */
+    protected $subNavLinkClass = 'sub-nav__link';
+    public function __construct()
+    {
+        add_filter('wp_nav_menu_args', function ($args) {
+            $args['items_wrap'] = '<ul id="%1$s" class="' . $this->getPrefix() . $this->navListClass . '">%3$s</ul>';
+            return $args;
+        });
     }
-    // Check for children
-    function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ){
-                
-        $id_field = $this->db_fields['id'];
-        
-        if ( is_object( $args[0] ) ) {
-            $args[0]->has_children = !empty( $children_elements[$element->$id_field] );
+    public function start_lvl(&$output, $depth = 0, $args = [])
+    {
+        $output .= sprintf('<ul class="%s">', $this->getPrefix() . $this->subNavClass);
+    }
+    public function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
+    {
+        $classes = empty($item->classes) ? [] : (array) $item->classes;
+        array_walk($classes, function (&$value) use ($depth) {
+            $replacement = $depth ? $this->getPrefix() . $this->subNavItemClass : $this->getPrefix() . $this->navItemClass;
+            $value = str_replace('menu-item-', sprintf('%s--', $replacement), $value);
+            $value = str_replace('menu-item', $replacement, $value);
+        });
+        $classes[] = sprintf('%s--%s', $this->getPrefix() . $this->navItemClass, $item->ID);
+        $args = apply_filters('nav_menu_item_args', $args, $item, $depth);
+        $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args, $depth));
+        $class_names = $class_names ? sprintf(' class="%s"', esc_attr($class_names)) : '';
+        $id = apply_filters('nav_menu_item_id', sprintf('%s--%s', $this->getPrefix() . $this->navItemClass, $item->ID), $item, $args, $depth);
+        $id = $id ? sprintf(' id="%s"', esc_attr($id)) : '';
+        $output .= sprintf('<li%s%s>', $id, $class_names);
+        $atts = [];
+        $atts['title']  = !empty($item->attr_title) ? $item->attr_title      : '';
+        $atts['target'] = !empty($item->target)     ? $item->target          : '';
+        $atts['rel']    = !empty($item->xfn)        ? $item->xfn             : '';
+        $atts['href']   = !empty($item->url)        ? $item->url             : '';
+        $atts['class']  = $depth                    ? $this->getPrefix() . $this->subNavLinkClass : $this->getPrefix() . $this->navLinkClass;
+        $atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args, $depth);
+        $attributes = '';
+        foreach ($atts as $attr => $value) {
+            if (empty($value)) {
+                continue;
+            }
+            $value       = 'href' === $attr ? esc_url($value) : esc_attr($value);
+            $attributes .= sprintf('%s="%s"', $attr, $value);
         }
-        
-        return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-    
-    }
-    
-    function start_lvl(&$output, $depth = 1, $args=array()) {
-        
-        $real_depth = $depth + 1;
-        
-        $indent = str_repeat("\t", $real_depth);
-        $prefix = $this->css_class_prefix;
-        $suffix = $this->item_css_class_suffixes;
-        $classes = array(
-            $prefix . $suffix['sub_menu'],
-            $prefix . $suffix['sub_menu']. '--' . $real_depth
-        );
-        $class_names = implode( ' ', $classes );
-        // Add a ul wrapper to sub nav
-        $output .= "\n" . $indent . '<ul class="'. $class_names .'">' ."\n";
-    }
-  
-    // Add main/sub classes to li's and links
-     
-    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-        
-        global $wp_query;
-        
-        $indent = ( $depth > 0 ? str_repeat( "    ", $depth ) : '' ); // code indent
-        $prefix = $this->css_class_prefix;
-        $suffix = $this->item_css_class_suffixes;
-        // Item classes
-        $item_classes =  array(
-            'item_class'            => $depth == 0 ? $prefix . $suffix['item'] : '',
-            'parent_class'          => $args->has_children ? $parent_class = $prefix . $suffix['parent_item'] : '',
-            'active_page_class'     => in_array("current-menu-item",$item->classes) ? $prefix . $suffix['active_item'] : '',
-            'active_parent_class'   => in_array("current-menu-parent",$item->classes) ? $prefix . $suffix['parent_of_active_item'] : '',
-            'active_ancestor_class' => in_array("current-menu-ancestor",$item->classes) ? $prefix . $suffix['ancestor_of_active_item'] : '',
-            'depth_class'           => $depth >=1 ? $prefix . $suffix['sub_menu_item'] . ' ' . $prefix . $suffix['sub_menu'] . '--' . $depth . '__item' : '',
-            'item_id_class'         => $prefix . '__item--'. $item->object_id,
-            'user_class'            => $item->classes[0] !== '' ? $prefix . '__item--'. $item->classes[0] : ''
-        );
-        // convert array to string excluding any empty values
-        $class_string = implode("  ", array_filter($item_classes));
-        // Add the classes to the wrapping <li>
-        $output .= $indent . '<li class="' . $class_string . '">';
-        // Link classes
-        $link_classes = array(
-            'item_link'             => $depth == 0 ? $prefix . $suffix['link'] : '',
-            'depth_class'           => $depth >=1 ? $prefix . $suffix['sub_menu'] . $suffix['link'] . '  ' . $prefix . $suffix['sub_menu'] . '--' . $depth . $suffix['link'] : '',
-        );
-        $link_class_string = implode("  ", array_filter($link_classes));
-        $link_class_output = 'class="' . $link_class_string . '"';
-        // link attributes
-        $attributes  = ! empty($item->attr_title) ? ' title="'  . esc_attr($item->attr_title) .'"' : '';
-        $attributes .= ! empty($item->target)     ? ' target="' . esc_attr($item->target    ) .'"' : '';
-        $attributes .= ! empty($item->xfn)        ? ' rel="'    . esc_attr($item->xfn       ) .'"' : '';
-        $attributes .= ! empty($item->url)        ? ' href="'   . esc_attr($item->url       ) .'"' : '';
-        // Creatre link markup
-        $item_output = $args->before;
-        $item_output .= '<a' . $attributes . ' ' . $link_class_output . '>';
-        $item_output .=     $args->link_before;
-        $item_output .=     apply_filters('the_title', $item->title, $item->ID);
-        $item_output .=     $args->link_after;
-        $item_output .=     $args->after;
+        $title = apply_filters('the_title', $item->title, $item->ID);
+        $title = apply_filters('nav_menu_item_title', $title, $item, $args, $depth);
+        $item_output  = $args->before;
+        $item_output .= sprintf('<a %s>', $attributes);
+        $item_output .= $args->link_before . $title . $args->link_after;
         $item_output .= '</a>';
-        // Filter <li>
- 
+        $item_output .= $args->after;
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
-    
-}
-/**
- * bem_menu returns an instance of the walker_texas_ranger class with the following arguments
- * @param  string $location This must be the same as what is set in wp-admin/settings/menus for menu location.
- * @param  string $css_class_prefix This string will prefix all of the menu's classes, BEM syntax friendly
- * @param  arr/string $css_class_modifiers Provide either a string or array of values to apply extra classes to the <ul> but not the <li's>
- * @return [type]
- */
-function bem_menu($location = "main_menu", $css_class_prefix = 'main-menu', $css_class_modifiers = null) {  
-    
-    // Check to see if any css modifiers were supplied
-    if($css_class_modifiers){
-        if(is_array($css_class_modifiers)){
-            $modifiers = implode(" ", $css_class_modifiers);
-        } elseif (is_string($css_class_modifiers)) {
-            $modifiers = $css_class_modifiers;
+    /**
+     * @return string
+     */
+    protected function getPrefix()
+    {
+        if (empty($this->prefix)) {
+            return '';
         }
-    } else {
-        $modifiers = '';
-    }
-    $args = array(
-        'theme_location'    => $location,
-        'container'         => false,
-        'items_wrap'        => '<ul class="' . $css_class_prefix . ' ' . $modifiers . '">%3$s</ul>',
-        'walker'            => new walker_texas_ranger($css_class_prefix, true)
-    );
-    
-    if (has_nav_menu($location)){
-        return wp_nav_menu($args);
-    }else{
-        echo "<p>You need to first define a menu in WP-admin<p>";
+        return $this->prefix . '-';
     }
 }
 ?>

@@ -1,5 +1,5 @@
 {
-  "name": "Mercury2017",
+  "name": "mercury-press",
   "version": "1.0.0",
   "description": "Website theme for Mercury1089's WordPress site",
   "main": "Gulpfile.js",
@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mercury1089/Mercury2017.git"
+    "url": "git+https://github.com/Mercury1089/mercury-press.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mercury1089/Mercury2017/issues"
+    "url": "https://github.com/Mercury1089/mercury-press/issues"
   },
-  "homepage": "https://github.com/Mercury1089/Mercury2017#readme"
+  "homepage": "https://github.com/Mercury1089/mercury-press#readme"
 }

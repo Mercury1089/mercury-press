@@ -1,17 +1,20 @@
 <?php
     global $post;
+
     $post_id = $post->ID;
     $author_id = $post->post_author;
     $date = $post->post_date;
 
-    // Create hero
     $hero_class = array("hero");
     $content = array(
         get_the_title( $post ), 
-        "By" . get_the_author_meta( 'display_name', $author_id ) . " | " . $date
+        "By " . get_the_author_meta( 'display_name', $author_id ) . " | " . $date
     );
     $call = null;
 
+    $main_class = array("content");
+
+    // Create hero
     // Hero sizes
     if (is_front_page()) // Full-height hero is for the front-page only.
         array_push($hero_class, "hero--large");
@@ -31,12 +34,19 @@
         
         $content[0] = $page->post_title;
         $content[1] = $page->post_content;
+    } else if ( is_singular( "page" ) ) {
+        $content[1] = "";
     }
+
+    // Generate main classes
+    if ( is_singular('post') )
+        array_push( $main_class, "content--post" );
 ?>
 <header class="<?php echo implode(" ", $hero_class); ?>">
     <div class="hero__content">
         <h1 class="hero-content__text hero-content__text--large"><?php echo $content[0]; ?></h1>
         <p class="hero-content__text hero-content__text--small"><?php echo $content[1]; ?></p>
+        <a class="button hero__call-to-action landing-section__button landing-section__button--light" href="#jump">LEARN MORE</a>
     </div>
 </header>
-<main class="page-content page-content--blog">
+<main class="<?php echo implode(" ", $main_class); ?>">
