@@ -34,6 +34,11 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
     background-color: $bg-color-nav
     transition: all $base-duration $base-timing
 
+    &--transparent
+        background-color: transparent
+        +size(100%, 128px)
+        padding: 32px 50px
+
     &__item // All Nav Items
         display: flex
         align-items: center
@@ -59,7 +64,7 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
                     display: none
                     font: bold modular-scale(1, $nav-ms-base, $nav-ms-ratio) $diavlo
         
-        &--type--menu-toggle
+        &--type--menu-toggle // Nav mobile menu toggle
             +hmbrgr()
             +padding(10px)
             background: $bg-nav-button-mobile
@@ -68,7 +73,8 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
             background-position-x: 0%
 
     &__menu // Nav Menu
-        display: inline-block
+        display: flex
+        flex-direction: column
         +position(fixed, 0 100vw 0 0)
         right: calc(100vw - 256px)
         transform: translateX(-256px)
@@ -80,141 +86,126 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
         transition: all $base-duration $base-timing
 
         &--open
+            visibility: visible
             transform: translateX(0px)
 
-        .nav-menu__item // All nav menu items
-            transition: all $base-duration $base-timing
+        .nav-menu // All controls inside nav__menu
+            &__item // All nav menu items
+                font: $menu-font-mobile
+                text-transform: uppercase 
+                transition: all $base-duration $base-timing
+                color: $fg-color-menu
+                background: $bg-nav-button-mobile
+
+                &:hover,
+                &:focus,
+                &:active
+                    color: $fg-color-menu
+                    background-position-x: 0%
+                 
+            &__anchor // Item anchors
+                display: inline-block
+                width: 100%
+                padding: 0.5em
+                color: inherit
+                text-decoration: none      
         
-        .nav-menu__sub-item // All nav menu sub-items
-            transition: all $base-duration $base-timing
+            &__sub-menu // All nav sub-menus
+                display: none
+                overflow: hidden
+            
+                &--open
+                    display: block
 
-        .nav-sub-menu__item // All nav sub-menu items
-            transition: all $base-duration $base-timing
+                .nav-sub-menu // All nav menu sub-items
+                    &__item
+                        +padding(0.5em)
+                        color: $fg-color-submenu
+                        text-transform: uppercase
+                        background-color: $bg-color-submenu
 
-.site-nav-menu__sub-menu
-    display: none
-    overflow: hidden
-    background: $bg-color-submenu
+                        &:hover,
+                        &:focus,
+                        &:active
+                            color: $action-color 
+                            background-color: $bg-color-submenuitem-selected
 
-.site-nav-menu__sub-menu--open
-    display: block
-
-.site-nav-menu--open
-    visibility: visible
-    right: calc(100vw - 256px)
-
-.site-nav-menu-link,
-.site-nav-menu__sub-menu-link
-    display: inline-block
-    width: 100%
-    padding: 0.5em
-    text-decoration: none
-    text-transform: uppercase
-    font: $menu-font-mobile
-
-.site-nav-menu-link
-    color: $fg-color-menu
-    background: $bg-nav-button-mobile
-    transition: all $base-duration $base-timing
-
-.site-nav-menu__item:hover .site-nav-menu-link,
-.site-nav-menu__item:focus .site-nav-menu-link
-    color: $fg-color-menu
-    background-position-x: 0%
-
-.site-nav-menu__sub-menu-item:hover,
-.site-nav-menu__sub-menu-item:focus
-    background-color: $bg-color-submenuitem-selected
-
-.site-nav-menu__sub-menu-link
-    padding-left: 1em
-    color: $fg-color-submenu
-
-// Mobile Menu Toggle
-.site-nav__menu-toggle
-    transition: all $base-duration $base-timing
-
-.site-nav__menu-toggle:focus,
-.site-nav__menu-toggle:hover
-    color: $fg-color-nav
+                    &__anchor
+                        display: inline-block
+                        width: 100%
+                        padding-left: 1em
+                        text-decoration: none
+                        color: inherit
     
-.site-nav__menu-toggle--active
-    background-position-x: 0%
-    
-//--------Tablet media query--------
+//--------Tablet+ media query--------
 +mq(tablet)
-    // Master Bar
-    .site-nav--transparent
-        background-color: transparent
-        +size(100%, 128px)
-        padding: 32px 50px
+    .nav // Nav Container
+        &--transparent
+            .home-link__part--text
+                font-size: modular-scale(2, $nav-ms-base, $nav-ms-ratio)
 
-    // Home Link
-    .home-link__title
-        display: inline
+        .home-link__part--type--text
+            display: inline
+
+        &__item // Nav Items
+            &--type--menu-toggle // Mobile Menu Toggle
+                display: none
         
-    .site-nav--transparent .home-link__title
-        font-size: modular-scale(2, $nav-ms-base, $nav-ms-ratio)
-    
-    // Navigation Menu
-    .site-nav-menu
-        display: flex
-        justify-content: flex-end
-        +position(relative, auto)
-        +size(25em, auto)
-        padding: 0
-        overflow: unset
-        visibility: visible
-        background: none
+        &__menu // Navigation Menu
+            flex-direction: row
+            justify-content: flex-end
+            +position(relative, auto)
+            transform: none
+            +size(25em, auto)
+            padding: 0
+            overflow: unset
+            visibility: visible
+            background: none
 
-    .site-nav-menu__item
-        position: relative
-        height: 100%
-        margin-left: 1.5em
+            .nav-menu // All nav__menu children
+                &__item // Nav items
+                    position: relative
+                    height: 100%
+                    +padding(0.5em 0)
+                    margin-left: 1.5em
+                    font: $menu-font
+                    background: none
+                    
+                    &:hover,
+                    &:focus,
+                    &:active // Nav item: "Active" state
+                        .nav-menu__anchor
+                            background-position-y: 0%
 
-    .site-nav-menu-link,
-    .site-nav-menu__sub-menu-link
-        display: inline-block
-        width: 100%
-        font: $menu-font
+                        .nav-menu__sub-menu
+                            transform: translateY(5px)
+                            +size(fit-content, auto)
+                            opacity: 1
 
-    .site-nav-menu-link
-        +padding(0 0.5em)
-        background: $bg-nav-button
-    
-    .site-nav-menu__sub-menu
-        display: block
-        +size(fit-content, 0)
-        +position(absolute, null null null 0)
-        transform: translateY(20px)
-        +padding(0)
-        opacity: 0
-        transition: all $base-duration $base-timing
+                    &:last-child // Nav item: "Last" state
+                        .nav-menu__sub-menu
+                            +position(absolute, null 0 null initial)
+                            text-align: right
 
-    .site-nav-menu__sub-menu-link
-        +padding(0.5em 2em 0.5em 0.5em)
+                        .nav-sub-menu__anchor
+                            +padding(0 0 0 1.5em)
 
-    .site-nav-menu__item:last-child 
-        .site-nav-menu__sub-menu
-            +position(absolute, null 0 null initial)
-            text-align: right
+                &__anchor // Item Anchors
+                    +padding(0 0.5em)
+                    width: 100%
+                    background: $bg-nav-button
 
-        .site-nav-menu__sub-menu-link
-            +padding(0.5em 0.5em 0.5em 2em)
+                &__sub-menu // Nav Sub Menu
+                    display: block
+                    +size(fit-content, 0)
+                    +position(absolute, null initial null 0)
+                    transform: translateY(20px)
+                    +padding(0)
+                    opacity: 0
+                    transition: all $base-duration $base-timing
 
-    .site-nav-menu__item:hover,
-    .site-nav-menu__item:focus
-        .site-nav-menu-link
-            background-position-y: 0%
-
-        .site-nav-menu__sub-menu
-            transform: translateY(0px)
-            +size(fit-content, auto)
-            opacity: 1
-
-    .site-nav-menu__sub-menu-item
-        white-space: nowrap
-
-    // Mobile Menu Toggle
-    .site-nav__menu-toggle
-        display: none
+                    .nav-sub-menu // All nav sub-menu children
+                        &__item
+                            white-space: nowrap
+                        &__anchor
+                            +padding(0 1.5em 0 0)

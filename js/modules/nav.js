@@ -16,45 +16,49 @@ $j(window).on("load", function() {
   });
 
   toggle.click(function() {
-    var submenu = $j(".site-nav-menu__sub-menu");
+    var submenu = $j(".nav-menu__sub-menu");
 
     toggle.toggleClass("nav__item--active");
     $j(".nav__menu").toggleClass('nav__menu--open');
 
     submenu.slideUp(150, "easeOutCirc", function() {
-      $j(this).removeClass(".site-nav-menu__sub-menu--open");
+      $j(this).removeClass(".nav-menu__sub-menu--open");
     });
   });
 });
 
 // Nav Toggles
 $j(window).on("load resize", function() {
-  var menulink = $j(".site-nav-menu-link");
+  var menulink = $j(".nav-menu__anchor");
   menulink.unbind("click");
 
-  if ( $j(".site-nav__menu-toggle").css("display") != "none" ) {
-    var active = $j(".site-nav__menu-toggle--active").length > 0;
+  if ( $j(".nav__item--type--menu-toggle").css("display") != "none" ) {
+    var active = $j(".nav__item--active").length > 0;
 
-    $j(".site-nav-menu").toggleClass('site-nav-menu--open', active);
+    $j(".nav__menu").toggleClass('nav__menu--open', active);
 
     menulink.click(function (e) {
-        var sibling = $j(this).parent().find(".site-nav-menu__sub-menu");
+        var child = $j(this).parent().find(".nav-menu__sub-menu");
 
-        if (sibling) {
-          sibling.slideToggle(150, "easeOutCirc");
-          sibling.toggleClass('.site-nav-menu__sub-menu--open');
+        if (child) {
+          child.slideToggle(150, "easeOutCirc");
+          child.toggleClass('nav-menu__sub-menu--open');
         }
 
         e.preventDefault();
     });
   } else {
-    $j(".site-nav-menu").removeClass('site-nav-menu--open');
-    $j(".site-nav-menu__sub-menu").removeClass('.site-nav-menu__sub-menu--open')
-    $j(".site-nav-menu__sub-menu").removeAttr("style");
+    $j(".nav__menu").removeClass('nav__menu--open');
+    $j(".nav-menu__sub-menu").removeClass('nav-menu__sub-menu--open')
+    $j(".nav-menu__sub-menu").removeAttr("style");
   }
 });
 
 // Transparency Transition
-$j(window).on("load resize scroll", function() {
-  $j(".site-nav").toggleClass("site-nav--transparent", $j(window).scrollTop() === 0 && $j(document).width() > 768);
+$j(document).on("ready", function() {
+  $j(".nav").toggleClass("nav--transparent", $j(window).scrollTop() === 0 && $j(document).width() > 768);
+});
+
+$j(window).on("resize scroll", function() {
+  $j(".nav").toggleClass("nav--transparent", $j(window).scrollTop() === 0 && $j(document).width() > 768);
 });
