@@ -10,7 +10,7 @@
         get_the_title( $post ), 
         "By " . get_the_author_meta( 'display_name', $author_id ) . " | " . $date
     );
-    $call = null;
+    $call = array();
 
     $main_class = array("content");
 
@@ -38,15 +38,27 @@
         $content[1] = "";
     }
 
+    // Hero Button Content
+
     // Generate main classes
     if ( is_singular('post') )
         array_push( $main_class, "content--post" );
 ?>
 <header class="<?php echo implode(" ", $hero_class); ?>">
     <div class="hero__content">
-        <h1 class="hero-content__text hero-content__text--large"><?php echo $content[0]; ?></h1>
-        <p class="hero-content__text hero-content__text--small"><?php echo $content[1]; ?></p>
-        <a class="button hero__call-to-action landing-section__button landing-section__button--light" href="#jump">LEARN MORE</a>
+        
+        <?php if ( !empty( $content[0] ) ) { ?>
+            <h1 class="hero-content__text hero-content__text--large"><?php echo $content[0]; ?></h1>
+        <?php } ?>
+
+        <?php if ( !empty( $content[1] ) ) { ?>
+            <p class="hero-content__text hero-content__text--small"><?php echo $content[1]; ?></p>
+        <?php } ?>
+        
+        <?php if ( count( $call ) === 2 ) { ?>
+            <a class="hero-content__button" href="<?php echo $call[0]; ?>"><?php echo $call[1]; ?></a>
+        <?php } ?>
+
     </div>
 </header>
 <main class="<?php echo implode(" ", $main_class); ?>">

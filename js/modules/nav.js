@@ -55,10 +55,10 @@ $j(window).on("load resize", function() {
 });
 
 // Transparency Transition
-$j(document).on("ready", function() {
+function transitionTransparency() {
   $j(".nav").toggleClass("nav--transparent", $j(window).scrollTop() === 0 && $j(document).width() > 768);
-});
+};
 
-$j(window).on("resize scroll", function() {
-  $j(".nav").toggleClass("nav--transparent", $j(window).scrollTop() === 0 && $j(document).width() > 768);
-});
+$j(document).on("ready", transitionTransparency);
+
+$j(window).on("resize scroll", transitionTransparency);
