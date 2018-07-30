@@ -29,7 +29,7 @@ $j(window).on("load", function() {
 
 // Nav Toggles
 $j(window).on("load resize", function() {
-  var menulink = $j(".nav-menu__anchor");
+  var menulink = $j(".nav-menu__item--has-children .nav-menu__anchor");
   menulink.unbind("click");
 
   if ( $j(".nav__item--type--menu-toggle").css("display") != "none" ) {
@@ -43,6 +43,7 @@ $j(window).on("load resize", function() {
         if (child) {
           child.slideToggle(150, "easeOutCirc");
           child.toggleClass('nav-menu__sub-menu--open');
+          e.preventDefault();
         }
     });
   } else {
