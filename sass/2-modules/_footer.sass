@@ -1,5 +1,6 @@
 // Footer Stylings
 $bg-footer: shade($dark-gray, 25%)
+$fg-footer: $light-gray
 
 .footer
     +padding(2em)
@@ -7,3 +8,24 @@ $bg-footer: shade($dark-gray, 25%)
 
     &__section
         display: flex
+        color: $light-gray
+
+        &:not(:last-child)
+            +margin(0 0 1em 0)
+
+        &--type--social
+            fill: $light-gray
+            justify-content: center
+
+        &--type--copyright
+            text-align: center
+
+    &__social-link
+        +size(fit-content, 2em)
+
+        &:not(:last-child)
+            +margin(0 1.5em 0 0)
+
+        .social-link
+            &__svg
+                height: 100%
