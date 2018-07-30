@@ -44,8 +44,6 @@ $j(window).on("load resize", function() {
           child.slideToggle(150, "easeOutCirc");
           child.toggleClass('nav-menu__sub-menu--open');
         }
-
-        e.preventDefault();
     });
   } else {
     $j(".nav__menu").removeClass('nav__menu--open');
