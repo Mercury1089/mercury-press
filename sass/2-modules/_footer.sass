@@ -1,6 +1,8 @@
 // Footer Stylings
 $bg-footer: shade($dark-gray, 25%)
 $fg-footer: $light-gray
+$fg-footer-hover: transparentize($light-gray, 0.25)
+$fg-footer-focus: shade($action-color, 25%)
 
 .footer
     +padding(2em)
@@ -8,17 +10,34 @@ $fg-footer: $light-gray
 
     &__section
         display: flex
+        justify-content: center
+        align-content: center
+        +size(fit-content, auto)
+        +margin(null auto)
+        text-align: center
         color: $light-gray
+        transition: all $base-duration $base-timing
 
         &:not(:last-child)
-            +margin(0 0 1em 0)
+            +margin(null null 1em null)
 
-        &--type--social
-            fill: $light-gray
-            justify-content: center
+        &--type--social // Social Links Section
+            .footer__social-link
+                fill: $light-gray
+                transition: all $base-duration $base-timing
 
-        &--type--copyright
+            &:hover
+                .footer__social-link
+                    fill: $fg-footer-hover
+
+                    &:hover
+                        fill: $fg-footer-focus
+
+        &--type--copyright // Copyright Info
             text-align: center
+
+        &--type--widgets
+            text-align: left
 
     &__social-link
         +size(fit-content, 2em)
