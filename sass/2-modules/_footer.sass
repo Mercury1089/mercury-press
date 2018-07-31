@@ -4,6 +4,8 @@ $fg-footer: $light-gray
 $fg-footer-hover: transparentize($light-gray, 0.25)
 $fg-footer-focus: shade($action-color, 25%)
 
+$font-footer-widget-title: bold modular-scale(1) $abel
+
 .footer
     +padding(2em)
     background: $bg-footer
@@ -37,7 +39,33 @@ $fg-footer-focus: shade($action-color, 25%)
             text-align: center
 
         &--type--widgets
+            flex-direction: column
             text-align: left
+
+            .footer-widget
+                +margin(0 0 1em 0)
+
+                &__title
+                    font: $font-footer-widget-title
+                    letter-spacing: 0.5em
+                    text-transform: uppercase
+
+                ul
+                    li
+                        +size(fit-content)
+                        color: $fg-footer
+                        transition: all $base-duration $base-timing
+                        a
+                            color: inherit
+                            text-decoration: none
+                            transition: all $base-duration $base-timing
+                    &:hover,
+                    &:focus
+                        li
+                            color: $fg-footer-hover
+                            &:hover,
+                            &:focus
+                                color: $fg-footer-focus
 
     &__social-link
         +size(fit-content, 2em)
