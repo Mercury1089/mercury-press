@@ -55,7 +55,7 @@ $j(window).on("load resize", function() {
 
 // Transparency Transition
 function transitionTransparency() {
-  $j(".nav").toggleClass("nav--transparent", $j(window).scrollTop() === 0 && $j(document).width() > 768);
+  $j(".nav").toggleClass("nav--transparent", $j(window).scrollTop() === 0);
 };
 
 $j(document).on("ready", transitionTransparency);

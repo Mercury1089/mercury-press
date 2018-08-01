@@ -32,8 +32,6 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
 
     &--transparent
         background-color: transparent
-        +size(100%, 128px)
-        padding: 32px 50px
 
     &__item // All Nav Items
         display: flex
@@ -137,6 +135,9 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
 +mq(tablet)
     .nav // Nav Container
         &--transparent
+            +size(100%, 128px)
+            padding: 32px 50px
+            
             .home-link__part--text
                 font-size: modular-scale(2, $nav-ms-base, $nav-ms-ratio)
 
