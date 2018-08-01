@@ -26,8 +26,10 @@ function resources() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 
-// Walker Section
+// Extra functions and such
 require 'php/functions/bem_walker.php';
+require 'php/functions/split_content.php';
+require 'php/functions/get_title.php';
 
 // Register nav menus
 register_nav_menus(array(
@@ -62,36 +64,6 @@ function register_theme_sidebars() {
             'after_title' => '</span>',
         ));
     }
-}
-
-// Split content at the more tag and return an array
-function split_content() {
-	global $more;
-	$more = true;
-	$content0 = preg_split('/<span id="more-\\d+"><\\/span>/i', get_the_content('more'));      // first <!--more--> tag gets turned into <span id="more-[number]"></span>
-	$content1 = preg_split('/<!--more-->/i', $content0[1]);	// but all the remaining ones are left as <!--more-->
-	$content = array_merge(array($content0[0]), $content1);	// so we have this here ugly hack
-	
-	for($c = 0, $csize = count($content); $c < $csize; $c++) {
-		$content[$c] = apply_filters('the_content', $content[$c]);
-	}
-	return $content;
-}
-
-// Gets the title of the window based on the current page
-function get_title() {
-    $title_string = "";
-        
-    if (is_front_page())
-        $title_string = "";
-    else if (is_home())
-        $title_string = "Team Blog | ";
-    else if (is_post_type_archive( 'robot' ))
-        $title_string = "Our Robots | ";
-    else 
-        $title_string = single_post_title() . " | ";
-    
-    return $title_string . get_bloginfo('name'); 
 }
 
 add_action( 'widgets_init', 'register_theme_sidebars' );
