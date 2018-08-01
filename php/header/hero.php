@@ -12,8 +12,6 @@
     );
     $call = array();
 
-    $main_class = array("content");
-
     // Create hero
     // Hero sizes
     if (is_front_page()) // Full-height hero is for the front-page only.
@@ -39,10 +37,6 @@
     }
 
     // Hero Button Content
-
-    // Generate main classes
-    if ( is_singular('post') )
-        array_push( $main_class, "content--post" );
 ?>
 <header class="<?php echo implode(" ", $hero_class); ?>">
     <div class="hero__content">
@@ -61,4 +55,3 @@
 
     </div>
 </header>
-<main class="<?php echo implode(" ", $main_class); ?>">
