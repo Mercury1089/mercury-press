@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 
+var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 
@@ -18,8 +19,10 @@ gulp.task('sass', function () {
   ];
 
   return gulp.src('./sass/style.sass')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./'));
 });
 
