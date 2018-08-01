@@ -7,6 +7,10 @@ $fg-color-hero: $white
 $font-hero-largetext: $oswald
 $font-hero-smalltext: $roboto-condensed
 
+$fontsize-hero-largetext: strip-unit( modular-scale(2) ), strip-unit(  modular-scale(3) )
+$fontsize-hero-smalltext: strip-unit( modular-scale(0) ), strip-unit(  modular-scale(1) )
+$csslock-hero-range: 768, 1024
+
 // Hero Container
 .hero
     display: flex
@@ -37,8 +41,10 @@ $font-hero-smalltext: $roboto-condensed
     color: $fg-color-hero
 
 .hero-content__text--large
-    font: bold modular-scale(3) $font-hero-largetext
+    font-family: $font-hero-largetext
+    +css-lock( nth($fontsize-hero-largetext, 1), nth($fontsize-hero-largetext, 2) )
     text-transform: uppercase
 
 .hero-content__text--small
-    font: modular-scale(1) $font-hero-smalltext
+    font-family: $font-hero-smalltext
+    +css-lock( nth($fontsize-hero-smalltext, 1), nth($fontsize-hero-smalltext, 2) )
