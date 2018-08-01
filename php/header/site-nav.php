@@ -16,11 +16,12 @@
             protected $subNavItemClass = 'nav-sub-menu__item';
             protected $subNavLinkClass = 'nav-sub-menu__anchor';
         }
+
         wp_nav_menu( array(
             'theme_location' => 'header',
-            'walker' => new NavWalker,
+            'walker' => new NavWalker(),
+            'items_wrap' => '<ul class="nav__menu">%3$s</ul>',
             'container' => false
         ) );
     ?>
-    <?php // bem_menu('header', 'nav-menu', "nav__item nav__item--type--menu"); ?>
 </nav>

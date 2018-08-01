@@ -13,7 +13,7 @@
 if (!defined('WPINC')) {
     exit;
 }
-class BEMWalkerNavMenu extends \Walker_Nav_Menu
+class BEMWalkerNavMenu extends Walker_Nav_Menu
 {
     /**
      * @var string
@@ -43,17 +43,19 @@ class BEMWalkerNavMenu extends \Walker_Nav_Menu
      * @var string
      */
     protected $subNavLinkClass = 'sub-nav__link';
-    public function __construct()
-    {
-        add_filter('wp_nav_menu_args', function ($args) {
-            $args['items_wrap'] = '<ul id="%1$s" class="' . $this->getPrefix() . $this->navListClass . '">%3$s</ul>';
-            return $args;
-        });
-    }
+    // public function __construct()
+    // {
+    //     add_filter('wp_nav_menu_args', function ( $args ) {
+    //         $this->$args['items_wrap'] = '<ul id="%1$s" class="' . $this->getPrefix() . $this->navListClass . '">%3$s</ul>';
+    //         return $args;
+    //     });
+    // }
+    
     public function start_lvl(&$output, $depth = 0, $args = [])
     {
         $output .= sprintf('<ul class="%s">', $this->getPrefix() . $this->subNavClass);
     }
+
     public function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
     {
         $classes = empty($item->classes) ? [] : (array) $item->classes;
