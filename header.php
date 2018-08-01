@@ -10,6 +10,7 @@
     <body <?php echo body_class(); ?>>
     <?php
         include 'php/header/site-nav.php'; 
-        include 'php/header/hero.php'; 
+        include 'php/header/hero.php';
+        include 'php/header/main-head.php';
     ?>
         
