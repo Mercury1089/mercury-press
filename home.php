@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <section class="blog-feed">
+    <section class="content__section content__section--type--feed">
     <?php 
         if (have_posts()) {
             while(have_posts()) {

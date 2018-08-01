@@ -1,3 +1,21 @@
 // Default layout for all types
 .content
-    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__section
+        position: relative
+        max-width: 768px
+
+        img
+            display: block
+
+            &.alignright
+                float: right
+            
+            &.alignleft
+                float: left
+
+            &.aligncenter
+                +margin(null auto)
