@@ -6,10 +6,10 @@
         while(have_posts()) {
             the_post();
 ?>
-    <section class="post__section post__body">
+    <section class="content__section content__section--type--body">
         <?php the_content(); ?>
     </section>
-    <section class="post__section post__comments">
+    <section class="content__section content__section--type--comments">
         <?php comments_template(); ?>
     </section>
 <?php
