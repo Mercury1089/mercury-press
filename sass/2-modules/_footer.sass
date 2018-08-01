@@ -76,3 +76,11 @@ $font-footer-widget-title: bold modular-scale(1) $abel
         .social-link
             &__svg
                 height: 100%
+
++mq("tablet")
+    .footer__section--type--widgets
+        flex-direction: row
+        
+        .footer-widget
+            &:not(:last-child)
+                +margin(0 1.5em 0 0)
