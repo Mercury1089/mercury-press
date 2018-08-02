@@ -11,10 +11,40 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  font-size: modular-scale(1);
+  text-transform: uppercase;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+}
+
+h1 {
+  font-family: $h1-font-family;
+  font-size: modular-scale(6);
+}
+
+h2 {
+  font-family: $h2-font-family;
+  letter-spacing: 0.25em;
+  font-size: modular-scale(5);
+}
+
+h3 {
+  font-family: $h3-font-family;
+  font-size: modular-scale(4);
+}
+
+h4 {
+  font-family: $h4-font-family;
+  font-size: modular-scale(3);
+}
+
+h5 {
+  font-family: $h5-font-family;
+  font-size: modular-scale(2);
+}
+
+h6 {
+  font-family: $h6-font-family;
+  font-size: modular-scale(1);
 }
 
 p {

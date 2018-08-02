@@ -23,7 +23,13 @@ $roboto-condensed: 'Roboto Condensed', $font-stack-system;
 // Typography
 $title-font-family: $diavlo;
 $base-font-family: $roboto-condensed;
-$heading-font-family: $base-font-family;
+
+$h1-font-family: $oswald;
+$h2-font-family: $abel;
+$h3-font-family: $roboto-mono;
+$h4-font-family: $base-font-family;
+$h5-font-family: $base-font-family;
+$h6-font-family: $base-font-family;
 
 // Line height
 $base-line-height: 1.5;
