@@ -1,6 +1,9 @@
 // Feed Item Stylings
+$font-feeditem-date: $oswald
+
 $fontsize-feeditem-meta-large: modular-scale(1)
 $fontsize-feeditem-meta-small: modular-scale(0)
+
 $color-feeditem-date-separator: transparentize($base-font-color, 0.5)
     
 .feed-item
@@ -32,8 +35,19 @@ $color-feeditem-date-separator: transparentize($base-font-color, 0.5)
 
             .feed-item-date__line
                 +margin(0)
+                font-family: $font-feeditem-date
+                line-height: 1em
                 text-align: center
                 text-transform: uppercase
+
+                &--year
+                    font-size: 1.5em
+                
+                &--month
+                    font-size: 2em
+                
+                &--day
+                    font-size: 3em
 
     &__author
         display: inline-block
