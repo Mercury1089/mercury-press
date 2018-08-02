@@ -1,0 +1,49 @@
+// Feed Item Stylings
+$fontsize-feeditem-meta-large: modular-scale(1)
+$fontsize-feeditem-meta-small: modular-scale(0)
+$color-feeditem-date-separator: transparentize($base-font-color, 0.5)
+    
+.feed-item
+    display: flex
+    +size(100%, auto)
+    +margin(0 0 2em)
+
+    &__body
+        display: inline-block
+
+    &__title
+        +margin(0 0 0.5em 0)
+        font-size: $fontsize-feeditem-meta-large
+        text-decoration: none
+
+    &__date
+        border-right: 2px solid $color-feeditem-date-separator
+
+        &--mq--small
+            display: inline-block
+            +padding(0 0.25em 0 0)
+            font-size: $fontsize-feeditem-meta-small
+
+        &--mq--large
+            display: none
+            +size(fit-content, fit-content)
+            +padding(0 0.5em 0 0)
+            +margin(0 1em 0 0)
+
+            .feed-item-date__line
+                +margin(0)
+                text-align: center
+                text-transform: uppercase
+
+    &__author
+        display: inline-block
+        font-size: $fontsize-feeditem-meta-small
+
++mq("tablet")
+    .feed-item
+        &__date
+            &--mq--small
+                display: none
+
+            &--mq--large
+                display: inline-block
