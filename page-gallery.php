@@ -61,8 +61,8 @@
 				)
             );
             
-			$albums .= "<section class=\"content__section content__section--columns--3\" id=\"$year\">\r\n";
-			$albums .= "\t<h2 class=\"gallery-year__header\">$year</h2>\r\n";
+			$albums .= "<section class=\"content__section content__section--grid--container\" id=\"$year\">\r\n";
+			$albums .= "\t<h2 class=\"content__section content__section--grid--col-full\">$year</h2>\r\n";
 			
 			foreach($children as $child) {
                 $id = $child->ID;
@@ -70,7 +70,7 @@
 				$galIDs = explode( ",", $gallery['ids'] );
 				$galSize = count($galIDs);
 
-				$albums .= "\t<div class=\"gallery-year__album\">";
+				$albums .= "\t<div class=\"content__section content__section--grid--col-3\">";
 				
 
 				for($i = 0; $i < $galSize; $i++) {
@@ -112,7 +112,8 @@
 	}
 ?>
     <p class="gallery__text">
-        Here are all the pictures we take every year during our time in Robotics, both on-season and off-season.<br>
+        Here are all the
+		 pictures we take every year during our time in Robotics, both on-season and off-season.<br>
         Use the year nav below to jump to a specific year.
     </p>
 <?php
