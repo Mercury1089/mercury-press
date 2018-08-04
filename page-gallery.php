@@ -61,7 +61,7 @@
 				)
             );
             
-			$albums .= "<section class=\"gallery__year\" id=\"$year\">\r\n";
+			$albums .= "<section class=\"content__section content__section--columns--3\" id=\"$year\">\r\n";
 			$albums .= "\t<h2 class=\"gallery-year__header\">$year</h2>\r\n";
 			
 			foreach($children as $child) {
@@ -115,16 +115,14 @@
         Here are all the pictures we take every year during our time in Robotics, both on-season and off-season.<br>
         Use the year nav below to jump to a specific year.
     </p>
-	<?php
-		if (have_posts()) :
-			while (have_posts()) :
-				the_post();
-				$content = get_the_content();
-	?>
-		<?php render_nav(); ?>
-		<?php render_albums(); ?>
-	<?php
-			endwhile;
-		endif;
-	?>
-<?php get_footer(); ?>
+<?php
+	if (have_posts()) {
+		while (have_posts()) {
+			the_post();
+			$content = get_the_content();
+			render_nav();
+			render_albums();
+		}
+	}
+	get_footer(); 
+?>
