@@ -1,0 +1,25 @@
+// Default table layout
+.content__section
+    &--grid--container
+        +grid-container()
+    
+    &--grid--col
+        +grid-column(1 of 1)
+
++mq("tablet")
+    .content__section
+        &--grid--col
+            +grid-column(1)
+            
+            &-2
+                +grid-column(2)
+            
+            &-3
+                +grid-column(3)
+
+            &-4
+                +grid-column(4)
+
+            &-full
+                +grid-column(1 of 1)
+        
