@@ -17,7 +17,7 @@
             );
             
 			$albums .= "<section class=\"content__section content__section--grid--container\" id=\"$year\">\r\n";
-			$albums .= "\t<h2 class=\"content__section content__section--grid--col-full\">$year</h2>\r\n";
+			$albums .= "\t<h3 class=\"content__section content__section--grid--col-full content__section--align--center\">$year</h3>\r\n";
 			
 			foreach($children as $child) {
                 $id = $child->ID;
@@ -35,16 +35,16 @@
 				
 				$imgThumb = wp_get_attachment_image_src( $imgID, 'thumbnail', false )[0];
 
-				$albums .= "\t\t<img class=\"album__thumbnail";
+				$albums .= "\t\t<img class=\"thumbnail";
 
 				if (!isset($imgThumb)) {
 					$imgThumb = get_theme_file_uri("/images/default.jpg"); // default/missing img
-					$albums .= " album__thumbnail--no-thumbnail";
+					$albums .= " thumbnail--default";
 				}
 						
 				$albums .= "\" src=" . $imgThumb . "></img>\r\n";
 
-				$albums .= "<p class=\"album__caption\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</p>\r\n";
+				$albums .= "<p class=\"caption\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</p>\r\n";
 				$albums .= "</a>\r\n";
 				$galNum += 1;	
 			}

@@ -27,12 +27,12 @@
 		}
 	});
 	
-	include 'php/page-gallery/render-nav.php';
+	// include 'php/page-gallery/render-nav.php';
 	include 'php/page-gallery/render-albums.php'
 ?>
-    <p class="gallery__text">
+    <p class="content__section">
         Here are all the
-		 pictures we take every year during our time in Robotics, both on-season and off-season.<br>
+		pictures we take every year during our time in Robotics, both on-season and off-season.<br>
         Use the year nav below to jump to a specific year.
     </p>
 <?php
@@ -40,7 +40,7 @@
 		while (have_posts()) {
 			the_post();
 			$content = get_the_content();
-			render_nav();
+			// render_nav();
 			render_albums();
 		}
 	}

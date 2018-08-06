@@ -1,10 +1,7 @@
 <?php
 // Render the navigation bar for the sections.
 function render_nav() {
-    $nav = "
-    <section class=\"year-nav\">
-        <nav class=\"year-nav__nav\">\n
-    ";
+    $nav = "<nav class=\"content__section\">\n";
     
     global $sections;
     
@@ -13,7 +10,7 @@ function render_nav() {
         $nav .= "<a class=\"year-nav__year\" href=\"#$year\">$year</a>";
     }
     
-    $nav .= "</nav></section>";
+    $nav .= "</nav>";
     
     echo $nav;
 }

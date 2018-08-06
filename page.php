@@ -5,7 +5,7 @@
         while (have_posts()) {
             the_post();
 ?>
-        <section class="page__section page__body">
+        <section class="content__section">
             <?php echo the_content(); ?>
         </section>
 <?php

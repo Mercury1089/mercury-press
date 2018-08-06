@@ -6,6 +6,19 @@
     &--grid--col
         +grid-column(1 of 1)
 
++mq("mobile")
+    .content__section
+        &--grid--col
+            +grid-column(1)
+            
+            &-2
+            &-3
+            &-4
+                +grid-column(2)
+
+            &-full
+                +grid-column(1 of 1)
+
 +mq("tablet")
     .content__section
         &--grid--col
