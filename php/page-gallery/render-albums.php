@@ -17,7 +17,7 @@
             );
             
 			$albums .= "<section class=\"content__section content__section--grid--container\" id=\"$year\">\r\n";
-			$albums .= "\t<h3 class=\"content__section content__section--grid--col-full content__section--align--center\">$year</h3>\r\n";
+			$albums .= "\t<h2 class=\"content__section content__section--grid--col-full content__section--align--center\">$year</h2>\r\n";
 			
 			foreach($children as $child) {
                 $id = $child->ID;
