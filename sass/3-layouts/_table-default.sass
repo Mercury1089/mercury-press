@@ -1,38 +1,16 @@
 // Default table layout
+$default-grid-columns: 12
+$default-grid-gutter: 2%
+
 .content__section
-    &--grid--container
-        +grid-container()
-    
-    &--grid--col
-        +grid-column(1 of 1)
+    &--grid
+        &--container 
+	        +grid($flex-flow: row wrap, $gutter: $default-grid-gutter)
 
-+mq("mobile")
-    .content__section
-        &--grid--col
-            +grid-column(1)
-            
-            &-2
-            &-3
-            &-4
-                +grid-column(2)
-
+        &--col
             &-full
-                +grid-column(1 of 1)
+                +grid-col($col: $default-grid-columns, $grid-columns: $default-grid-columns, $gutter: $default-grid-gutter)
 
-+mq("tablet")
-    .content__section
-        &--grid--col
-            +grid-column(1)
-            
-            &-2
-                +grid-column(2)
-            
-            &-3
-                +grid-column(3)
-
-            &-4
-                +grid-column(4)
-
-            &-full
-                +grid-column(1 of 1)
-        
+            @for $i from 1 through $default-grid-columns
+                &-#{$i}
+                    +grid-col($col: $i, $grid-columns: $default-grid-columns, $gutter: $default-grid-gutter)
