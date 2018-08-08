@@ -1,16 +1,45 @@
 // Default table layout
-$default-grid-columns: 12
-$default-grid-gutter: 2%
+$desktop-grid-columns: 12
+$desktop-grid-gutter: 2%
+
+$tablet-grid-columns: 9
+$tablet-grid-gutter: 3%
+
+$mobile-grid-columns: 6
+$mobile-grid-gutter: 4%
 
 .content__section
-    &--grid
-        &--container 
-	        +grid($flex-flow: row wrap, $gutter: $default-grid-gutter)
+    &--grid-container // Grid container section
+        +grid($flex-flow: row wrap, $gutter: $mobile-grid-gutter)
 
-        &--col
-            &-full
-                +grid-col($col: $default-grid-columns, $grid-columns: $default-grid-columns, $gutter: $default-grid-gutter)
+.grid-item // Grid item (defined as their own blocks)
+    
+    // By default they take up the entire row
+    +grid-col($col: 1, $grid-columns: 1)
 
-            @for $i from 1 through $default-grid-columns
-                &-#{$i}
-                    +grid-col($col: $i, $grid-columns: $default-grid-columns, $gutter: $default-grid-gutter)
+    &--text-align
+        &--center
+            text-align: center
+    
+        &--left
+            text-align: left
+
+        &--right
+            text-align: left
+
+    @for $i from 1 through $mobile-grid-columns // Mobile grid item sizes
+        &--mobile-size--#{$i}
+            +grid-col($col: $i, $grid-columns: $mobile-grid-columns, $gutter: $mobile-grid-gutter)
+
++mq("tablet") // Intermediate tablet breakpoint because why not
+    .grid-item // Grid item (defined as their own blocks)
+        @for $i from 1 through $tablet-grid-columns // Tablet grid item sizes
+            &--tablet-size--#{$i}
+                +grid-col($col: $i, $grid-columns: $tablet-grid-columns, $gutter: $tablet-grid-gutter)
+
+
++mq("desktop")
+    .grid-item // Grid item (defined as their own blocks)
+        @for $i from 1 through $desktop-grid-columns // Desktop grid item sizes
+            &--desktop-size--#{$i}
+                +grid-col($col: $i, $grid-columns: $desktop-grid-columns, $gutter: $desktop-grid-gutter)
