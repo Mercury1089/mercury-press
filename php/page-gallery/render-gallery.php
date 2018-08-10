@@ -1,10 +1,7 @@
 <?php
-    // Render the years as headers with each album inside.
-	// This renders everything within the lightbox, but only loads
-	// the necessary images.
-	// Constructs each album with a lightbox
-	function render_albums() {
-		global $sections;
+	// Renders the entire gallery, sorting albums by year, 
+	// and building a lightbox in each gallery link.
+	function render_gallery($sections = array()) {
 		$albums = "";
 		
 		$galNum = 0;
@@ -16,8 +13,8 @@
 				)
             );
             
-			$albums .= "<section class=\"content__section content__section--grid--container\" id=\"$year\">\r\n";
-			$albums .= "\t<h2 class=\"content__section content__section--grid--col-12 content__section--align--center\">$year</h2>\r\n";
+			$albums .= "<section class=\"grid content__section\" id=\"$year\">\r\n";
+			$albums .= "\t<h2 class=\"grid__item grid__item--text-align--center\">$year</h2>\r\n";
 			
 			foreach($children as $child) {
                 $id = $child->ID;
@@ -25,7 +22,7 @@
 				$galIDs = explode( ",", $gallery['ids'] );
 				$galSize = count($galIDs);
 
-				$albums .= "\t<a class=\"content__section content__section--grid--col-3\">";
+				$albums .= "\t<a class=\"grid__item grid__item--col-s--3 grid__item--col-m--3 grid__item--col-l--3\">";
 			
 				$imgID = $galIDs[0];
 				$imgSrc = wp_get_attachment_url( $imgID );

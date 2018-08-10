@@ -28,7 +28,7 @@
 	});
 	
 	// include 'php/page-gallery/render-nav.php';
-	include 'php/page-gallery/render-albums.php'
+	include 'php/page-gallery/render-gallery.php'
 ?>
     <p class="content__section">
         Here are all the
@@ -41,7 +41,7 @@
 			the_post();
 			$content = get_the_content();
 			// render_nav();
-			render_albums();
+			render_gallery($sections);
 		}
 	}
 	get_footer(); 
