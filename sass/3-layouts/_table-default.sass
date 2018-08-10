@@ -8,38 +8,37 @@ $tablet-grid-gutter: 3%
 $mobile-grid-columns: 6
 $mobile-grid-gutter: 4%
 
-.content__section
-    &--grid-container // Grid container section
-        +grid($flex-flow: row wrap, $gutter: $mobile-grid-gutter)
+.grid // Grid container section
+    +grid($flex-flow: row wrap, $gutter: $mobile-grid-gutter)
 
-.grid-item // Grid item (defined as their own blocks)
+    &__item // Grid item (defined as their own blocks)
     
-    // By default they take up the entire row
-    +grid-col($col: 1, $grid-columns: 1)
+        // By default they take up the entire row
+        +grid-col($col: 1, $grid-columns: 1)
 
-    &--text-align
-        &--center
-            text-align: center
-    
-        &--left
-            text-align: left
+        &--text-align
+            &--center
+                text-align: center
+        
+            &--left
+                text-align: left
 
-        &--right
-            text-align: left
+            &--right
+                text-align: left
 
-    @for $i from 1 through $mobile-grid-columns // Mobile grid item sizes
-        &--mobile-size--#{$i}
-            +grid-col($col: $i, $grid-columns: $mobile-grid-columns, $gutter: $mobile-grid-gutter)
+        @for $i from 1 through $mobile-grid-columns // Mobile grid item sizes
+            &--col-s--#{$i}
+                +grid-col($col: $i, $grid-columns: $mobile-grid-columns, $gutter: $mobile-grid-gutter)
 
 +mq("tablet") // Intermediate tablet breakpoint because why not
-    .grid-item // Grid item (defined as their own blocks)
+    .grid__item // Grid item (defined as their own blocks)
         @for $i from 1 through $tablet-grid-columns // Tablet grid item sizes
-            &--tablet-size--#{$i}
+            &--col-m--#{$i}
                 +grid-col($col: $i, $grid-columns: $tablet-grid-columns, $gutter: $tablet-grid-gutter)
 
 
 +mq("desktop")
-    .grid-item // Grid item (defined as their own blocks)
+    .grid__item // Grid item (defined as their own blocks)
         @for $i from 1 through $desktop-grid-columns // Desktop grid item sizes
-            &--desktop-size--#{$i}
+            &--col-l--#{$i}
                 +grid-col($col: $i, $grid-columns: $desktop-grid-columns, $gutter: $desktop-grid-gutter)
