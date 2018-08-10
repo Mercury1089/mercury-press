@@ -62,7 +62,7 @@ $base-border: 1px solid $base-border-color;
 // Grids
 
 // Background Colors
-$viewport-background-color: #fff;
+$viewport-background-color: $dark-gray;
 
 // Focus
 $focus-outline-color: transparentize($action-color, 0.4);
