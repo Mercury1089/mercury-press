@@ -1,0 +1,52 @@
+// Text styling
+$font-color-light: $dark-gray
+$font-color-dark: $light-gray
+
+$min-modular-scale: 0
+$max-modular-scale: 12
+
+.text
+    color: $font-color-light
+    &--dark
+        color: $font-color-dark
+    &--action
+        color: $action-color
+
+    &--align
+        &--left
+            text-align: left
+        &--center
+            text-align: center
+        &--right
+            text-align: right
+        &--justify
+            text-align: justify
+
+    @for $i from $min-modular-scale to $max-modular-scale
+        &--ms--#{$i}
+            font-size: modular-scale($i)
+
+    
+
+    &--font-family
+        &--h1
+            font-family: $h1-font-family
+        &--h2
+            font-family: $h2-font-family
+        &--h3
+            font-family: $h3-font-family
+        &--h4
+            font-family: $h4-font-family
+        &--h5
+            font-family: $h5-font-family
+        &--h6
+            font-family: $h6-font-family
+        &--p
+            font: $base-font-family
+
+    &--weight
+        &--bold
+            font-weight: bold
+            font-weight: 700
+        &--light
+            font-weight: 300
