@@ -27,5 +27,5 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:watch', function() {
-  gulp.watch('./sass/**/*.s*ss', ['sass']);
+  gulp.watch('**/*.s*ss', {cwd: 'sass'}, ['sass']);
 });
