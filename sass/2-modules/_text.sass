@@ -7,6 +7,7 @@ $max-modular-scale: 12
 
 .text
     color: $font-color-light
+    
     &--dark
         color: $font-color-dark
     &--action
@@ -25,8 +26,6 @@ $max-modular-scale: 12
     @for $i from $min-modular-scale to $max-modular-scale
         &--ms--#{$i}
             font-size: modular-scale($i)
-
-    
 
     &--font-family
         &--h1

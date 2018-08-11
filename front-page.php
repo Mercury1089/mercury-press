@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <section class="text text--dark text--align--center content__section content__section--background-color--dark content__section--width--full" id="jump"> <!-- Grabber text -->
+    <section class="text text--dark text--align--center content__section content__section--background-color--dark" id="jump"> <!-- Grabber text -->
         <!-- <h2>ABOUT US</h2> -->
         <!-- <p>
             Team Mercury (1089) inspires students to pursue careers in science and technology by creating partnerships with parents, sponsors, and community members. 
@@ -16,10 +16,10 @@
         </p>
     </section>
     <section class="grid content__section"> <!-- "OUR TEAMS" -->
-        <h2 class="grid__item">
+        <h2 class="text text--align--center grid__item">
             OUR TEAMS
         </h2>
-        <p class="grid__item">
+        <p class="text text--align--center grid__item">
             Team Mercury has various teams for every age and interest. No matter who you are, Team Mercury has a home for every kind of student!
         </h5>
         <div class="grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
@@ -44,17 +44,17 @@
             </p>
         </div>
     </section>
-    <section class="grid content__section">
+    <section class="grid content__section content__section--width--full">
         <section class="grid__item grid__item--col-l--6 grid__item--col-m--9 grid__item--col-s--6"> <!-- "JOIN US" -->
-            <h2 class="landing-section__header">STUDENTS</h2>
-            <p class="landing-section__text-body">
+            <h2 class="text text--align--center text--dark">STUDENTS</h2>
+            <p class="text text--align--center text--dark">
                 Are you a Hightstown student looking to join a FIRST robotics team? Look no further! We are always looking for new students to join our teams!
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3UGBnHzwgEufM4HYTq2zWJq_tYcaEVFNWHFp5d2Zw9sVdag/viewform?c=0&w=1" target="_blank" class="button landing-section__button landing-section__button--light" id="call">SIGN UP</a>
         </section>
         <section class="grid__item grid__item--col-l--6 grid__item--col-m--9 grid__item--col-s--6"> <!-- "SPONSORS" -->
-            <h2 class="landing-section__header">SPONSORS</h2>
-            <p class="landing-section__text-body">
+            <h2 class="text text--align--center text--dark">SPONSORS</h2>
+            <p class="text text--align--center text--dark">
                 Find what we do interesting? Want to give us a hand in helping our team to achieve greatness? Become our sponsor today!
             </p>
             <a href="#" target="_blank" class="button landing-section__button landing-section__button--light">SPONSOR US</a>

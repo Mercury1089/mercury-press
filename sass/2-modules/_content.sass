@@ -2,6 +2,8 @@
 $bg-dark: $dark-gray
 $fg-dark: $light-gray
 
+$max-section-width: 1280px
+
 .content
     display: flex
     flex-direction: column
@@ -10,7 +12,7 @@ $fg-dark: $light-gray
 
     &__section
         position: relative
-        max-width: 768px
+        width: 100%
         +padding(2em)
 
         &--background-color--dark
@@ -39,10 +41,7 @@ $fg-dark: $light-gray
 +mq("tablet")
     .content
         &__section
-            position: relative
-            max-width: 768px
-            +padding(2em 0)
-        
+            +padding(2em calc(50% - #{$max-section-width} / 2 + 2em))
+
             &--width--full
-                max-width: 100%
-                +padding(null calc(50% - 384px + 2em))
+                +padding(null 2em)
