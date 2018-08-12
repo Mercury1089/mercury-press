@@ -4,7 +4,6 @@
 	function render_gallery($sections = array()) {
 		$albums = "";
 		
-		$galNum = 0;
 		foreach ($sections as $section) {
 			$year = str_replace("Private: ", "", get_the_title($section));
 			$children = get_children(
@@ -44,12 +43,16 @@
 
 				$dataLightbox = $year . $id;
 
-				$albums .= "\t<a href=" . wp_get_attachment_url( $imgIDs[0] ) . " data-lightbox=" . $dataLightbox . " data-title=\"My caption\" class=\"grid__item grid__item--col-s--3 grid__item--col-m--3 grid__item--col-l--2 album\">";
-				$albums .= "\t\t<img class=\"" . implode(" ", $thumbnailClasses). "\" src=" . $thumbnail . "></img>\r\n";
-				$albums .= "<p class=\"album__title text text--align--center\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</p>\r\n";
-				$albums .= "</a>\r\n";
-
-				$galNum += 1;	
+				$albums .= "<a href=" . wp_get_attachment_url( $imgIDs[0] ) . " data-lightbox=" . $dataLightbox . " class=\"grid__item grid__item--col-s--3 grid__item--col-m--3 grid__item--col-l--2 album\">";
+				$albums .= "<img class=\"" . implode(" ", $thumbnailClasses). "\" src=" . $thumbnail . " />";
+				$albums .= "<p class=\"album__title text text--align--center\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</p>";
+				for ($i = 1; $i < count($imgIDs); $i++) {
+					$curImg = wp_get_attachment_url( $imgIDs[$i] );
+					$albums .= "<a href=" . $curImg . " data-lightbox=" . $dataLightbox . " class=\"void\" />";
+				}
+				
+				
+				$albums .= "</a>";
 			}
 
 			$albums .= "</section>";
