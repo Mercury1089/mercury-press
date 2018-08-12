@@ -12,17 +12,21 @@ function resources() {
     wp_register_script( 'jquery-scrollTo', get_template_directory_uri() . '/js/plugins/jquery.scrollTo.js', array( 'jquery' ) );
     wp_register_script( 'easing', get_template_directory_uri() . '/js/plugins/easing.js', array( 'jquery' ) );
     wp_register_script( 'hamburger', get_template_directory_uri() . '/js/plugins/jquery.hmbrgr.js', array( 'jquery' ) );
+    wp_register_script( 'lightbox', get_template_directory_uri() . '/js/plugins/lightbox.min.js', array( 'jquery' ) );
     
     // Register Scripts
     wp_register_script( 'body', get_template_directory_uri() . '/js/modules/body.js', array( 'jquery', 'jquery-ui', 'jquery-scrollTo', 'easing' ));
     wp_register_script( 'nav', get_template_directory_uri() . '/js/modules/nav.js', array( 'jquery' ));
+    wp_register_script( 'fadeable', get_template_directory_uri() . '/js/modules/fadeable.js', array( 'jquery' ));
 
     // Enqueue resources
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'easing' );
     wp_enqueue_script( 'hamburger' );
+    wp_enqueue_script( 'lightbox' );
     wp_enqueue_script( 'body' );
     wp_enqueue_script( 'nav' );
+    wp_enqueue_script( 'fadeable' );
     wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 

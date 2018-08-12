@@ -19,30 +19,36 @@
 			foreach($children as $child) {
                 $id = $child->ID;
 				$gallery = get_post_gallery( $id, false );
-				$galIDs = explode( ",", $gallery['ids'] );
-				$galSize = count($galIDs);
+				$imgIDs = explode( ",", $gallery['ids'] );
+				$galSize = count($imgIDs);
 
-				$albums .= "\t<a class=\"grid__item grid__item--col-s--3 grid__item--col-m--3 grid__item--col-l--3\">";
+				$albums .= "";
+				$thumbnailClasses = array(
+					"img",
+					"img--round",
+					"album__thumbnail"
+				);
 			
-				$imgID = $galIDs[0];
-				$imgSrc = wp_get_attachment_url( $imgID );
+				$thumbID = $imgIDs[0];
+				$thumbSrc = wp_get_attachment_url( $thumbID );
 
-				if (empty($imgSrc) || !isset($imgSrc))
-					$imgSrc = "#";
+				if (empty($thumbSrc) || !isset($thumbSrc))
+					$thumbSrc = "#";
 				
-				$imgThumb = wp_get_attachment_image_src( $imgID, 'thumbnail', false )[0];
-
-				$albums .= "\t\t<img class=\"thumbnail";
-
-				if (!isset($imgThumb)) {
-					$imgThumb = get_theme_file_uri("/images/default.jpg"); // default/missing img
-					$albums .= " thumbnail--default";
+				$thumbnail = wp_get_attachment_image_src( $thumbID, 'thumbnail', false )[0];
+				
+				if (!isset($thumbnail)) {
+					$thumbnail = get_theme_file_uri("/images/default.jpg"); // default/missing img
+					array_push($thumbnailClasses, "album__thumbnail--default");
 				}
-						
-				$albums .= "\" src=" . $imgThumb . "></img>\r\n";
 
-				$albums .= "<p class=\"caption\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</p>\r\n";
+				$dataLightbox = $year . $id;
+
+				$albums .= "\t<a href=" . wp_get_attachment_url( $imgIDs[0] ) . " data-lightbox=" . $dataLightbox . " data-title=\"My caption\" class=\"grid__item grid__item--col-s--3 grid__item--col-m--3 grid__item--col-l--2 album\">";
+				$albums .= "\t\t<img class=\"" . implode(" ", $thumbnailClasses). "\" src=" . $thumbnail . "></img>\r\n";
+				$albums .= "<p class=\"album__title text text--align--center\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</p>\r\n";
 				$albums .= "</a>\r\n";
+
 				$galNum += 1;	
 			}
 

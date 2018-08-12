@@ -30,9 +30,9 @@
 	// include 'php/page-gallery/render-nav.php';
 	include 'php/page-gallery/render-gallery.php'
 ?>
-    <p class="content__section">
-        Here are all the
-		pictures we take every year during our time in Robotics, both on-season and off-season.<br>
+    <p class="text text--align--center content__section">
+        Here are all the pictures we take every year during our time in Robotics, both on-season and off-season.
+		<br>
         Use the year nav below to jump to a specific year.
     </p>
 <?php
