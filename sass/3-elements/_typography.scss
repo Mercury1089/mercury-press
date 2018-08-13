@@ -23,7 +23,7 @@ h1 {
 
 h2 {
   font-family: $h2-font-family;
-  letter-spacing: 0.25em;
+  @include letter-spacing(0.25em);
   font-size: modular-scale(5);
 }
 

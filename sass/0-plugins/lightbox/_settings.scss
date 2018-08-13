@@ -1,9 +1,0 @@
-$_lightbox-defaults: (
-    "image-location": "../images/"
-);
-
-$lightbox: () !default;
-
-@function _fetch-lightbox-setting($setting) {
-    @return map-get(map-merge($_lightbox-defaults, $lightbox), $setting);
-  }
