@@ -6,7 +6,7 @@
     $robot_year = get_post_meta($postID, 'robot-year-meta', true);
 
     if (empty($post_img))
-        $post_img = get_theme_file_uri('/images/default.jpg');
+        $post_img = get_theme_file_uri('/images/default/thumbnail_default.jpg');
 
     if (empty($robot_year)) {
         $robot_year = '20XX';

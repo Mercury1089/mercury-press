@@ -23,21 +23,21 @@
             Team Mercury has various teams for every age and interest. No matter who you are, Team Mercury has a home for every kind of student!
         </h5>
         <div class="container container--direction--col container--align--center grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
-            <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/1089logo.png"/>
+            <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/logos/1089logo.png"/>
             <h4 class="text text--align--center">FRC 1089</h4>
             <p class="text text--align--center">
                 Mercury 1089 is the number of our FRC team. With over 50 members and blah blah blah yea yea yea something something something.
             </p>
         </div>
         <div class="container container--direction--col container--align--center grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
-            <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/3944logo.png"/>
+            <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/logos/3944logo.png"/>
             <h4 class="text text--align--center">FTC 3944</h4>
             <p class="text text--align--center">
                 Mercury 3944 is the number of our FTC team. With over 50 members and blah blah blah yea yea yea something something something.
             </p>
         </div>
         <div class="container container--direction--col container--align--center grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
-            <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/FLLlogo.png"/>
+            <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/logos/FLLlogo.png"/>
             <h4 class="text text--align--center">OUR FLL TEAMS</h4>
             <p class="text text--align--center">
                 Team Mercury has also helped to startup some FLL teams within the Hightstown region. Check em out cuz I need more money.

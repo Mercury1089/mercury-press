@@ -34,10 +34,8 @@
 				
 				$thumbnail = wp_get_attachment_image_src( $thumbID, 'thumbnail', false )[0];
 				
-				if (!isset($thumbnail)) {
-					$thumbnail = get_theme_file_uri("/images/default.jpg"); // default/missing img
-					// array_push($thumbnailClasses, "album__thumbnail--default");
-				}
+				if (!isset($thumbnail))
+					$thumbnail = get_theme_file_uri("/images/default/thumbnail_default.jpg"); // default/missing img
 
 				$dataLightbox = "{$year}{$id}";
 
