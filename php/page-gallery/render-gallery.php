@@ -12,24 +12,22 @@
 				)
             );
             
-			$albums .= "<section class=\"grid content__section\" id=\"$year\">\r\n";
-			$albums .= "\t<h2 class=\"grid__item grid__item--text-align--center\">$year</h2>\r\n";
+			$albums .= "<section class=\"grid content__section\" id=\"{$year}\">";
+			$albums .= "<h2 class=\"grid__item grid__item--text-align--center\">{$year}</h2>";
 			
-			foreach($children as $child) {
+			foreach( $children as $child ) {
                 $id = $child->ID;
 				$gallery = get_post_gallery( $id, false );
 				$imgIDs = explode( ",", $gallery['ids'] );
 				$galSize = count($imgIDs);
-
-				$albums .= "";
+			
+				$thumbID = $imgIDs[0];
+				$thumbSrc = wp_get_attachment_url( $thumbID );
 				$thumbnailClasses = array(
 					"img",
 					"img--round",
 					"album__thumbnail"
 				);
-			
-				$thumbID = $imgIDs[0];
-				$thumbSrc = wp_get_attachment_url( $thumbID );
 
 				if (empty($thumbSrc) || !isset($thumbSrc))
 					$thumbSrc = "#";
@@ -41,14 +39,15 @@
 					array_push($thumbnailClasses, "album__thumbnail--default");
 				}
 
-				$dataLightbox = $year . $id;
+				$dataLightbox = "{$year}{$id}";
 
-				$albums .= "<a href=" . wp_get_attachment_url( $imgIDs[0] ) . " data-lightbox=" . $dataLightbox . " class=\"grid__item grid__item--col-s--3 grid__item--col-m--3 grid__item--col-l--2 album\">";
+				$albums .= "<a href=" . wp_get_attachment_url( $imgIDs[0] ) . " data-lightbox=" . $dataLightbox . " class=\"album grid__item grid__item--col-s--3 grid__item--col-m--3 grid__item--col-l--2\">";
 				$albums .= "<img class=\"" . implode(" ", $thumbnailClasses). "\" src=" . $thumbnail . " />";
-				$albums .= "<p class=\"album__title text text--align--center\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</p>";
+				$albums .= "<h6 class=\"album__title text text--align--center\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</h6>";
+				
 				for ($i = 1; $i < count($imgIDs); $i++) {
 					$curImg = wp_get_attachment_url( $imgIDs[$i] );
-					$albums .= "<a href=" . $curImg . " data-lightbox=" . $dataLightbox . " class=\"void\" />";
+					$albums .= "<a href=" . $curImg . " data-lightbox=" . $dataLightbox . " class=\"void\"></a>";
 				}
 				
 				

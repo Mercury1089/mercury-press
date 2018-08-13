@@ -1,0 +1,10 @@
+.fadeable
+    transition: all $base-duration $base-timing
+
+    &--hidden
+        transform: translateY(10em)
+        opacity: 0
+
+    &--visible
+        transform: translateY(0em)
+        opacity: 1

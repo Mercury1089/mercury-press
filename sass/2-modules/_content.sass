@@ -30,15 +30,7 @@ $max-section-width: 1280px
             &.aligncenter
                 +margin(null auto)
 
-        .thumbnail
-            +margin(auto)
-
-        .caption
-            font-family: $roboto-mono
-            word-break: break-word
-            text-align: center
-
-+mq("tablet")
++mq($max-section-width)
     .content
         &__section
             +padding(2em calc(50% - #{$max-section-width} / 2 + 2em))

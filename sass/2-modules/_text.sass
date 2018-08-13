@@ -6,8 +6,8 @@ $min-modular-scale: 0
 $max-modular-scale: 12
 
 .text
-    color: $font-color-light
-    
+    text-decoration: none
+
     &--dark
         color: $font-color-dark
     &--action
@@ -49,3 +49,6 @@ $max-modular-scale: 12
             font-weight: 700
         &--light
             font-weight: 300
+
+    &--contain
+        +margin(null null 1.5em)

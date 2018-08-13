@@ -15,11 +15,11 @@
             IN THE INTERNATIONAL FIRST ROBOTICS COMPETITION.
         </p>
     </section>
-    <section class="grid content__section"> <!-- "OUR TEAMS" -->
+    <section class="grid content__section fadeable"> <!-- "OUR TEAMS" -->
         <h2 class="text text--align--center grid__item">
             OUR TEAMS
         </h2>
-        <p class="text text--align--center grid__item">
+        <p class="text text--align--center text--contain grid__item">
             Team Mercury has various teams for every age and interest. No matter who you are, Team Mercury has a home for every kind of student!
         </h5>
         <div class="grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">

@@ -6,8 +6,7 @@ $bourbon: (
     "modular-scale-ratio": 1.25,
 );
 
-// // Neat
-// $neat-grid: (
-//     columns: 12,
-//     gutter: 1em
-// );
+// Lightbox CSS
+$lightbox: (
+    "image-location": "../images/lightbox/"
+);
