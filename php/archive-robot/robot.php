@@ -13,7 +13,7 @@
     }
 ?>
 <a href="<?php echo get_post_permalink(); ?>" class="robot grid__item grid__item--col-s--3 grid__item--col-m--3 grid__item--col-l--3">
-    <img class="img img--round robot__thumbnail" src="<?php echo $post_img; ?>" /> 
+    <img class="image image--round robot__thumbnail" src="<?php echo $post_img; ?>" /> 
     <h5 class="robot__caption"><?php echo $robot_name; ?></h5>
     <h6 class="robot__caption"><?php echo $robot_year; ?></h6>
 </a>

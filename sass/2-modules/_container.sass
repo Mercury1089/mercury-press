@@ -1,0 +1,35 @@
+// Container Block
+.container
+    display: flex
+
+    &--direction
+        &--row
+            flex-direction: row
+        &--col
+            flex-direction: column
+
+    &--align
+        &--end
+            align-items: flex-end
+        &--center
+            align-items: center
+        &--start
+            align-items: flex-start
+
+    &--justify
+        &--end
+            justfy-items: flex-end
+        &--center
+            justify-items: center
+        &--start
+            justify-items: flex-start
+
+    &--debug:after
+        content: ""
+        position: absolute
+        z-index: -1
+        top: 0
+        bottom: 0
+        left: 50%
+        border-left: 3px dotted #ff0000
+        transform: translate(-50%)

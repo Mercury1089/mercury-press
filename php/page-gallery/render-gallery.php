@@ -24,9 +24,9 @@
 				$thumbID = $imgIDs[0];
 				$thumbSrc = wp_get_attachment_url( $thumbID );
 				$thumbnailClasses = array(
-					"img",
-					"img--round",
-					"album__thumbnail"
+					"image",
+					"image--round",
+					"image--has-border"
 				);
 
 				if (empty($thumbSrc) || !isset($thumbSrc))
@@ -36,7 +36,7 @@
 				
 				if (!isset($thumbnail)) {
 					$thumbnail = get_theme_file_uri("/images/default.jpg"); // default/missing img
-					array_push($thumbnailClasses, "album__thumbnail--default");
+					// array_push($thumbnailClasses, "album__thumbnail--default");
 				}
 
 				$dataLightbox = "{$year}{$id}";

@@ -1,8 +1,21 @@
 // Image Blocks
-.img
+.image
     display: block
     +margin(null null 1em)
     +size(auto)
 
+    &--size
+        &--thumbnail-s
+            +size(150px, 150px)
+
     &--round
         border-radius: 50%
+
+    &--fit
+        &--cover
+            object-fit: cover
+        &--contain
+            object-fit: contain
+
+    &--has-border
+        border: $base-border

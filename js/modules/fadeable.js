@@ -12,7 +12,9 @@ $j(document).ready(function () {
       var windowInnerHeight = window.innerHeight;
       var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
       var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
-      var distanceFromBottomToAppear = 300;
+      
+      
+      var distanceFromBottomToAppear = 100;
 
       if (elementTopToWindowBottom > distanceFromBottomToAppear) {
         $j(element).addClass('fadeable--visible');

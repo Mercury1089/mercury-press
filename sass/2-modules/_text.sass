@@ -1,6 +1,8 @@
 // Text styling
-$font-color-light: $dark-gray
-$font-color-dark: $light-gray
+$font-color-light: $light-gray
+$font-color-dark: $dark-gray
+$font-color-black: $black
+$font-color-white: $white
 
 $min-modular-scale: 0
 $max-modular-scale: 12
@@ -8,10 +10,17 @@ $max-modular-scale: 12
 .text
     text-decoration: none
 
-    &--dark
-        color: $font-color-dark
-    &--action
-        color: $action-color
+    &--color
+        &--white
+            color: $font-color-white
+        &--light
+            color: $font-color-light
+        &--dark
+            color: $font-color-dark
+        &--black
+            color: $font-color-black
+        &--action
+            color: $action-color
 
     &--align
         &--left
@@ -28,20 +37,17 @@ $max-modular-scale: 12
             font-size: modular-scale($i)
 
     &--font-family
-        &--h1
-            font-family: $h1-font-family
-        &--h2
-            font-family: $h2-font-family
-        &--h3
-            font-family: $h3-font-family
-        &--h4
-            font-family: $h4-font-family
-        &--h5
-            font-family: $h5-font-family
-        &--h6
-            font-family: $h6-font-family
-        &--p
-            font: $base-font-family
+        &--diavlo
+            font-family: $diavlo
+        &--oswald
+            font-family: $oswald
+        &--abel
+            font-family: $abel
+            letter-spacing: 0.25em
+        &--roboto-mono
+            font-family: $roboto-mono
+        &--roboto-condensed
+            font-family: $roboto-condensed
 
     &--weight
         &--bold
