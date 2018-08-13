@@ -41,13 +41,14 @@
 
 				$dataLightbox = "{$year}{$id}";
 
-				$albums .= "<a href=" . wp_get_attachment_url( $imgIDs[0] ) . " data-lightbox=" . $dataLightbox . " class=\"album grid__item grid__item--col-s--3 grid__item--col-m--3 grid__item--col-l--2\">";
+				$albums .= "<a href=" . wp_get_attachment_url( $imgIDs[0] ) . " data-lightbox=" . $dataLightbox . " class=\"album grid__item grid__item--col-s--6 grid__item--col-m--3 grid__item--col-l--2\">";
 				$albums .= "<img class=\"" . implode(" ", $thumbnailClasses). "\" src=" . $thumbnail . " />";
 				$albums .= "<h6 class=\"album__title text text--align--center\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</h6>";
 				
 				for ($i = 1; $i < count($imgIDs); $i++) {
 					$curImg = wp_get_attachment_url( $imgIDs[$i] );
-					$albums .= "<a href=" . $curImg . " data-lightbox=" . $dataLightbox . " class=\"void\"></a>";
+					$curCap = wp_get_attachment_caption( $imgIDs[$i] );
+					$albums .= "<a href=\"{$curImg}\" data-lightbox=\"{$dataLightbox}\" data-title=\"{$curCap}\" class=\"void\"></a>";
 				}
 				
 				
