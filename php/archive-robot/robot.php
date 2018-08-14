@@ -12,7 +12,7 @@
         $robot_year = '20XX';
     }
 ?>
-<a href="<?php echo get_post_permalink(); ?>" class="robot grid__item grid__item--col-s--6 grid__item--col-m--3 grid__item--col-l--3">
+<a href="<?php echo get_post_permalink(); ?>" class="archive-item container container--direction--col container--align--center grid__item grid__item--col-s--6 grid__item--col-m--3 grid__item--col-l--3">
     <img class="image image--round image--has-border image--fit--cover image--size--thumbnail-s" src="<?php echo $post_img; ?>" /> 
     <h6 class="text text--align--center"><?php echo $robot_name; ?></h6>
     <h6 class="text text--align--center"><?php echo $robot_year; ?></h6>
