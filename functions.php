@@ -39,6 +39,7 @@ require 'php/functions/bem_walker.php';
 require 'php/functions/split_content.php';
 require 'php/functions/get_title.php';
 require 'php/functions/embed_yt.php';
+require 'php/functions/generate_rand_p.php';
 
 // Register nav menus
 register_nav_menus(array(
