@@ -13,6 +13,7 @@ many tools for building web apps and such.
 
 ### Tools included
 - [gulp-sass](https://github.com/dlmanning/gulp-sass)
+- [gulp-sourcemaps](https://github.com/gulp-sourcemaps/gulp-sourcemaps)
 - [postcss](https://github.com/postcss/postcss)
 - [autoprefixer](https://github.com/postcss/autoprefixer)
 - [cssnano](https://github.com/cssnano/cssnano)
