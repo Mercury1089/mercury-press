@@ -1,4 +1,12 @@
 // Robot Info Component
+$bg-robotinfo-label: $orange
+
 .robot-info
-    list-style-type: none
-    +padding(0)
+    p
+        +margin(null null 1em)
+
+    &__label
+        padding: 0.2em 0.5em
+        margin-right: 0.5em
+        background: $bg-robotinfo-label
+        text-transform: uppercase
