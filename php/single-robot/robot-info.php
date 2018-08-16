@@ -4,12 +4,12 @@
     $postID = $post->ID;
 
     $name = $post->post_title;
-    $status = get_post_meta($postID, "robot-status-meta", true);
+    $status = get_meta_or_default($postID, "robot-status-meta", true, "Unknown");
 
-    $length = get_post_meta($postID, "robot-length-meta", true);
-    $width = get_post_meta($postID, "robot-width-meta", true);
-    $height = get_post_meta($postID, "robot-height-meta", true);
-    $weight = get_post_meta($postID, "robot-weight-meta", true);
+    $length = get_meta_or_default($postID, "robot-length-meta", true, "??");
+    $width = get_meta_or_default($postID, "robot-width-meta", true, "??");
+    $height = get_meta_or_default($postID, "robot-height-meta", true, "??");
+    $weight = get_meta_or_default($postID, "robot-weight-meta", true, "???");
 
 ?>
 <ul class="robot-info">
