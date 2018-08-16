@@ -5,10 +5,12 @@
 
     $name = $post->post_title;
     $status = get_post_meta($postID, "robot-status-meta", true);
+
     $length = get_post_meta($postID, "robot-length-meta", true);
     $width = get_post_meta($postID, "robot-width-meta", true);
     $height = get_post_meta($postID, "robot-height-meta", true);
     $weight = get_post_meta($postID, "robot-weight-meta", true);
+
 ?>
 <ul class="robot-info">
     <li>

@@ -1,5 +1,5 @@
 <?php
-include 'php/single-robot/robot-pagination.php';
+include 'php/single-robot/robot-nav.php';
 /**
  * Template Name: Robot Page
  * Template Post Type: robot
@@ -34,7 +34,7 @@ if (have_posts()) {
     <section class="grid content__section">
         <h2 class="text grid__item">THE ROBOT</h2>
         <div class="grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
-            <img src="<?php echo $imgSrc;?>" />
+            <img class="robot-img" src="<?php echo $imgSrc;?>" />
         </div>
         <div class="grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
             <h4 class="text">Stats</h4>

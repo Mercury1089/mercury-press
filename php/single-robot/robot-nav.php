@@ -32,22 +32,36 @@
             
             if (!empty($lastYearRobot)) {
                 $prevID = $lastYearRobot[0]->ID;
+                $prevName = $lastYearRobot[0]->post_title;
+
                 $prevLink = get_post_permalink( $prevID );
-                $prevLabel = $prevYear . ": " . get_post_meta( $prevID, 'robot-game-meta', true );
+                $prevLabel = $prevYear . ": " . get_post_meta( $prevID, 'robot-game-meta', true ) . "<br>" . $prevName;
             }
             
             if (!empty($nextYearRobot)) {
                 $nextID = $nextYearRobot[0]->ID;
+                $nextName = $nextYearRobot[0]->post_title;
+
                 $nextLink = get_post_permalink( $nextID );
-                $nextLabel = $nextYear . ": " . get_post_meta( $nextID, 'robot-game-meta', true );
+                $nextLabel = $nextYear . ": " . get_post_meta( $nextID, 'robot-game-meta', true ) . "<br>" . $nextName;
             }
 
-            ?><nav class="robot-page__section robot-page__nav robot-page__section--full-width"><?php
+            ?><nav class="content__section robot-nav"><?php
             if ( !empty($prevLink) ) {
-                ?><a class="robot-page-nav__button robot-page-nav__button--prev" href="<?php echo $prevLink; ?>"><?php echo "« " . $prevLabel ?></a> <?php  
-            } 
+                ?>
+                <a class="robot-nav__button robot-nav__button--prev" href="<?php echo $prevLink; ?>">
+                    <span class="robot-nav__arrow">«</span>
+                    <span class="robot-nav__label"><?php echo $prevLabel ?></span>
+                </a>
+                <?php  
+            }
             if ( !empty($nextLink) ) {
-                ?><a class="robot-page-nav__button robot-page-nav__button--next" href="<?php echo $nextLink; ?>"><?php echo $nextLabel . " »" ?></a><?php
+                ?>
+                <a class="robot-nav__button robot-nav__button--next" href="<?php echo $nextLink; ?>">
+                    <span class="robot-nav__label"><?php echo $nextLabel; ?></span>
+                    <span class="robot-nav__arrow">»</span>
+                </a>
+                <?php
             }
             ?></nav><?php
         }
