@@ -3,7 +3,8 @@
     function embed_yt(string $id) {
         $opts = implode("&", array(
             "color=white",
-            "rel=0"
+            "rel=0",
+            "showinfo=0"
         ));
         $src = "https://www.youtube.com/embed/{$id}?{$opts}"
 ?>
