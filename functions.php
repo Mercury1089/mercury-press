@@ -40,6 +40,7 @@ require 'php/functions/split_content.php';
 require 'php/functions/get_title.php';
 require 'php/functions/embed_yt.php';
 require 'php/functions/generate_rand_p.php';
+require 'php/functions/get_meta_or_default.php';
 
 // Register nav menus
 register_nav_menus(array(
