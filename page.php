@@ -5,7 +5,7 @@
         while (have_posts()) {
             the_post();
 ?>
-        <section class="content__section">
+        <section class="content__section wp-content">
             <?php echo the_content(); ?>
         </section>
 <?php

@@ -6,7 +6,7 @@
         while(have_posts()) {
             the_post();
 ?>
-    <section class="content__section content__section--type--body">
+    <section class="content__section wp-content">
         <?php the_content(); ?>
     </section>
     <!-- <section class="content__section content__section--type--comments">
