@@ -4,6 +4,7 @@
 require 'php/functions/actions/init.php';
 require 'php/functions/actions/enqueue_scripts.php';
 require 'php/functions/actions/widgets_init.php';
+require 'php/functions/actions/after_setup_theme.php';
 
 // Helper Functions
 require 'php/functions/helpers/bem_walker.php';
