@@ -21,7 +21,7 @@ if (have_posts()) {
 ?>
     <section class="grid content__section">
         <h2 class="text grid__item">THE GAME</h2>
-        <div class="grid__item grid__item--col-l--6 grid__item--col-m--5 grid__item--col-s--6">
+        <div class="grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
             <?php
                 if ( !empty($seasonDesc) ) 
                     echo $seasonDesc;
