@@ -24,6 +24,15 @@
 				.wp-block-column
 					+grid-col($col: 1, $grid-columns: $i, $gutter: $i * $wp-gutter-size - $wp-gutter-size)
 
+	img, .wp-block-image
+		display: block	
+		&.alignright	
+			float: right			
+		&.alignleft	
+			float: left	
+		&.aligncenter	
+			+margin(null auto)
+
 	h1,
 	h2,
 	h3,
@@ -135,3 +144,6 @@
 	p.author
 		font-family: $sans-serif
 		font-style: italic
+
+	ul
+		@extend .list
