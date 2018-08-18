@@ -1,126 +1,139 @@
 // WordPress User Content Component
 // Basically a WP-style overwrite for user-written content
 .wp-content
-  $base-border-radius: 3px !default
-  $base-line-height: 1.5em !default
-  $base-spacing: 1.5em !default
-  $medium-screen: 40em !default
-  $base-font-color: $dark-gray !default
-  $sans-serif: $roboto-condensed
-  $sans-serif-2: $roboto-mono
+	$base-border-radius: 3px !default
+	$base-line-height: 1.5em !default
+	$base-spacing: 1.5em !default
+	$medium-screen: 40em !default
+	$base-font-color: $dark-gray !default
+	$sans-serif: $roboto-condensed
+	$sans-serif-2: $roboto-mono
 
-  @include clearfix
-  font-family: $sans-serif
-  text-align: left
+	$wp-max-columns: 6;
+	$wp-gutter-size: 5%;
 
-  h1,
-  h2,
-  h3,
-  p
-    +letter-spacing(0)
-    +padding(0)
-    +margin(0)
+	@include clearfix
+	font-family: $sans-serif
+	text-align: left
 
-  hr
-    border-bottom: 1px solid $light-gray
-    border-left: 0
-    border-right: 0
-    border-top: 0
-    margin: $base-spacing 0
+	.wp-block-columns
+		@for $i from 1 to 6
+			&.has-#{$i}-columns
+				+grid($flex-flow: row wrap)
 
-  p
-    color: $base-font-color
-    line-height: $base-line-height
+				.wp-block-column
+					+grid-col($col: 1, $grid-columns: $i, $gutter: $i * $wp-gutter-size - $wp-gutter-size)
 
-  a
-    color: $action-color
-    text-decoration: none
+		
 
-  .type
-    border-bottom: 1px solid
-    display: inline-block
-    font-family: $sans-serif-2
-    font-size: 0.7em
-    font-weight: 900
-    letter-spacing: 1px
-    margin-bottom: 2em
-    padding: 0.1em 0
-    text-align: left
-    text-transform: uppercase
+	h1,
+	h2,
+	h3,
+	p
+		+letter-spacing(0)
+		+padding(0)
+		+margin(0)
 
-  h1 
-    font-family: $sans-serif-2
-    font-size: 2em
-    font-weight: 600
-    margin-bottom: 0.6em
+	hr
+		border-bottom: 1px solid $light-gray
+		border-left: 0
+		border-right: 0
+		border-top: 0
+		margin: $base-spacing 0
 
-    +mq($medium-screen) 
-      font-size: 2.4em
+	p
+		color: $base-font-color
+		line-height: $base-line-height
 
-  h2 
-    font-family: $sans-serif
-    font-size: 1.2em
-    font-weight: 400
-    line-height: 1.4em
-    margin-bottom: 1.2em
+	a
+		color: $action-color
+		text-decoration: none
 
-    +mq($medium-screen)
-      font-size: 1.4em
+	.type
+		border-bottom: 1px solid
+		display: inline-block
+		font-family: $sans-serif-2
+		font-size: 0.7em
+		font-weight: 900
+		letter-spacing: 1px
+		margin-bottom: 2em
+		padding: 0.1em 0
+		text-align: left
+		text-transform: uppercase
 
-  code
-    background: #f7f7f7
-    border-radius: $base-border-radius * 1.5
-    border: 1px solid #e0e0e0
-    font-family: monaco
-    font-size: 0.65em
-    font-style: normal
-    padding: 0.1em 0.4em
-    white-space: nowrap
+	h1 
+		font-family: $sans-serif-2
+		font-size: 2em
+		font-weight: 600
+		margin-bottom: 0.6em
 
-  h3 
-    font-family: $sans-serif-2
-    font-size: 1em
-    font-weight: 700
-    line-height: 1.4em
-    margin-bottom: 0.5em
-    text-transform: uppercase
+		+mq($medium-screen) 
+			font-size: 2.4em
 
-  p.date 
-    color: transparentize($base-font-color, 0.6)
-    font-family: $sans-serif
-    font-size: 0.8em
-    margin-bottom: 0.5em
+	h2 
+		font-family: $sans-serif
+		font-size: 1.2em
+		font-weight: 400
+		line-height: 1.4em
+		margin-bottom: 1.2em
 
-  p 
-    font-family: $sans-serif
-    font-weight: 300
-    letter-spacing: 1
-    margin-bottom: 1.5em
+		+mq($medium-screen)
+			font-size: 1.4em
 
-    span 
-      font-family: $sans-serif
-      font-size: 0.8em
-      font-weight: 600
-      text-transform: uppercase
+	code
+		background: #f7f7f7
+		border-radius: $base-border-radius * 1.5
+		border: 1px solid #e0e0e0
+		font-family: monaco
+		font-size: 0.65em
+		font-style: normal
+		padding: 0.1em 0.4em
+		white-space: nowrap
 
-  hr
-    width: 3em
+	h3 
+		font-family: $sans-serif-2
+		font-size: 1em
+		font-weight: 700
+		line-height: 1.4em
+		margin-bottom: 0.5em
+		text-transform: uppercase
 
-  a.read-more
-    display: inline-block
-    font-family: $sans-serif
-    font-size: 0.8em
-    font-weight: 700
-    margin-left: 0.2em
-    position: relative
-    text-transform: uppercase
+	p.date 
+		color: transparentize($base-font-color, 0.6)
+		font-family: $sans-serif
+		font-size: 0.8em
+		margin-bottom: 0.5em
 
-    span
-      font-size: 1.7em
-      position: absolute
-      right: -10px
-      top: -2px
+	p 
+		font-family: $sans-serif
+		font-weight: 300
+		letter-spacing: 1
+		margin-bottom: 1.5em
 
-  p.author
-    font-family: $sans-serif
-    font-style: italic
+		span 
+			font-family: $sans-serif
+			font-size: 0.8em
+			font-weight: 600
+			text-transform: uppercase
+
+	hr
+		width: 3em
+
+	a.read-more
+		display: inline-block
+		font-family: $sans-serif
+		font-size: 0.8em
+		font-weight: 700
+		margin-left: 0.2em
+		position: relative
+		text-transform: uppercase
+
+		span
+			font-size: 1.7em
+			position: absolute
+			right: -10px
+			top: -2px
+
+	p.author
+		font-family: $sans-serif
+		font-style: italic
