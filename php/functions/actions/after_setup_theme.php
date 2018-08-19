@@ -3,6 +3,8 @@
 function mercury_press_add_theme_supports() {
     add_theme_support( 'post-thumbnails' );
 
+    add_theme_support( 'align-wide' );
+    add_theme_support( 'align-full' );
     add_theme_support( 'editor-color-palette', array(
         array(
             'name' => 'orange',
