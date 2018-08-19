@@ -1,0 +1,15 @@
+// Sponsors Styling
+// Normally wouldn't use ID selector,
+// but the plugin uses the id to specify the sponsor DOM.
+div#wp-sponsors
+    display: grid
+    grid-template-areas: "sponsor-item"
+    div.sponsor-item
+        display: flex
+        +size(100%, 100%)
+        +margin(0)
+
+        img
+            max-width: 100%
+            max-height: 100%
+            object-fit: contain
