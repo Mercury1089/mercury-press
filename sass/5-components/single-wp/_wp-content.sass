@@ -11,10 +11,17 @@
 
 	$wp-max-columns: 6;
 	$wp-gutter-size: 5%;
+	$wp-max-section-width-l: 1280px
+	$wp-max-section-width-s: 768px
 
 	@include clearfix
 	font-family: $sans-serif
 	text-align: left
+
+	// +padding(null 0)
+
+	// > *
+	// 	+margin(null calc(50% - #{$wp-max-section-width-s} / 2 + 2em))
 
 	.wp-block-columns
 		@for $i from 1 to 6
@@ -25,13 +32,22 @@
 					+grid-col($col: 1, $grid-columns: $i, $gutter: $i * $wp-gutter-size - $wp-gutter-size)
 
 	img, .wp-block-image
-		display: block	
-		&.alignright	
-			float: right			
-		&.alignleft	
-			float: left	
-		&.aligncenter	
+		display: flex
+		flex-direction: column
+
+	.alignright	
+		float: right			
+	.alignleft	
+		float: left	
+	.aligncenter
+		display: flex
+		*
 			+margin(null auto)
+
+	.wp-block-button__link
+		@extend .button
+		background: none
+		color: $action-color
 
 	h1,
 	h2,
