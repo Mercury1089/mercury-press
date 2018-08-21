@@ -48,3 +48,15 @@ $color-button-text-active: $white
             &:hover
                 background-color: $white
 
+    &--align
+        &--center
+            +margin(auto)
+        &--top
+            +margin(null null auto)
+        &--bottom
+            +margin(auto null null)
+        &--left
+            +margin(null null null auto)
+        &--right
+            +margin(null auto null null)
+
