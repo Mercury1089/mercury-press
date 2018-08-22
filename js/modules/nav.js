@@ -19,6 +19,7 @@ $j(window).on("load", function() {
     var submenu = $j(".nav-menu__sub-menu");
 
     toggle.toggleClass("nav__item--active");
+    $j("body").toggleClass("disable-scrolling");
     $j(".nav__menu").toggleClass('nav__menu--open');
 
     submenu.slideUp(150, "easeOutCirc", function() {
@@ -36,6 +37,7 @@ $j(window).on("load resize", function() {
     var active = $j(".nav__item--active").length > 0;
 
     $j(".nav__menu").toggleClass('nav__menu--open', active);
+    $j("body").toggleClass('disable-scrolling', active);
 
     menulink.click(function (e) {
         var child = $j(this).parent().find(".nav-menu__sub-menu");
@@ -50,6 +52,8 @@ $j(window).on("load resize", function() {
     $j(".nav__menu").removeClass('nav__menu--open');
     $j(".nav-menu__sub-menu").removeClass('nav-menu__sub-menu--open')
     $j(".nav-menu__sub-menu").removeAttr("style");
+
+    $j("body").removeClass('disable-scrolling');
   }
 });
 
