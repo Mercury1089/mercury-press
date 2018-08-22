@@ -19,6 +19,7 @@ $j(window).on("load", function() {
     var submenu = $j(".nav-menu__sub-menu");
 
     toggle.toggleClass("nav__item--active");
+    
     $j("body").toggleClass("disable-scrolling");
     $j(".nav__menu").toggleClass('nav__menu--open');
 
@@ -33,7 +34,9 @@ $j(window).on("load resize", function() {
   var menulink = $j(".nav-menu__item--has-children .nav-menu__anchor");
   menulink.unbind("click");
 
-  if ( $j(".nav__item--type--menu-toggle").css("display") != "none" ) {
+  // If the size is enough to show the menu toggle, 
+  // assume we are < tablet size
+  if ( $j(".nav__item--type--menu-toggle").css("display") != "none" ) { 
     var active = $j(".nav__item--active").length > 0;
 
     $j(".nav__menu").toggleClass('nav__menu--open', active);
@@ -48,7 +51,7 @@ $j(window).on("load resize", function() {
           e.preventDefault();
         }
     });
-  } else {
+  } else { // >= tablet size
     $j(".nav__menu").removeClass('nav__menu--open');
     $j(".nav-menu__sub-menu").removeClass('nav-menu__sub-menu--open')
     $j(".nav-menu__sub-menu").removeAttr("style");
