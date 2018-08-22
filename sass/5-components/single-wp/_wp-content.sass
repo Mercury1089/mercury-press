@@ -44,10 +44,27 @@
 		*
 			+margin(null auto)
 
+	.has-orange-color
+		color: $orange
+	
+	.has-dark-gray-color
+		color: $dark-gray
+	
+	.has-light-gray-color
+		color: $light-gray
+
 	.wp-block-button__link
 		@extend .button
-		background: none
-		color: $action-color
+
+		&.has-orange-color
+			@extend .button--color--orange
+
+		&.has-dark-gray-color
+			@extend .button--color--dark
+		
+		&.has-light-gray-color
+			@extend .button--color--light
+		
 
 	h1,
 	h2,

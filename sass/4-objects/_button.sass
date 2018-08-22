@@ -3,6 +3,7 @@ $color-button-dark: $dark-gray
 $color-button-light: $light-gray
 $color-button-black: $black
 $color-button-white: $white
+$color-button-orange: $orange
 
 $color-button-text-active: $white
 
@@ -10,21 +11,30 @@ $color-button-text-active: $white
     +padding(1em 2em)
     border: $base-border
     border-radius: 4em
-    +border-color($action-color)
     text-decoration: none
     font-weight: bold
+    background: none
     transition: all $base-duration $base-timing
 
     &:hover
-        background-color: $action-color
         color: $color-button-text-active
+        background-color: $action-color
 
     &--color
+        &--orange
+            +border-color($orange)
+            color: $orange
+
+            &:hover
+                color: $color-button-text-active
+                background-color: $orange
+            
         &--dark
             +border-color($dark-gray)
             color: $dark-gray
             
             &:hover
+                color: $color-button-text-active
                 background-color: $dark-gray
         
         &--light
@@ -32,6 +42,7 @@ $color-button-text-active: $white
             color: $light-gray
 
             &:hover
+                color: $color-button-text-active
                 background-color: $light-gray
             
         &--black
@@ -39,6 +50,7 @@ $color-button-text-active: $white
             color: $black
 
             &:hover
+                color: $color-button-text-active
                 background-color: $black
 
         &--white
@@ -46,6 +58,7 @@ $color-button-text-active: $white
             color: $white
 
             &:hover
+                color: $color-button-text-active
                 background-color: $white
 
     &--align
