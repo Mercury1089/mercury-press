@@ -5,17 +5,22 @@ function mercury_press_add_theme_supports() {
 
     add_theme_support( 'align-wide' );
     add_theme_support( 'align-full' );
+
+    add_theme_support( 'disable-custom-colors' );
     add_theme_support( 'editor-color-palette', array(
         array(
             'name' => 'orange',
+            'slug' => 'orange',
             'color' => '#f7941e',
         ),
         array(
             'name' => 'light gray',
+            'slug' => 'light-gray',
             'color' => '#d2d2d4',
         ),
         array(
             'name' => 'dark gray',
+            'slug' => 'dark-gray',
             'color' => '#333',
         )
     ));
