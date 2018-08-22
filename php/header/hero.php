@@ -3,20 +3,27 @@
 
     $post_id = $post->ID;
     $author_id = $post->post_author;
-    $date = $post->post_date;
+    $date = get_the_date('F d, Y', $post_id);
 
     $hero_class = array("hero");
     $content = array(
         get_the_title( $post ), 
-        "By " . get_the_author_meta( 'display_name', $author_id ) . " | " . $date
+        "By " . get_the_author_meta( 'display_name', $author_id ) . " | Written " . $date
     );
     $call = array();
-    $hero_img = get_the_post_thumbnail_url($post->ID, 'full');
+    $hero_img = get_theme_file_uri( "./images/default/hero_default.jpg" );
 
     // Create hero
     // Get custom hero image
-    if ( !isset( $hero_img ) || empty( $hero_img )) {
-        $hero_img = get_theme_file_uri("./images/default/hero_default.jpg");
+    if ( is_archive() ) {
+        $postType = get_queried_object();
+        switch($postType) {
+            case 'robot':
+                $hero_img = get_the_post_thumbnail_url( null, 'full' );
+                break;
+        }
+    } else if ( !empty( get_the_post_thumbnail_url( null, 'full' ) ) ) {
+        $hero_img = get_the_post_thumbnail_url( null, 'full' );
     }
 
     // Hero sizes
