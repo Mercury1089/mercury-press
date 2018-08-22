@@ -46,18 +46,18 @@
     </section>
     <section class="grid content__section content__section--width--full">
         <section class="container container--direction--col container--align--center grid__item grid__item--col-l--6 grid__item--col-m--9 grid__item--col-s--6"> <!-- "JOIN US" -->
-            <h2 class="text text--align--center text--dark">STUDENTS</h2>
+            <h2 class="text text--align--center text--dark">BECOME A MEMBER</h2>
             <p class="text text--contain text--align--center text--dark">
                 Are you a Hightstown student looking to join a FIRST robotics team? Look no further! We are always looking for new students to join our teams!
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3UGBnHzwgEufM4HYTq2zWJq_tYcaEVFNWHFp5d2Zw9sVdag/viewform?c=0&w=1" target="_blank" class="button button--align--bottom button--color--black" id="call">SIGN UP</a>
         </section>
         <section class="container container--direction--col container--align--center grid__item grid__item--col-l--6 grid__item--col-m--9 grid__item--col-s--6"> <!-- "SPONSORS" -->
-            <h2 class="text text--align--center text--color--dark">SPONSORS</h2>
+            <h2 class="text text--align--center text--color--dark">SPONSOR THE TEAM</h2>
             <p class="text text--contain text--align--center text--color--dark">
-                Find what we do interesting? Want to give us a hand in helping our team to achieve greatness? Become our sponsor today!
+                Find what we do interesting? Want to fund us for bragging rights? Become our sponsor today!
             </p>
-            <a href="#" target="_blank" class="button button--align--bottom button--color--black">SPONSOR US</a>
+            <a href="#" target="_blank" class="button button--align--bottom button--color--black">LEARN MORE</a>
         </section>
     </section>
 <?php get_footer(); ?>
