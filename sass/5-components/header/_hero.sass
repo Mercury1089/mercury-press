@@ -1,20 +1,20 @@
 // Hero Style
 $bg-tint-hero: 0.5
-$bg-hero-default: url('./images/default/hero_default.jpg') center/cover no-repeat
+$bg-hero-default: center/cover no-repeat
 
 $fg-color-hero: $white
 
 $font-hero-largetext: $oswald
 $font-hero-smalltext: $roboto-condensed
 
-$fontsize-hero-largetext: strip-unit( modular-scale(3) ), strip-unit(  modular-scale(6) )
-$fontsize-hero-smalltext: strip-unit( modular-scale(1) ), strip-unit(  modular-scale(3) )
+$fontsize-hero-largetext: strip-unit( modular-scale(3) ), strip-unit(  modular-scale(8) )
+$fontsize-hero-smalltext: strip-unit( modular-scale(1) ), strip-unit(  modular-scale(4) )
 $csslock-hero-range: 768, 1024
 
 // Hero Container
 .hero
     display: flex
-    min-height: 25em
+    min-height: 50vh
     +padding(2em)
     background-color: rgba(0, 0, 0, $bg-tint-hero)
 
@@ -30,6 +30,9 @@ $csslock-hero-range: 768, 1024
 
 .hero--large
     min-height: 100vh
+
+.hero--medium
+    min-height: 75vh
 
 // Hero Content Wrapper
 .hero__content

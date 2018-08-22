@@ -11,8 +11,14 @@
         "By " . get_the_author_meta( 'display_name', $author_id ) . " | " . $date
     );
     $call = array();
+    $hero_img = get_the_post_thumbnail_url($post->ID, 'full');
 
     // Create hero
+    // Get custom hero image
+    if ( !isset( $hero_img ) || empty( $hero_img )) {
+        $hero_img = get_theme_file_uri("./images/default/hero_default.jpg");
+    }
+
     // Hero sizes
     if (is_front_page()) // Full-height hero is for the front-page only.
         array_push($hero_class, "hero--large");
@@ -41,6 +47,11 @@
 
     // Hero Button Content
 ?>
+<style>
+    .hero:before {
+        background-image: url(<?php echo $hero_img; ?>);
+    }
+</style>
 <header class="<?php echo implode(" ", $hero_class); ?>">
     <div class="hero__content">
         
