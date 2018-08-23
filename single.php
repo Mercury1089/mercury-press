@@ -18,6 +18,5 @@
     } else {
         echo '<p>No content found</p>';
     }
+    get_footer();
 ?>
-
-<?php get_footer(); ?>
