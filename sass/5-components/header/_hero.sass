@@ -43,6 +43,9 @@ $csslock-hero-range: 768, 1024
     text-align: center
     color: $fg-color-hero
 
+    &:last-child
+        +margin(null null 0)
+
 .hero__text--large
     font-family: $font-hero-largetext
     +css-lock( nth($fontsize-hero-largetext, 1), nth($fontsize-hero-largetext, 2) )
