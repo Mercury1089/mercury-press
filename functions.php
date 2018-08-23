@@ -9,10 +9,10 @@
     require 'php/functions/helpers/bem_walker.php';
     require 'php/functions/helpers/split_content.php';
     require 'php/functions/helpers/get_title.php';
-    require 'php/functions/helpers/embed_yt.php';
     require 'php/functions/helpers/generate_rand_p.php';
     require 'php/functions/helpers/get_meta_or_default.php';
 
     // Shortcodes
-    require 'php/functions/shortcodes/calendar.php'
+    require 'php/functions/shortcodes/calendar.php';
+    require 'php/functions/shortcodes/embed_yt.php';
 ?>

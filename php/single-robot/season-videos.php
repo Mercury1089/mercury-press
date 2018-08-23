@@ -9,7 +9,7 @@
   <li class="tab-header-and-content">
     <a href="javascript:void(0)" class="is-active tab-link">Game Reveal</a>
     <div class="tab-content">
-        <?php embed_yt($gameReveal); ?>
+        <?php do_shortcode("[embed_yt id={$gameReveal}]"); ?>
     </div>
   </li>
   <li class="tab-header-and-content">
@@ -17,7 +17,7 @@
     <div class="tab-content">
         <?php 
             if ( isset($robotReveal) && !empty($robotReveal) ) 
-                embed_yt($robotReveal);
+                do_shortcode("[embed_yt id={$robotReveal}]");
         ?>
     </div>
   </li>
