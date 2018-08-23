@@ -12,4 +12,7 @@
     require 'php/functions/helpers/embed_yt.php';
     require 'php/functions/helpers/generate_rand_p.php';
     require 'php/functions/helpers/get_meta_or_default.php';
+
+    // Shortcodes
+    require 'php/functions/shortcodes/calendar.php'
 ?>
