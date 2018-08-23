@@ -70,8 +70,8 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
     &__menu // Nav Menu
         display: flex
         flex-direction: column
-        +position(fixed, 0 100vw 0 0)
-        right: calc(100vw - 256px)
+        +position(fixed, null calc(100vw - 256px) 0 0)
+        height: 100%
         transform: translateX(-256px)
         padding-top: 1em
         overflow-x: hidden 
@@ -133,8 +133,8 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
                         text-decoration: none
                         color: inherit
     
-//--------Tablet+ media query--------
-+mq(tablet)
+//--------Desktop+ media query--------
++mq(desktop)
     .nav // Nav Container
         &--transparent
             +size(100%, 128px)
