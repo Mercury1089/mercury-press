@@ -10,7 +10,7 @@ buildscript {
 }
 
 plugins {
-    id 'java'
+	id 'distribution'
     id 'com.moowork.gulp' version '1.2.0'
 }
 
@@ -50,6 +50,33 @@ ext.deleteInvalidSymLinks = {dir ->
 
 nodeSetup.doFirst {
 	deleteInvalidSymLinks(project.file('.gradle/nodejs'))
+}
+
+buildDir = '.build'
+
+build.dependsOn 'compileSass'
+distZip.dependsOn 'compileSass'
+
+distributions {
+    main {
+        baseName = 'mercury-press'
+        contents {
+			from('./') {
+				exclude 'node_modules'
+				exclude '*.js'
+				exclude '**/.*'
+				exclude 'sass'
+				exclude '**/gradle*'
+
+				include 'style.css'
+				
+				include '**/*.php'
+				include '**/*.js'
+				include '**/*.png'
+				include '**/*.jp*g'
+			}
+        }
+    }
 }
 
 task wrapper(type: Wrapper) {
