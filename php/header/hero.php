@@ -40,11 +40,11 @@
     } else if ( is_post_type_archive( 'robot' ) ) {
         $content[0] = "Robot Archive";
         $content[1] = "Mercury's past of scrap metal and stuff";
-    } else if ( is_front_page() || is_home() ) { // Front-page/Blog feed
-        if ( is_front_page() )
-            $page = get_post( get_option( 'page_on_front' ) );
-        else
-            $page = get_post( get_option( 'page_for_posts' ) );
+    } else if ( is_front_page() ) { // Front Page
+        $content[0] = bloginfo( 'name' );
+        $content[1] = bloginfo( 'description' );
+    } else if ( is_home() ) { // Blog feed
+        $page = get_post( get_option( 'page_for_posts' ) );
         
         $content[0] = $page->post_title;
         $content[1] = $page->post_content;
