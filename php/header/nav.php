@@ -24,4 +24,5 @@
             'container' => false
         ) );
     ?>
+    <div class="nav__mask"></div>
 </nav>

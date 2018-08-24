@@ -22,6 +22,7 @@ $j(window).on("load", function() {
     
     $j("body").toggleClass("disable-scrolling");
     $j(".nav__menu").toggleClass('nav__menu--open');
+    $j(".nav__mask").toggleClass('nav__mask--active');
 
     submenu.slideUp(150, "easeOutCirc", function() {
       $j(this).removeClass(".nav-menu__sub-menu--open");

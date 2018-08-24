@@ -5,6 +5,8 @@ $nav-ms-ratio: $perfect-fifth
 $bg-color-nav: $black
 $fg-color-nav: contrast-switch($bg-color-nav)
 
+$opacity-mask: 0.5
+
 $bg-color-nav-button-selected: $orange
 $bg-nav-button: linear-gradient(to top, transparent 50%, $bg-color-nav-button-selected 50%) center -100%/100% 200% no-repeat
 $bg-nav-button-mobile: linear-gradient(to left, transparent 50%, $bg-color-nav-button-selected 50%) 100% center/200% 100% no-repeat
@@ -18,7 +20,7 @@ $fg-color-submenu: contrast-switch($bg-color-submenu)
 $bg-color-submenuitem-selected: $light-gray
 
 $menu-font: modular-scale(0, $nav-ms-base, $nav-ms-ratio) $oswald
-$menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald     
+$menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
 
 .nav // Nav Container
     display: flex
@@ -132,6 +134,18 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
                         padding-left: 1em
                         text-decoration: none
                         color: inherit
+
+    &__mask // Nav mask
+        +position(fixed, 0 0 0 0)
+        z-index: -1
+        pointer-events: none
+        background-color: black
+        opacity: 0
+        transition: all $base-duration $base-timing
+
+        &--active
+            opacity: $opacity-mask
+            pointer-events: all
     
 //--------Desktop+ media query--------
 +mq(desktop)
@@ -209,3 +223,7 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
                             white-space: nowrap
                         &__anchor
                             +padding(0 1.5em 0 0)
+
+        &__mask
+            opacity: 0
+            pointer-events: none
