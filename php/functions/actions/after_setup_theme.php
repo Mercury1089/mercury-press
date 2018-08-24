@@ -22,7 +22,17 @@ function mercury_press_add_theme_supports() {
             'name' => 'dark gray',
             'slug' => 'dark-gray',
             'color' => '#333',
-        )
+        ),
+        array(
+            'name' => 'black',
+            'slug' => 'black',
+            'color' => '#000',
+        ),
+        array(
+            'name' => 'white',
+            'slug' => 'white',
+            'color' => '#fff',
+        ),
     ));
 }
 
