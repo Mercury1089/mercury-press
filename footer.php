@@ -1,9 +1,9 @@
             </main>            
             <footer class="footer">
                 <section class="footer__section footer__section--type--widgets">
-                    <?php
-                        if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer") )
-                    ?>
+                <?php
+                    if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer") )
+                ?>
                 </section>
                 <?php 
                     include 'php/footer/social-links.php'; 

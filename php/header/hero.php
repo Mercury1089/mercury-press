@@ -15,8 +15,8 @@
 
     // Create hero
     // Get custom hero image
-    if ( is_archive() ) {
-        $postType = get_queried_object();
+    if ( is_archive() ) { // Any type of archive
+        $postType = get_queried_object()->name;
         switch($postType) {
             case 'robot':
                 $hero_img = get_the_post_thumbnail_url( null, 'full' );
@@ -37,7 +37,7 @@
         $content[1] = 
             get_post_meta( $post_id, 'robot-year-meta', true ) . ": " . 
             get_post_meta( $post_id, 'robot-game-meta', true );
-    } else if ( is_post_type_archive( 'robot' ) ) {
+    } else if ( is_post_type_archive( 'robot' ) ) { // Robot Archive
         $content[0] = "Robot Archive";
         $content[1] = "Mercury's past of scrap metal and stuff";
     } else if ( is_front_page() ) { // Front Page
