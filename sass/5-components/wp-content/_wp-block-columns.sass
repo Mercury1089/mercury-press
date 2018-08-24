@@ -1,0 +1,13 @@
+// Gutenberg Columns Block
+$wp-max-columns: 6
+$wp-gutter-size: 5%
+$wp-max-section-width-l: 1280px
+$wp-max-section-width-s: 768px
+
+.wp-content .wp-block-columns
+    @for $i from 1 to 6
+        &.has-#{$i}-columns
+            +grid($flex-flow: row wrap)
+
+            .wp-block-column
+                +grid-col($col: 1, $grid-columns: $i, $gutter: $i * $wp-gutter-size - $wp-gutter-size)
