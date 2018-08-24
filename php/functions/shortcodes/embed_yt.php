@@ -14,7 +14,7 @@
         $src = "https://www.youtube.com/embed/{$id}?{$opts}";
         
         $out .= '<div class="iframe-container">';
-        $out .= '<iframe class="iframe" src="{$src}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+        $out .= "<iframe class=\"iframe\" src={$src} frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
         $out .= '</div>';
 
         return $out;
