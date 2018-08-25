@@ -14,13 +14,18 @@
         }
     ?>
     </section>
-    <?php 
-        if (have_posts()) {
-            echo the_posts_pagination(array(
-                'mid-size' => 4,
-                'prev_text'          => "«",
-                'next_text'          => "»",
-            )); 
-        }
-    ?>
+    <section class="content__section container container--direction--row container--justify--center container--align--center">
+<?php 
+    global $wp_query;
+
+    $big = 999999999; // need an unlikely integer
+    
+    echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $wp_query->max_num_pages
+    ) );
+?>
+    </section>
 <?php get_footer(); ?>
