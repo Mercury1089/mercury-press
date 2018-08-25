@@ -10,7 +10,10 @@
 				array (
 					'post_parent' => $section->ID
 				)
-            );
+			);
+			
+			if ( empty($children) )
+				continue;
             
 			$albums .= "<section class=\"grid content__section\" id=\"{$year}\">";
 			$albums .= "<h2 class=\"grid__item grid__item--text-align--center\">{$year}</h2>";
