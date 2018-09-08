@@ -30,25 +30,42 @@
 					continue;
 				
 				$thumbSrc = wp_get_attachment_url( $thumbID );
-				$thumbnailClasses = array(
+				$thumbnailClasses = implode(' ', array(
 					"image",
 					"image--round",
 					"image--has-border"
-				);
+				));
+				$arcItemClasses = implode(' ', array(
+					"archive-item",
+					"container",
+					"container--direction--col",
+					"container--align--center",
+					"grid__item",
+					"grid__item--col-s--6",
+					"grid__item--col-m--3",
+					"grid__item--col-l--2"
+				)); 
 				$thumbnail = wp_get_attachment_image_src( $thumbID, 'thumbnail', false )[0];
+				$thumbnailHref = wp_get_attachment_url( $imgIDs[0] );
 
 				$dataLightbox = "{$year}{$id}";
 
-				$albums .= "<a href=" . wp_get_attachment_url( $imgIDs[0] ) . " data-lightbox=\"{$dataLightbox}\" class=\"archive-item container container--direction--col container--align--center grid__item grid__item--col-s--6 grid__item--col-m--3 grid__item--col-l--2\">";
-				$albums .= "<img class=\"" . implode( ' ', $thumbnailClasses ) . "\" src=\"{$thumbnail}\" />";
-				$albums .= "<h6 class=\"album__title text text--align--center\">" . str_replace( "Private: ", "", get_the_title($id) ) . "</h6>";
+				$albumTitle = str_replace( "Private: ", "", get_the_title($id) );
+				$albumClasses = implode(' ', array(
+					"album__title",
+					"text",
+					"text--align--center"
+				));
+
+				$albums .= "<a href=\"{$thumbnailHref}\" data-lightbox=\"{$dataLightbox}\" class=\"{$arcItemClasses}\">";
+				$albums .= "<img class=\"{$thumbnailClasses}\" src=\"{$thumbnail}\" />";
+				$albums .= "<h6 class=\"{$albumClasses}\">{$albumTitle}</h6>";
 				
 				for ($i = 1; $i < count($imgIDs); $i++) {
 					$curImg = wp_get_attachment_url( $imgIDs[$i] );
 					$curCap = wp_get_attachment_caption( $imgIDs[$i] );
 					$albums .= "<a href=\"{$curImg}\" data-lightbox=\"{$dataLightbox}\" data-title=\"{$curCap}\" class=\"void\"></a>";
 				}
-				
 				
 				$albums .= "</a>";
 			}
