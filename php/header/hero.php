@@ -2,14 +2,10 @@
     global $post;
 
     $post_id = $post->ID;
-    $author_id = $post->post_author;
-    $date = get_the_date('F d, Y', $post_id);
-
+    
     $hero_class = array("hero");
-    $content = array(
-        get_the_title( $post ), 
-        "By " . get_the_author_meta( 'display_name', $author_id ) . " | Written " . $date
-    );
+    $content = "";
+
     $call = array();
     $hero_img = get_theme_file_uri( "./images/default/hero_default.jpg" );
 
@@ -34,22 +30,33 @@
 
     // Hero content
     if ( is_singular( 'robot' ) ) { // Robot single
-        $content[1] = 
-            get_post_meta( $post_id, 'robot-year-meta', true ) . ": " . 
-            get_post_meta( $post_id, 'robot-game-meta', true );
+        $title = get_the_title( $post );
+        $year = get_post_meta( $post_id, 'robot-year-meta', true );
+        $game = get_post_meta( $post_id, 'robot-game-meta', true );
+
+        $content .= "<h1>{$title}</h1>";
+        $content .= "<p>{$year}: {$game}</p>"; 
     } else if ( is_post_type_archive( 'robot' ) ) { // Robot Archive
-        $content[0] = "Robot Archive";
-        $content[1] = "Mercury's past of scrap metal and stuff";
+        $content .= "<h1>Robot Archive</h1>";
+        $content .= "<p>Mercury's past of scrap metal and stuff</p>";
     } else if ( is_front_page() ) { // Front Page
-        $content[0] = get_bloginfo( 'name' );
-        $content[1] = get_bloginfo( 'description' );
-    } else if ( is_home() ) { // Blog feed
-        $page = get_post( get_option( 'page_for_posts' ) );
-        
-        $content[0] = $page->post_title;
-        $content[1] = $page->post_content;
+        $page = get_post( get_option( 'page_on_front' ) );
+        $content = apply_filters( 'the_content', $page->post_content );
+    } else if ( is_home() ) { // Blog Feed
+        $page =  get_post( get_option( 'page_for_posts' ) );
+        $content = apply_filters( 'the_content', $page->post_content );
     } else if ( is_singular( 'page' ) ) { // Single page
-        $content[1] = "";
+        $content .= "<h1>{$title}</h1>";
+    } else { // Catch-All (Most likely single blog post)
+        $title = get_the_title( $post );
+    
+        $date = get_the_date('F d, Y', $post_id);
+        
+        $author_id = $post->post_author;
+        $author = get_the_author_meta( 'display_name', $author_id );
+
+        $content .= "<h1>{$title}</h1>";
+        $content .= "<p>By {$author} | Written {$date}</p>";
     }
 
     // Hero Button Content
@@ -61,18 +68,6 @@
 </style>
 <header class="<?php echo implode(" ", $hero_class); ?>">
     <div class="hero__content">
-        
-        <?php if ( !empty( $content[0] ) ) { ?>
-            <h1 class="hero__text hero__text--large"><?php echo $content[0]; ?></h1>
-        <?php } ?>
-
-        <?php if ( !empty( $content[1] ) ) { ?>
-            <p class="hero__text hero__text--small"><?php echo $content[1]; ?></p>
-        <?php } ?>
-        
-        <?php if ( count( $call ) === 2 ) { ?>
-            <a class="hero__button" href="<?php echo $call[0]; ?>"><?php echo $call[1]; ?></a>
-        <?php } ?>
-
+        <?php echo $content; ?>
     </div>
 </header>

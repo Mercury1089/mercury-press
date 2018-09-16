@@ -35,22 +35,52 @@ $csslock-hero-range: 768, 1024
     min-height: 75vh
 
 // Hero Content Wrapper
+// Contect changer as well
 .hero__content
     +margin(auto)
 
-// Hero Text
-.hero__text
-    text-align: center
-    color: $fg-color-hero
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p
+        text-align: center
+        color: $fg-color-hero
 
-    &:last-child
-        +margin(null null 0)
+        &:last-child
+            +margin(null null 0)
 
-.hero__text--large
-    font-family: $font-hero-largetext
-    +css-lock( nth($fontsize-hero-largetext, 1), nth($fontsize-hero-largetext, 2) )
-    text-transform: uppercase
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+        font-family: $font-hero-largetext
+        +css-lock( nth($fontsize-hero-largetext, 1), nth($fontsize-hero-largetext, 2) )
+        text-transform: uppercase
 
-.hero__text--small
-    font-family: $font-hero-smalltext
-    +css-lock( nth($fontsize-hero-smalltext, 1), nth($fontsize-hero-smalltext, 2) )
+    p
+        font-family: $font-hero-smalltext
+        +css-lock( nth($fontsize-hero-smalltext, 1), nth($fontsize-hero-smalltext, 2) )
+    
+    .wp-block-button
+	    .wp-block-button__link
+            @extend .button
+
+            &.has-orange-color
+                @extend .button--color--orange
+
+            &.has-dark-gray-color
+                @extend .button--color--dark
+            
+            &.has-light-gray-color
+                @extend .button--color--light
+            
+            &.has-black-color
+                @extend .button--color--black
+            
+            &.has-white-color
+                @extend .button--color--white
