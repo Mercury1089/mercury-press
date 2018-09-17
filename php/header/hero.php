@@ -30,7 +30,7 @@
 
     // Hero content
     if ( is_singular( 'robot' ) ) { // Robot single
-        $title = get_the_title( $post );
+        
         $year = get_post_meta( $post_id, 'robot-year-meta', true );
         $game = get_post_meta( $post_id, 'robot-game-meta', true );
 
@@ -46,6 +46,7 @@
         $page =  get_post( get_option( 'page_for_posts' ) );
         $content = apply_filters( 'the_content', $page->post_content );
     } else if ( is_singular( 'page' ) ) { // Single page
+        $title = get_the_title( $post );
         $content .= "<h1>{$title}</h1>";
     } else { // Catch-All (Most likely single blog post)
         $title = get_the_title( $post );
