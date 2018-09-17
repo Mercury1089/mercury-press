@@ -7,7 +7,7 @@
         <?php wp_head(); ?>
     </head>
     
-    <body <?php echo body_class(); ?>>
+    <body <?php echo body_class('loadable'); ?>>
     <?php
         include 'php/header/nav.php'; 
         include 'php/header/hero.php';
