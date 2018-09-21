@@ -26,21 +26,21 @@
             <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/logos/1089logo.png"/>
             <h4 class="text text--align--center">FRC 1089</h4>
             <p class="text text--align--center">
-                Mercury 1089 is the number of our FRC team. With over 50 members and blah blah blah yea yea yea something something something.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.
             </p>
         </div>
         <div class="container container--direction--col container--align--center grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
             <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/logos/3944logo.png"/>
             <h4 class="text text--align--center">FTC 3944</h4>
             <p class="text text--align--center">
-                Mercury 3944 is the number of our FTC team. With over 50 members and blah blah blah yea yea yea something something something.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.
             </p>
         </div>
         <div class="container container--direction--col container--align--center grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
             <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/logos/FLLlogo.png"/>
             <h4 class="text text--align--center">OUR FLL TEAMS</h4>
             <p class="text text--align--center">
-                Team Mercury has also helped to startup some FLL teams within the Hightstown region. Check em out cuz I need more money.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.
             </p>
         </div>
     </section>
