@@ -22,6 +22,9 @@ $bg-color-submenuitem-selected: $light-gray
 $menu-font: modular-scale(0, $nav-ms-base, $nav-ms-ratio) $oswald
 $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
 
+$font-size-hometext: 1.5em
+$font-size-hometext-large: 1.85em
+
 .nav // Nav Container
     display: flex
     justify-content: space-between
@@ -59,7 +62,8 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
                     +size(auto, 100%)
                 &--type--text
                     display: none
-                    font: bold modular-scale(1, $nav-ms-base, $nav-ms-ratio) $diavlo
+                    font: bold $font-size-hometext $diavlo
+                    transition: all $base-duration $base-timing
         
         &--type--menu-toggle // Nav mobile menu toggle
             +hmbrgr()
@@ -154,8 +158,8 @@ $menu-font-mobile: modular-scale(1, $nav-ms-base, $nav-ms-ratio) $oswald
             +size(100%, 128px)
             padding: 32px 50px
             
-            .home-link__part--text
-                font-size: modular-scale(2, $nav-ms-base, $nav-ms-ratio)
+            .home-link__part--type--text
+                font-size: $font-size-hometext-large
 
         .home-link__part--type--text
             display: inline
