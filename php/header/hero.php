@@ -1,6 +1,6 @@
 <?php
     global $post;
-
+    
     $post_id = $post->ID;
     
     $hero_class = array("hero");
@@ -15,7 +15,7 @@
         $postType = get_queried_object()->name;
         switch($postType) {
             case 'robot':
-                $hero_img = get_the_post_thumbnail_url( null, 'full' );
+                $hero_img = get_theme_file_uri( "./images/default/hero_default.jpg" );
                 break;
         }
     } else if ( !empty( get_the_post_thumbnail_url( null, 'full' ) ) ) {
@@ -30,7 +30,6 @@
 
     // Hero content
     if ( is_singular( 'robot' ) ) { // Robot single
-        
         $year = get_post_meta( $post_id, 'robot-year-meta', true );
         $game = get_post_meta( $post_id, 'robot-game-meta', true );
 
@@ -43,8 +42,11 @@
         $page = get_post( get_option( 'page_on_front' ) );
         $content = apply_filters( 'the_content', $page->post_content );
     } else if ( is_home() ) { // Blog Feed
-        $page =  get_post( get_option( 'page_for_posts' ) );
-        $content = apply_filters( 'the_content', $page->post_content );
+        $page = get_post( get_option( 'page_for_posts' ) );
+        $title = get_the_title( $page );
+        
+        $content .= "<h1>{$title}</h1>";
+        $content .= "<p>Your source for all news and events from Team Mercury</p>";
     } else if ( is_singular( 'page' ) ) { // Single page
         $title = get_the_title( $post );
         $content .= "<h1>{$title}</h1>";
