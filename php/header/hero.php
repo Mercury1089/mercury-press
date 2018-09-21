@@ -30,6 +30,7 @@
 
     // Hero content
     if ( is_singular( 'robot' ) ) { // Robot single
+        $title = get_the_title( $post );
         $year = get_post_meta( $post_id, 'robot-year-meta', true );
         $game = get_post_meta( $post_id, 'robot-game-meta', true );
 
