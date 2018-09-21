@@ -1,4 +1,12 @@
-<?php 
+<?php
+/**
+ * Template Name: Gallery Page
+ *
+ * @package Mercury1089
+ * @subpackage MercuryPress
+ * @since 1.0.0 
+ */
+
     get_header();
 	
 	// First we define all the sections that exist.
