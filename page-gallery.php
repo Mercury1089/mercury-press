@@ -38,14 +38,14 @@
 	include 'php/page-gallery/render-nav.php';
 	include 'php/page-gallery/render-gallery.php'
 ?>
-	<div class="content__section">
+	<!-- <div class="content__section">
 		<p class="text text--align--center">
 			Here are all the pictures we take every year during our time in Robotics, both on-season and off-season.
 			<br>
-			<!-- Use the year nav below to jump to a specific year. -->
+			Use the year nav below to jump to a specific year.
 		</p>
-		<?php echo render_nav(); ?>
-	</div>
+		<?php // echo render_nav(); ?>
+	</div> -->
 <?php
 	if (have_posts()) {
 		while (have_posts()) {

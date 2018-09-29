@@ -1,3 +1,9 @@
 // Pagination Stylings
+$font-numbers: bold 1.65em $roboto-condensed
 .page-numbers
-    @extend .button
+    &:not(:last-child)
+        +margin(null 1em null null)
+
+    font: $font-numbers 
+    text-transform: uppercase
+    text-decoration: none
