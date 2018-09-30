@@ -26,21 +26,21 @@
             <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/logos/1089logo.png"/>
             <h4 class="text text--align--center">FRC 1089</h4>
             <p class="text text--align--center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.
+                The FRC team competes in the FIRST Robotics Competition. With over 70 members, the team handles everything from Spirit, Media, & Public Relations to designing, building, & programming a fully-functioning competition robot.
             </p>
         </div>
         <div class="container container--direction--col container--align--center grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
             <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/logos/3944logo.png"/>
             <h4 class="text text--align--center">FTC 3944</h4>
             <p class="text text--align--center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.
+                The FTC team competes in the FIRST Tech Challenge. This close-knit group of around 10 members dedicates their time to designing, building, & programming their robot. They track their progress using an Engineering Notebook.
             </p>
         </div>
         <div class="container container--direction--col container--align--center grid__item grid__item--col-l--4 grid__item--col-m--3 grid__item--col-s--6">
             <img class="image image--size--thumbnail-s image--fit--contain" src="<?php echo get_template_directory_uri() ?>/images/logos/FLLlogo.png"/>
             <h4 class="text text--align--center">OUR FLL TEAMS</h4>
             <p class="text text--align--center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.
+                Students from the FRC team mentor several FLL (FIRST Lego League) Teams. Mentors guide kids grades 4-8 in the designing, building & programming of Lego EV3 robots for competition, as well as a mini-research project.
             </p>
         </div>
     </section>
