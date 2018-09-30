@@ -1,3 +1,16 @@
 // Invite Blocks
 .invite
+    +padding(2em)
+    background-size: cover
+    background-position: center
+    width: 100%
+
+    &--members
+        background-image: url("./images/bg/bg_invite-members.jpg")
     
+    &--sponsors
+        background-image: url("./images/bg/bg_invite-sponsors.jpg")
+
++mq(tablet)
+    .invite
+        width: 50%
