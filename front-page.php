@@ -50,14 +50,14 @@
             <p class="text text--contain text--align--center text--color--light">
                 Are you a Hightstown student looking to join a FIRST robotics team? 
                 <br>
-                Look no further! We are always looking for new students to join our teams!
+                Look no further! We are always looking for new students to join our team!
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3UGBnHzwgEufM4HYTq2zWJq_tYcaEVFNWHFp5d2Zw9sVdag/viewform?c=0&w=1" target="_blank" class="button button--align--bottom button--color--white" id="call">SIGN UP</a>
         </section>
         <section class="invite invite--sponsors container container--direction--col container--align--center"> <!-- "SPONSORS" -->
             <h2 class="text text--align--center text--color--light">SPONSOR THE TEAM</h2>
             <p class="text text--contain text--align--center text--color--light">
-                Find what we do interesting? Want to fund us for bragging rights? 
+                Want to fund our team? Want your brand's logo on the robot and on our site? 
                 <br>
                 Become our sponsor today!
             </p>
