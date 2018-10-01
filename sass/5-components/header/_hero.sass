@@ -85,3 +85,16 @@ $csslock-hero-range: 768, 1024
             
             &.has-white-color
                 @extend .button--color--white
+
+// Jump section
+.hero__jump
+    display: none
+    position: absolute
+    left: 0
+    right: 0 
+    top: 85vh
+    margin: auto
+
++mq(mobile)
+    .hero__jump
+        display: inherit

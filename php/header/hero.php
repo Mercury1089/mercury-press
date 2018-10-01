@@ -62,8 +62,6 @@
         $content .= "<h1>{$title}</h1>";
         $content .= "<p>By {$author} | Written {$date}</p>";
     }
-
-    // Hero Button Content
 ?>
 <style>
     .hero:before {
@@ -74,4 +72,10 @@
     <div class="hero__content">
         <?php echo $content; ?>
     </div>
+
+<?php if (is_front_page()) { ?>
+    <div class="container hero__jump">
+        <a href="#jump" class="button button--color--white button--align--center">▼</a>
+    </div>
+<?php } ?>
 </header>
