@@ -57,7 +57,7 @@ build.dependsOn 'compileSass'
 distZip.dependsOn 'compileSass'
 
 task pack(type: Zip, dependsOn: 'compileSass') {
-	baseName = "mercurypress"
+	baseName = "mercury-press"
 	extension = "zip"
 
 	from('./') {
