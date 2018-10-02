@@ -55,8 +55,8 @@ buildDir = '.build'
 
 build.dependsOn 'compileSass'
 
-task packPlugin(type: Zip, dependsOn: 'compileSass') {
-	baseName = "mercurypress"
+task pack(type: Zip, dependsOn: 'compileSass') {
+	baseName = "mercury-press"
 	extension = "zip"
 
 	from('./') {
@@ -74,12 +74,8 @@ task packPlugin(type: Zip, dependsOn: 'compileSass') {
 		include '**/*.jp*g'
 		include '**/*.ttf'
 	} 
-
 	into ('')
-
-	
 }
-
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.7'
