@@ -54,7 +54,6 @@ nodeSetup.doFirst {
 buildDir = '.build'
 
 build.dependsOn 'compileSass'
-distZip.dependsOn 'compileSass'
 
 task packPlugin(type: Zip, dependsOn: 'compileSass') {
 	baseName = "mercurypress"
@@ -73,6 +72,7 @@ task packPlugin(type: Zip, dependsOn: 'compileSass') {
 		include '**/*.js'
 		include '**/*.png'
 		include '**/*.jp*g'
+		include '**/*.ttf'
 	} 
 
 	into ('')
@@ -80,29 +80,6 @@ task packPlugin(type: Zip, dependsOn: 'compileSass') {
 	
 }
 
-distributions {
-    main {
-        baseName = 'mercury-press'
-        contents {
-			from('./') {
-				exclude 'node_modules'
-				exclude '*.js'
-				exclude '**/.*'
-				exclude 'sass'
-				exclude '**/gradle*'
-
-				include 'style.css'
-				
-				include '**/*.php'
-				include '**/*.js'
-				include '**/*.png'
-				include '**/*.jp*g'
-			}
-
-			into('')
-        }
-    }
-}
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.7'
