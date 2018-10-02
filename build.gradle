@@ -56,7 +56,7 @@ buildDir = '.build'
 build.dependsOn 'compileSass'
 distZip.dependsOn 'compileSass'
 
-task packPlugin(type: Zip, dependsOn: 'compileSass') {
+task pack(type: Zip, dependsOn: 'compileSass') {
 	baseName = "mercurypress"
 	extension = "zip"
 
