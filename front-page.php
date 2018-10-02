@@ -61,7 +61,7 @@
                 <br>
                 Become our sponsor today!
             </p>
-            <a href="#" target="_blank" class="button button--align--bottom button--color--white">LEARN MORE</a>
+            <a href="https://drive.google.com/open?id=1MeZvx8fvccsRvH63bJp82U0eTwi_rttI" target="_blank" class="button button--align--bottom button--color--white">LEARN MORE</a>
         </section>
     </section>
 <?php get_footer(); ?>
