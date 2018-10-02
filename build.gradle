@@ -74,34 +74,7 @@ task packPlugin(type: Zip, dependsOn: 'compileSass') {
 		include '**/*.png'
 		include '**/*.jp*g'
 	} 
-
 	into ('')
-
-	
-}
-
-distributions {
-    main {
-        baseName = 'mercury-press'
-        contents {
-			from('./') {
-				exclude 'node_modules'
-				exclude '*.js'
-				exclude '**/.*'
-				exclude 'sass'
-				exclude '**/gradle*'
-
-				include 'style.css'
-				
-				include '**/*.php'
-				include '**/*.js'
-				include '**/*.png'
-				include '**/*.jp*g'
-			}
-
-			into('')
-        }
-    }
 }
 
 task wrapper(type: Wrapper) {
