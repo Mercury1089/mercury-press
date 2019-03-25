@@ -1,0 +1,1572 @@
+[33mcommit 2461f9b1ae1f86b47bec37847c615a88860cb052[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Oct 3 00:08:05 2018 +0000
+
+    Change text colors to white on front page
+
+[33mcommit 2cc023c9b7418cb62f12b9644e2d295e8e632425[m
+Merge: 6bec322 bdc89a9
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 23:50:59 2018 +0000
+
+    Merge
+
+[33mcommit 6bec322d7003a9ef91196e11cd37e0ba545be722[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 23:49:07 2018 +0000
+
+    Include "ttf" in build
+
+[33mcommit bdc89a9ceeb7054c69c9971a1194a45538d129db[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 15:37:45 2018 -0400
+
+    Change prev and next pagination text in blog feed
+
+[33mcommit cee6e92cf138b1cba739c5e02224338bd47b0154[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 15:32:07 2018 -0400
+
+    Change hero__jump visibility breakpoint
+
+[33mcommit af3ae92ed304e3f757be86ad38924b39d2859a4c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 12:41:07 2018 -0400
+
+    Rename baseName to mercury-press
+
+[33mcommit b8f4751fee8c10128ff5804f4e2cf33e541efde2[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 12:38:38 2018 -0400
+
+    Rename packPlugin to pack
+
+[33mcommit c00a1f5f54af07104a11b1a7696c0720f92f9afe[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 12:37:33 2018 -0400
+
+    Update build stuff
+
+[33mcommit 687394af11df636d1e0edf8fe08fec03c422cb5f[m
+Merge: aafe84f 0408ce1
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 13:58:54 2018 +0000
+
+    Merge branch 'develop' of github.com:Mercury1089/mercury-press into develop
+
+[33mcommit aafe84f31f3d5b880e8a079c9db6e7dfe2cce069[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 13:58:51 2018 +0000
+
+    Add packPlugin task to gradle config
+
+[33mcommit 0408ce13b0eff1f852dd7b183afbfe2b9da24ac2[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 08:48:49 2018 -0400
+
+    Remove comment
+
+[33mcommit bb09918023fab7e5b0e52dd375b2c01f205c66a0[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Oct 2 08:48:43 2018 -0400
+
+    Disable view zooming on mobile browsers (hopefully)
+
+[33mcommit f3435733103f9a07b19f7f90c9632229d436646c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Oct 1 21:09:24 2018 -0400
+
+    Add link to doc for "LEARN MORE" button for sponsors
+
+[33mcommit cb42d0ddaa1fbbcf2dcefb0fcd9ac5ed5c1fd3c8[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Oct 1 18:05:21 2018 +0000
+
+    Add jump button to front-page hero by default
+
+[33mcommit 0500973f340f825de6016e5b03af9dbfc09b3e95[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Oct 1 18:01:54 2018 +0000
+
+    Change text on front page
+
+[33mcommit c1dabb82c7c1fe16c0a5546a19affdb9f0bc4f89[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Oct 1 14:57:33 2018 +0000
+
+    Change text things in various places
+
+[33mcommit 8e211ebbcb1949958ce11565f8533dbfa05dea60[m
+Merge: 3f61b2d 7b3f0b7
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Sep 30 11:52:47 2018 -0400
+
+    Merge branch 'develop' of github.com:Mercury1089/Mercury2017 into develop
+
+[33mcommit 3f61b2daea051c282d7c771ff836a5a788e22fcc[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Sep 30 11:52:43 2018 -0400
+
+    Restyle invite section
+
+[33mcommit 241db3baccec22721a51a6c2c9750cd95ecda508[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Sep 30 11:52:32 2018 -0400
+
+    Remove empty line at top of file
+
+[33mcommit 7b3f0b7748d2f1550ce11b8a926950c6555096ca[m
+Author: Anitej Biradar <anitej.biradar@gmail.com>
+Date:   Sun Sep 30 11:47:28 2018 -0400
+
+    changed copypasta to actual descriptions for FRC, FTC, FLL
+
+[33mcommit b537c74a1d2dab1d02747edaaf7ad40f45a16e45[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Sep 29 09:02:22 2018 -0400
+
+    Change pagination style to match robot nav to the best of my ability
+
+[33mcommit 27e23a2b610ddb52cbd7c1e9f6b5dd1b43bc464e[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Sep 28 17:21:16 2018 -0400
+
+    Add IDs to album year headers
+
+[33mcommit d986b612c9649ea0cc954cbec6471d36bde56dc3[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Sep 28 17:20:56 2018 -0400
+
+    Fix classes in page-gallery
+
+[33mcommit 366fba2efcd35586598441c35d34b4f2f8af12f7[m
+Merge: 7b66713 8f18b5f
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Sep 21 16:26:35 2018 -0400
+
+    Merge with HEAD
+
+[33mcommit 7b667133d40d2f9b970428c006d29ae7920a123c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Sep 21 16:25:01 2018 -0400
+
+    Default robot page hero
+
+[33mcommit 64fa224faf457dcf46848536dcd79c0062bdb12d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Sep 21 16:24:15 2018 -0400
+
+    Make page-gallery a page template as well
+
+[33mcommit 3324d4f66908c323e844bc473a5bf1dbd77fe40c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Sep 21 15:00:02 2018 -0400
+
+    Make home link font size scale with logo
+    
+    Had to set them to definite values to keep them in spec.
+
+[33mcommit 917fa860b3f28fb3fdb3a39f4a395156253bb368[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Sep 21 14:28:36 2018 -0400
+
+    Change front-page teams text to lorem ipsums.
+    
+    NOTE: Team descriptions should be 140 characters.
+
+[33mcommit 8f18b5f484991555cf8c82b64530f9e2c85b021e[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Sep 19 16:57:55 2018 +0000
+
+    Make changes
+
+[33mcommit a78770b9d13ea5db476bbfd9f709b191b0789937[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Sep 17 10:02:10 2018 -0400
+
+    Initialize title variable in single page case
+
+[33mcommit 8187864e2cda04d2e028ed12075d9eef9f41113f[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Sep 17 09:59:41 2018 -0400
+
+    Remove index body
+
+[33mcommit e92574e837d6107c61fea176377cfd554aca73c4[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Sep 17 09:59:30 2018 -0400
+
+    Fix smooth-scroll event not running, create loadable utility
+
+[33mcommit fd1e0f81338a8cfb99a3e5342d80378946a88d7d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Sep 16 11:00:26 2018 -0400
+
+    Set defautl min-height of hero to 450px
+    
+    This way, there is no strange sizing on mobile landscape (hopefully).
+
+[33mcommit ceb9c395cbbebdd5a722accb3e3aaf2f2bb94e33[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Sep 16 10:54:37 2018 -0400
+
+    Reset letter spacing in hero context
+
+[33mcommit 3c2e791fc8cbc7be585ba0aae8302ab29b76d1e7[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Sep 16 01:02:30 2018 +0000
+
+    Fix header bugs and make static pages custom-hero
+    
+    "Static pages" such as front-page and blog feed pages
+    now use the post content to determine the hero content.
+    
+    Technically the blog-feed page is not a static page, but
+    still applies, don't attack me.
+
+[33mcommit e09b639d8535fddf3d4519f638169cde6c7e91db[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Sep 16 00:57:51 2018 +0000
+
+    Update package-lock.json
+
+[33mcommit 1c4b9c9fb6ea72ca0eb20473d3d3a7cf2d60f356[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Sep 8 18:02:32 2018 +0000
+
+    Use only variables in strings to keep formatting consistent
+
+[33mcommit 752d40f8a002f7144af93d3009b146724a9713c0[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Sep 8 18:01:59 2018 +0000
+
+    Update gulp dependencies
+
+[33mcommit 9388c75fdd0897b40810d272237b5fa9b1eacb16[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Sep 4 17:47:03 2018 -0400
+
+    Edit pagination stylings
+
+[33mcommit 24e5d2284aa0e1d85067d207e53661230cef3862[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 23:47:11 2018 -0400
+
+    Use paginate_links to custom wrap pagination
+
+[33mcommit 80af1e2e76ab4313ab8ed8e42d8d39abff03c385[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 23:46:34 2018 -0400
+
+    Fix some issues with container alignment
+
+[33mcommit 1198cca0f607d7079591b47f08cc97d8f1c31f5a[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 20:17:56 2018 -0400
+
+    Skip empty galleries
+
+[33mcommit 27c37e07a81612b6e32bf1ef4328a7f22f29fa64[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 14:47:06 2018 -0400
+
+    Fix archive query getting custom hero image
+
+[33mcommit 1c7b4ce8e6e1fbf8919446c515bdef2231f4371c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 11:29:13 2018 -0400
+
+    Disable the two-column template
+
+[33mcommit d7f7335154c0165ce0417693dba293a3a6382591[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 11:26:18 2018 -0400
+
+    Force normal nav on mobile
+
+[33mcommit 73811caf087fa1dc816ee94ab6fa19672f028352[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 11:24:14 2018 -0400
+
+    Add nav mask to block input and rename site-nav to nav
+
+[33mcommit 1b709a489bcf70e421a1570e897103feb2f7ca1b[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 11:06:45 2018 -0400
+
+    Add more colors to the theme
+
+[33mcommit 4d2351c75bd9ae57b9b1b6d92afefac9a19d7899[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 11:06:34 2018 -0400
+
+    Separate wp-content into individual stylesheets
+
+[33mcommit 4b088f58fc394cf87bcd4dff82e1f0c397b99d19[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 10:17:19 2018 -0400
+
+    Remove hero_old.php
+
+[33mcommit 090216558a06a57e2a6b12d0a8fcfa3249b4d468[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 10:17:09 2018 -0400
+
+    Fix issue where embed_yt would not return yt video markup
+
+[33mcommit e1b0fa4aeb423752f6dfff353c0f59d49977eeab[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 09:27:15 2018 -0400
+
+    Have shortcode functions return their markup
+
+[33mcommit 1fcbe77671397a4ee6d0227eebf6f767f9a9e29d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 24 09:24:03 2018 -0400
+
+    Update screenshot.png
+
+[33mcommit 39e4c65ea8731379089a1f01de591a879fac17a6[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 12:18:32 2018 -0400
+
+    Make embed_yt a shortcode
+
+[33mcommit db91882db091b108d65c27b37e49ae9958dcac57[m
+Merge: c37c6ea ec0d594
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 12:10:19 2018 -0400
+
+    Merge branch 'develop' of github.com:Mercury1089/Mercury2017 into develop
+    
+    # Conflicts:
+    #       php/header/hero.php
+
+[33mcommit c37c6eaa1b4a3a0245eb88b57cb3ac596015926a[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 12:06:30 2018 -0400
+
+    Use customizer for front page hero
+
+[33mcommit ec0d59444a5443dd95676e6cab67b21e37e4bd21[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 12:06:30 2018 -0400
+
+    Use customizer for front page hero
+
+[33mcommit dc8c5a9fa9f50b335991425cfab90c223d31e7f8[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 11:42:45 2018 -0400
+
+    Add dist task configuration for easy distribution creation
+
+[33mcommit fa6c1c84580b2246ff90282de24bd4610e36d0a9[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 10:44:28 2018 -0400
+
+    Remove padding on last-child text in hero
+
+[33mcommit d57d74ba1127b9599f061ac38b6dce2174268f78[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 10:38:45 2018 -0400
+
+    Cleanup index.php and single.php
+
+[33mcommit 264dcb6ae119d07d81af995ef41a65cb7e23374d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 10:38:28 2018 -0400
+
+    Create responsive calendar shortcode
+    
+    Shortcode is [calendar]
+
+[33mcommit 84730d1ad78311f01d9977592d28d38941862639[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 10:03:39 2018 -0400
+
+    #1 Attempt slideout menu fix for certain browsers
+
+[33mcommit 2ed9d525b5a6c3d5d3c53410857cd02a19b68feb[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 10:02:28 2018 -0400
+
+    Add alt active color for white buttons
+
+[33mcommit be18ce47e0d557d775f70a496f037d4bb2f071bd[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 23 10:02:06 2018 -0400
+
+    Make fadeable only on desktop sizes
+
+[33mcommit cd6f70dc44fbae6e274a3701d4b0b71771dcca0d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 18:28:56 2018 -0400
+
+    Break word on word-wrap
+
+[33mcommit a5e268762b1a3fe5e10b1d71480e36212cb70905[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 18:21:48 2018 -0400
+
+    Skip empty albums when traversing gallery
+
+[33mcommit f1f49c7e96d421957d21bce3ee8183fce8db3fa7[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 18:18:22 2018 -0400
+
+    Add comments
+
+[33mcommit eb090282cd8d72f4e81b3d9c9ae26d1f5bcd3299[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 18:16:59 2018 -0400
+
+    Disable scrolling when nav is open
+
+[33mcommit fba90c2ab5e15a44cb640c5858262f5340d498ae[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 15:24:28 2018 -0400
+
+    Change some text in front page
+    
+    Allows block to wrap, keeping the viewport from becoming bigger
+    than the screen width
+
+[33mcommit 36a5eafce69812ab54124911a8a7bb836140498b[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 15:24:03 2018 -0400
+
+    Attempt container debug fix
+    
+    Might just be something I don't fix.
+
+[33mcommit ec6c6f92b003063c422154316a4913f03e657c51[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 15:23:40 2018 -0400
+
+    Begin work on hero image delegation
+
+[33mcommit 5dacfaf47683734922f02634ba17ac1481999de3[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 15:23:23 2018 -0400
+
+    Change hero font sizes
+
+[33mcommit 92930af4786b0e708f070064bd61322ee50b23f3[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 15:22:53 2018 -0400
+
+    Add colors to button blocks
+
+[33mcommit ad8bfc9b27098e2e275308c444a879784cd40da8[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 15:22:35 2018 -0400
+
+    Add color slugs and disable custom colors
+
+[33mcommit 940d2274a025de0cba9107c11c1b568e35c142ec[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 22 11:41:50 2018 -0400
+
+    Add support for custom hero images
+    
+    Also removed the default hero image definition in the SASS
+    style file, as it was redundant.
+
+[33mcommit 0369c03aa0a371dba28ab1f03ec6621feb6620fe[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Aug 21 11:33:43 2018 -0400
+
+    Add button alignment modifiers
+
+[33mcommit b922457bc6385c13f65a40c351153891b28cd727[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 19 22:17:12 2018 -0400
+
+    Restart iframes when tab switching in accordion-tabs
+
+[33mcommit 6a1bc549c0c75582e20d18c620b930e7893716a8[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 19 20:30:48 2018 -0400
+
+    Style wp-sponsors and wp-content
+
+[33mcommit e4654a67deba278af1eb90576581bc220ae07acf[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 19 20:18:23 2018 -0400
+
+    Fix styling for wp-sponsors
+
+[33mcommit 5debacf05063821fa47af5d9a2920eb96264bc74[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 19 20:18:07 2018 -0400
+
+    Format functions.php
+
+[33mcommit b3cc3b69e09ca7acb55d8f2d6f3fd5ad01a56475[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 19 11:51:37 2018 -0400
+
+    Start writing support full and wide margins
+
+[33mcommit 98b9e81270ea43115dee2d811c10f2f328928adc[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 19 11:51:02 2018 -0400
+
+    Start sponsor content formatting
+
+[33mcommit 2a3ccbad918d1dd0c2117c2fd11e8bf2bb92e96d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 19 11:50:30 2018 -0400
+
+    Add align-wide and align-full support
+
+[33mcommit 5805f879a1a8a474a9fb85ea63fb56aab66fdaad[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 22:34:44 2018 -0400
+
+    Disable sponsor page layout
+
+[33mcommit f9a347c630fb2d33709a73d546301e76bc16aea5[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 19:36:53 2018 -0400
+
+    Remove align-wide support
+
+[33mcommit b470104c9624624e069595eac1a311ef56be7a2d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 19:36:09 2018 -0400
+
+    Add after_setup_theme action hook, add color palette to editor
+
+[33mcommit 339627294b567298ac4bea3b5658850214196d63[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 19:21:15 2018 -0400
+
+    Re-add image block styling to wp-content
+
+[33mcommit 27ff3b0e666b1cb03b7264894e3f720b91e0a0d3[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 19:11:57 2018 -0400
+
+    Fix size of season-videos section in robot page
+
+[33mcommit 4bce01d1513b174672d97d0dceeb1fded4781eb6[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 19:08:54 2018 -0400
+
+    Remove extra spaces
+
+[33mcommit 292f8ad66cf60eb2f09e44d6f7bbd5d27686506d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 19:07:15 2018 -0400
+
+    Implement column block styling
+
+[33mcommit 81e76f491adbb51688db95428a94f79d6d98ecd0[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 19:06:49 2018 -0400
+
+    Remove gutter on outside of grid
+
+[33mcommit eacf21f1a06fa1f9fefe3bf179994fdcbe2a9259[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 18:49:43 2018 -0400
+
+    Create wp-content class for wordpress user content
+    
+    Might rename class.
+
+[33mcommit c722560e797a4b3042d4e14b4845db3af4c3b107[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 18:48:29 2018 -0400
+
+    Clean up functions.php by separating all actions into their own files
+    
+    Corresponding functions that contribute to their function hook are
+    placed in the same file.
+
+[33mcommit d503425cf93aa7fdb46be5bddbc48a3e5e3992be[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 14:30:18 2018 -0400
+
+    Remove .sass-cache folder
+
+[33mcommit d84fe59c874170a95c12958d426fb40d3c25bbee[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 18 00:09:50 2018 -0400
+
+    Change game section sizes in single-robot
+
+[33mcommit 5ac349b5cad6f5a5a5ca9d3ea489f8301a6dcfa1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 16 17:42:57 2018 -0400
+
+    Set showinfo to 0 for yt embeds
+
+[33mcommit 3010cf84bfa01b27afb543d2170f338bf47dae03[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 16 09:50:21 2018 -0400
+
+    Add defaults to robot-info
+
+[33mcommit ced61aa9375398a4f164d1d95ea2dc80817ca0d1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 16 09:50:12 2018 -0400
+
+    Make build env workaround for Linux
+
+[33mcommit 37dfe42b9ae003f11351332bf01dfe1b1e6bd46e[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 16 01:00:31 2018 -0400
+
+    Style robot images and robot nav
+
+[33mcommit e0ef9a50f8a40380b920a9cd3037e9c0e1275fab[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 16 01:00:08 2018 -0400
+
+    Implement meta getter to make defaulting eaiser
+
+[33mcommit 6e632cf4ce506d71274392d165cbad11172671ca[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 16:00:14 2018 -0400
+
+    Work on single-robot layout
+
+[33mcommit c58dcba554f7ac1b87098318b4976dd7b89b9b38[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 10:21:00 2018 -0400
+
+    Add default list style, add no-padding class
+
+[33mcommit 5be14440472242497d7e581278bcdafaeafccf14[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 10:20:19 2018 -0400
+
+    Add configuration to yt embed
+    
+    Turned off related videos and enabled the white scrub bar.
+
+[33mcommit f1f7cc1a50d1e2c862c4780ff01e0c6242594b9c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 10:19:40 2018 -0400
+
+    Create random string generator to fill empty text bodies
+
+[33mcommit ec68142867758e2898fcfe98b83a26ae9eb628e1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 08:01:23 2018 -0400
+
+    Update README.md
+
+[33mcommit 23c3e61e1e5c710e4f5b2622bb6a527857006b4a[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 07:59:34 2018 -0400
+
+    Remove robot templates
+    
+    Robot pages need to have a consistent layout; no reason to vary it
+    page by page.
+
+[33mcommit 508c9a08313ad29d14aa591b6be972e861873e05[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 00:35:30 2018 -0400
+
+    Add attribute to anchors to allow disabling
+
+[33mcommit 54a1b1f97da684e47deb6367174336e6f59dc257[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 00:35:14 2018 -0400
+
+    Make iframes responsive
+
+[33mcommit 30ca4e209d9e6b289407d72306741eca00c2703d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 00:34:43 2018 -0400
+
+    Begin single-robot rework
+    
+    Based on robot-pages 2.0.0
+
+[33mcommit f5999baba24c3c372cc6beb52ef3166a901e4513[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 00:34:14 2018 -0400
+
+    Create function to quickly create responsive yt iframes
+
+[33mcommit b8b1bccdcee8a0dcfde463a149447af15376e09f[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 00:05:34 2018 -0400
+
+    Rename tabs.js to accordion-tabs.js
+
+[33mcommit 5f4d97c437e53edce373b3ca46bd63f64cbd4742[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 15 00:04:51 2018 -0400
+
+    Add accordion-tabs, courtesy of Refills by ThoughtBot
+
+[33mcommit 0075a6768f6c955eca7df7576b51517d8687449d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Aug 14 09:40:57 2018 -0400
+
+    Use positive padding for letter-spacing correction
+
+[33mcommit 7ecf3dcb305214636c889dd56a6809492508bed5[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Aug 14 09:40:41 2018 -0400
+
+    Add archive-item component and changed archive item classes
+
+[33mcommit b2542d95fd4898ecb65c14cc6d2dc7c4f8999229[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Aug 14 09:40:05 2018 -0400
+
+    Modify durations to match base duration
+
+[33mcommit 0921d753442d5c004b6f6823ca4f1a0049873746[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Aug 13 16:35:57 2018 -0400
+
+    Restructure images directory, add front-page invite stylings
+
+[33mcommit 7518f412d5d890cf30dc05f3603cb2fe202e2f1d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Aug 13 16:01:45 2018 -0400
+
+    Restructure SASS directory to use ITCSS directory structure
+    
+    Also added new button block
+
+[33mcommit ce906738b3c670c9307a84dc4e8b59eb966708cb[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Aug 13 12:11:33 2018 -0400
+
+    Cleanup DOM in robot and gallery
+
+[33mcommit 6ad8fa4231304cac31df82c96c41e878963806e8[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Aug 13 10:04:28 2018 -0400
+
+    Rename blocks, create container block, adjust layouts
+
+[33mcommit cfbc4907b3e9d796e456e1cfe6c7564a6d5db753[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 12 20:55:16 2018 -0400
+
+    Fix classes on various pages and edit styles
+
+[33mcommit bd436ea8507442b53c63f346eb357053cddcc1fd[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 12 10:12:45 2018 -0400
+
+    Add all images to galleries for proper lightbox album display
+
+[33mcommit 2e5bc6b11e090893d78fd567a2284f62e4f70740[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Aug 12 10:00:05 2018 -0400
+
+    Begin work on implementing gallery lightbox
+
+[33mcommit e292b0758d0ab592d60ce446982dc261c13f1c14[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 11 17:41:07 2018 -0400
+
+    Increase max size and default sections to padded bodies
+
+[33mcommit 640d3cb733640d02f5e60c10c9efc1cf15e014ac[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 11 12:03:29 2018 -0400
+
+    Begin generic block structure
+
+[33mcommit c5d052e5412cb96aa0bda0ba5ec69421d1051f06[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 11 12:03:03 2018 -0400
+
+    Restructure watch task
+
+[33mcommit db2ef9268b4a002dc46c85dd8e4fd4b7e2fd0f08[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:32:58 2018 -0400
+
+    Remove 'gallery' import
+
+[33mcommit dd05234075bacd0a76e00c5ad809187b00f13cfa[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:32:36 2018 -0400
+
+    Rename classes for table layouts
+    
+    I didn't realize BEM mixes were a thing; now that I do, we can do things
+    like this.
+
+[33mcommit 76a508d33451b422fabd96c1132f7a64eec0f44b[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:31:50 2018 -0400
+
+    Remove gallery layout and place everything in all-default
+
+[33mcommit 8994f001afd8c35b099430468c1ae574c0844a6d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:30:47 2018 -0400
+
+    Change scaling sizes for hero text
+
+[33mcommit c026384d29f41ab163349ff20be0bc2d2289a54f[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:30:30 2018 -0400
+
+    Allow widgets to wrap in footer
+
+[33mcommit da48d23aba4cfb17cb8835c29f8672d2a70b433c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:29:00 2018 -0400
+
+    Remove side padding on content
+
+[33mcommit 1ac8a122b1e510860aaab8a15bbd56ac6e58dd40[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:28:41 2018 -0400
+
+    Change viewport bg color to dark gray
+    
+    Will be used when loading is re-implemented.
+
+[33mcommit 4190c9e129d5ef682ef181c93098a106cfe69f74[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:28:17 2018 -0400
+
+    Rename theme to MercuryPress
+
+[33mcommit 3a7ab1aec3b4c5f50befc09295b3de04e0ce909d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:28:05 2018 -0400
+
+    Remove type modifier in home
+
+[33mcommit a2cb44cbf29d7964a51cc3dd6fedfec69723824b[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:27:47 2018 -0400
+
+    Change classes in front-page to new CSS style classes
+
+[33mcommit bd76ffbc873fee804bc5f53ca3cf124c0fdcbe17[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:27:22 2018 -0400
+
+    Rename php render-albums to render-gallery
+
+[33mcommit 709cf6be39b91d3b33cface4330621bdfd69d1a2[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:25:39 2018 -0400
+
+    Update 1089logo with color change
+
+[33mcommit 931b7423a611b434589d4232da08b773f8ade9e4[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 10 10:25:28 2018 -0400
+
+    Update package-lock
+
+[33mcommit 7a4aa9c76b4f15a479ede827a53e5fd2add97fa5[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 8 12:12:31 2018 -0400
+
+    Improve table system
+    
+    This table system uses a content__section modifier to define a grid
+    container. From there, grid items are their own blocks, allowing the
+    use of modifiers to change responsive sizes and text-alignment.
+
+[33mcommit 5e71e0cd4afe04c9c7ce2e2ee70679963d3dfe1e[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 8 11:16:26 2018 -0400
+
+    Fix year header class in render-albums to work with new grid system
+
+[33mcommit b3725bba4e57288e57421cb3e24877838c403b10[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 8 11:15:53 2018 -0400
+
+    Implement rough table system
+    
+    12 column table system that can be used throughout all website content.
+    Built on flexbox.
+
+[33mcommit 9cad390e6bb372b0eeca8713bb0872eb1f957b74[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 8 11:00:41 2018 -0400
+
+    Add transition-property: all on nav-menu__anchor
+
+[33mcommit 80f3453b980b578181961d79797d3ab10935d885[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Aug 7 15:37:04 2018 -0400
+
+    Corrected orange color
+
+[33mcommit bcf70c04de5e9c3cf09ac00d566dbe377045bca7[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Aug 7 10:50:14 2018 -0400
+
+    Switch out Neat for flexbox-grid system
+    
+    Using floated grids is obsolete; flex grids offer better looks and
+    stuff.
+
+[33mcommit 6adb4c9d279800b97b489741e701f76987f44c5a[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Aug 6 20:34:27 2018 -0400
+
+    Change header level for year header
+
+[33mcommit 507a24ada13a474cb123b610de7d7388daa849b1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Aug 6 20:34:12 2018 -0400
+
+    Adjust hero modular scale to compensate for lower ratio
+
+[33mcommit 551442a0bc2c5064b1f218cb47605e37b62404a1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Aug 6 20:33:40 2018 -0400
+
+    Tone down the global scale ratio
+
+[33mcommit 859d72d2856e0219472578a448616f3c416cfafa[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Aug 6 11:33:15 2018 -0400
+
+    Work on format regarding Gutenberg
+
+[33mcommit a37c3a4aebef4c368609e3e3db1024816bb4fe33[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 4 21:50:53 2018 -0400
+
+    Begin rework of page-gallery
+    
+    This includes modularizing the page,
+    as well as begin the implementation of
+    code to create in-theme lightboxes. This way,
+    we no longer have to rely on lightboxes provided by plugins.
+
+[33mcommit 82a66df8cc83fc1d318d43d208aab435fffd0890[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 4 14:55:09 2018 -0400
+
+    Implement default table layouts
+
+[33mcommit efff57c451759d2d7dfb56ddcf62efe41c5970dc[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 4 14:54:56 2018 -0400
+
+    Change page-gallery classes
+
+[33mcommit 3b46ab4424d905eb865216a2f30ee671594965e1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 4 00:17:54 2018 -0400
+
+    Add bin directory to .gitignore
+
+[33mcommit 784e6aaeb5e23a46eaa0c9aeb6d016a0c68dbeeb[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Aug 4 00:17:42 2018 -0400
+
+    Update gallery classes
+
+[33mcommit 910632c73f87dc9a0b2a99fa6f3d85697b6c2146[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 3 23:31:19 2018 -0400
+
+    Fix installGulp dependency
+
+[33mcommit 6f09feac148fcf740f4a325ba40d8132bb1202b3[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Aug 3 23:28:13 2018 -0400
+
+    Remove random bin folder
+
+[33mcommit f0a107839057717f325833b28c2f2baa742d5d88[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 2 10:11:29 2018 -0400
+
+    Apply font spec to general typography
+
+[33mcommit c07a8778596ca2e2ef10b78738dc805e2e19a030[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 2 10:03:14 2018 -0400
+
+    Fix feed-item large date
+
+[33mcommit dbd85e6e517a600cdd5cb816a06f5b57beeef1f9[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 2 09:54:06 2018 -0400
+
+    Finish feed-item styling, begin pagination reformat
+
+[33mcommit ec2fca9139cbe609f6e40bcbc00780c91b244e81[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Aug 2 09:53:38 2018 -0400
+
+    Separate home and feed-item
+
+[33mcommit ba1643dec6b2fe55aad626a4fd049164884c4445[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 21:06:56 2018 -0400
+
+    Fix mismatched closing tags
+
+[33mcommit 34c03d855a0fe8188999920c315ba0ca529fae7d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 19:46:25 2018 -0400
+
+    Work on default layout for entire site
+
+[33mcommit 491e788f195ca1d1564c19aa8d41d1e6fb3b9bb1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 18:53:10 2018 -0400
+
+    Fix issue where aspect ratio was not maintained
+
+[33mcommit a59b8ddc24eaeba7c343577ce18f45fbe0440666[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 18:47:44 2018 -0400
+
+    Add gulp-sourcemaps for better css debugging
+
+[33mcommit 9281ca128469b60fd9f34db037dd8087de6dde0a[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 18:47:20 2018 -0400
+
+    Fix nav z-index
+
+[33mcommit 72878c837f70500853f19857404888523132fc13[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 14:51:27 2018 -0400
+
+    Remove main construction in hero file
+
+[33mcommit c6c21a6e52b6e34642f2da4cf0e88a85527bc8db[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 14:51:08 2018 -0400
+
+    Work on general post theme
+
+[33mcommit 9cac58d666bb94b4111f5ce193f853e91c72bd58[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 14:50:43 2018 -0400
+
+    Move main tag constructor to its own file
+
+[33mcommit 48ea034412e3d94bfcd6058a66b2da0560087422[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 14:50:23 2018 -0400
+
+    Remove old style files
+
+[33mcommit 56170ea8459214e96da3b33eec1699e1776cb9c2[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 13:09:49 2018 -0400
+
+    Allow transparent nav on mobile devices
+
+[33mcommit 9fc93a39cfb998855b6c0cde0e5cdfac934c486a[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 13:09:36 2018 -0400
+
+    Fix hero font sizing issue on mobile devices
+
+[33mcommit 3c6b106049c126c7c474b7c5b78e7d1dd66888c6[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 13:09:23 2018 -0400
+
+    Add css-lock mixin
+
+[33mcommit c4e8b555b2902393b7b430856abea4b22bed0b9d[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Aug 1 00:46:39 2018 -0400
+
+    Fix nav spacing and work on footer
+
+[33mcommit b121f428d9a7ccce4bb7b5f9dd5edb22b84023c1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Jul 31 20:02:15 2018 -0400
+
+    Separate custom functions from main file
+
+[33mcommit 319a8534e51383ed35e95533bef545ffc945ad06[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Jul 31 20:01:59 2018 -0400
+
+    Fix bug that applied nav classes globally
+
+[33mcommit ff7a8ab6de251379797fc4af4a0a82b5aa35e0bb[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Jul 31 14:42:17 2018 -0400
+
+    Style footer fonts
+
+[33mcommit 00f7f0732c54e562d8a43275d01b20e470ccf5da[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Jul 31 12:01:31 2018 -0400
+
+    Style footer widget section to align left
+
+[33mcommit a79538ee1ae10ea3f666979b3c319ff1cc2f82f4[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Jul 30 09:38:35 2018 -0400
+
+    Work on footer style
+
+[33mcommit 7affe235f5eedaeecf8130e1176dd6beabaea843[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Jul 30 00:56:12 2018 -0400
+
+    Fix bugs and begin footer
+
+[33mcommit d911408e62eb5b16dbc8d6f89223b96ac0f0cda7[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jul 29 23:42:22 2018 -0400
+
+    Update Instagram icon
+
+[33mcommit f6f010b9e3c7f240608143ca2071b972b7e6e533[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jul 29 20:47:24 2018 -0400
+
+    Allow white-space wrap on >tablet size
+
+[33mcommit 85be60d1d5fc9b818e3642c934b42cd0019a73cb[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jul 29 20:46:52 2018 -0400
+
+    Remove prevenDefault() for menu links
+
+[33mcommit 231d45352a5e3a28c17d661a2ce58bffdc224b19[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jul 29 20:46:37 2018 -0400
+
+    Update repository name to mercury-press
+    
+    For longevity, or at least the illusion of.
+
+[33mcommit 1fa606f22d2c4bf0e1dca86d02692f6029319219[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jul 29 19:32:06 2018 -0400
+
+    Work on hero and nav.js
+
+[33mcommit acf10dbe3e73e524f3d6e836fc13b925df8b5ac8[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jul 29 18:16:23 2018 -0400
+
+    Rework nav BEM organization
+    
+    Objectively might be worse if we're being honest; I don't think
+    nesting is a good way to achieve cleanliness.
+
+[33mcommit 2eebf013f926b457e1b27c69e682f0e9abe26cb2[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jul 29 09:50:50 2018 -0400
+
+    Reorganize BEM and JS to tidy up code
+
+[33mcommit b87cd391c8570d85befddcb589f567c3ee2a480c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 21:40:07 2018 -0400
+
+    Fix bug that did not bind handler on load
+
+[33mcommit 4b5cb8a653f26fd0d7681149e8f40db5024775b6[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 20:57:30 2018 -0400
+
+    Work on hero module
+
+[33mcommit 3cac9c9d54d758b068b75bf37a5a6eebb749ba04[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 14:20:47 2018 -0400
+
+    Create new hero constructor
+
+[33mcommit 64960323a122d2b7f1b313e167d8da5e90818e06[m
+Merge: 92983b0 f375c61
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 11:00:10 2018 -0400
+
+    Merge branch 'develop' of github.com:Mercury1089/Mercury2017 into develop
+
+[33mcommit 92983b08c29d13fde51b18d1a04c81defebb742e[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 10:59:55 2018 -0400
+
+    Restructure PHP files
+
+[33mcommit 6a53541ebc3860957ce55d136756cbca2970dbf5[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 10:59:31 2018 -0400
+
+    Ignore all build artifacts and Gulp dependencies
+
+[33mcommit f375c618b27ca4070fc54a35749f14943ec1a8de[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 10:47:57 2018 -0400
+
+    Update README.md
+
+[33mcommit eb9932e2659adb193c112be0909f91d1828f542e[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 10:44:58 2018 -0400
+
+    Update README.md
+
+[33mcommit 161cb6c2bd28379545db98286525ec6895313b34[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 10:41:27 2018 -0400
+
+    Update README, build.gradle, and .gitignore
+
+[33mcommit 1b1ee03947061836c9241b7b09d4343fbb68497f[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 10:22:20 2018 -0400
+
+    Ignore style.css
+
+[33mcommit d70c97934b6902b7ca81f2e1f25ed8dd3b1423d0[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 10:20:27 2018 -0400
+
+    Remove installCssNano task
+
+[33mcommit 266ffa7e94c73673d0f720cc852ea999b3f46f95[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 10:19:43 2018 -0400
+
+    Fix issue where style attr was not cleared
+
+[33mcommit b15409df5f9602019d272e4f7e9c351296fab60c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 02:10:11 2018 -0400
+
+    Implement watch command for Gradle
+
+[33mcommit 59802f1fd5984cc4eb088249157369e2834d1d17[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jul 28 02:02:25 2018 -0400
+
+    Finish tablet+ nav bar
+    
+    Also took some time to convert Gradle to using Gulp/Gulp tasks.
+    Now using an autoprefixer, css optimizer, and gulp-sass.
+    Note that "node_modules" has been ignored, so you should
+    take care to run the npm setup prior to working.
+
+[33mcommit 94863508e1743c591322cd7d44e00af01310caf6[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Jul 27 11:57:07 2018 -0400
+
+    Transition to using Gulp with Gradle
+
+[33mcommit 692f5b0fa4e36462dcbe2faa56fe5cd04e879908[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Jul 27 09:45:40 2018 -0400
+
+    Figure out how to use slideToggle and implement it in nav
+
+[33mcommit 58e24a0b05cbfbfef1159226136d1842c91017c9[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Jul 27 00:46:38 2018 -0400
+
+    Finish draft of slideout nav menu
+
+[33mcommit 3f21158f8f307b5a11c8f6c07aadd7c879c4cf48[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Jul 26 22:44:34 2018 -0400
+
+    Begin work on reponsive design
+
+[33mcommit c21cb3afd4593dcb68f94b0eaf6ec06cb18f591e[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Jul 26 11:30:36 2018 -0400
+
+    Fix .gitignore .* ignore rule
+
+[33mcommit cef9530e989c68dc14fc0996fe4eb2849518a4a7[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Jul 26 11:29:42 2018 -0400
+
+    Begin restructure of SASS
+
+[33mcommit 2accc72ebf30ae2cddbdb9ef98b5fbc3b271da50[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Jul 10 22:04:56 2018 -0400
+
+    Test webhook
+
+[33mcommit 1da28622d91327413d04f209d2c34f1d78ddf55e[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jun 9 14:21:18 2018 -0400
+
+    Fix typo with have_posts
+
+[33mcommit 8933881306fef7cc182458b663d59c2812cbc3bb[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jun 9 12:27:47 2018 -0400
+
+    Use get_post_permalink for pagination
+
+[33mcommit 082989d5eb15695be37d5c2eb3467de0e48f42a1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jun 9 11:30:04 2018 -0400
+
+    Attempt to use custom query to create pagination
+
+[33mcommit aa1c60dd0cd75ea0cc75f800379894b6d8479783[m
+Merge: ab4767f 4c57642
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jun 9 10:25:36 2018 -0400
+
+    Merge branch 'develop' of github.com:Mercury1089/Mercury2017 into develop
+
+[33mcommit 4c57642f3de40ac48e61d1ecbc1a7154e964c820[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jun 9 09:15:10 2018 -0400
+
+    Add execute permissions on gradlew
+
+[33mcommit ab4767f32f90b61a06dd2786a9b83d90c4a40ab9[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed May 30 23:26:25 2018 -0400
+
+    Fix .gitignore
+
+[33mcommit af71edfd13cd17fb3069eef8632e893fe5cbcd29[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed May 30 23:25:28 2018 -0400
+
+    Structure changes
+    
+    - Remove node_modules directory
+    ~ Update .gitignore
+    ~ Other changes
+
+[33mcommit 101c1e3d50867551092e226706d20bed19cdab5c[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue May 29 22:17:34 2018 -0400
+
+    Update hero style and add posts nav
+
+[33mcommit c4d329e57d9f062d4b8227b455e40e4995257721[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue May 29 06:49:11 2018 -0400
+
+    Update main structure and style
+
+[33mcommit 4ba0ea38299660d5667c1dacbbff622d454da8a3[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat May 26 22:15:25 2018 -0400
+
+    Update style in other pages
+
+[33mcommit b197a97ad52cfa42ee59970bf1abb7549254ccdf[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat May 26 22:15:02 2018 -0400
+
+    Add Instagram
+
+[33mcommit e4c9c92ee0cb71a6454c7ebe632cc2eea63f9e25[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat May 26 10:06:03 2018 -0400
+
+    Modify theme to fit team brand spec
+
+[33mcommit fe559c099e088d595838b9dda94e6847b9121336[m
+Merge: 75bd03d 4ad5d9f
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Mar 16 22:23:46 2018 -0400
+
+    Merge branch 'develop' of github.com:Mercury1089/Mercury2017 into develop
+
+[33mcommit 75bd03d811f03fcb7d74973248d7b0020244f60a[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Mar 16 22:23:29 2018 -0400
+
+    Add sponsors page template to simplify adding sponsors
+
+[33mcommit 4ad5d9f3ad77b60e5b9353385293aa84731a5793[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jan 20 08:13:01 2018 -0500
+
+    Update README.md
+
+[33mcommit e79ecb0fe557e19f7a6b511617ce1ad3341dd3d1[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jan 20 08:11:57 2018 -0500
+
+    Update README.md
+
+[33mcommit d3e966cd81d5d06c9da1e40b8380f8c3b871c9ff[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jan 20 08:01:14 2018 -0500
+
+    Add LibSass plugin for Gradle
+    
+    This allows anyone without the ability to install Sass
+    to still compile the sass source. Great for those with
+    borked permission systems on their macOS.
+
+[33mcommit 350a356aa42ffdfed1babab8b25725aa1d2ac2be[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jan 20 07:20:41 2018 -0500
+
+    Add Gradle build tool to project
+
+[33mcommit 8dda79ffe137f197b91336ff5123f94062385d8a[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jan 20 07:17:35 2018 -0500
+
+    Change some style
+
+[33mcommit 83f0b4e8d9c29568b8f82495b9f68f930cb85166[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Jan 15 00:20:54 2018 -0500
+
+    Fix style for robots and gallery
+
+[33mcommit 9f9db4933e20b19bfd44ffa716569e6a58dde4d0[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jan 14 23:10:11 2018 -0500
+
+    Fix robot pages nav
+    
+    Robot pages nav now generates properly on the bottom of all robot pages.
+    Each link displays not only the direction, but what the link leads to.
+    e.g.: « 2014: FIRST Aerial Assist
+
+[33mcommit bff1782e8e56083c481ceea28ff26d81847af580[m
+Merge: b374030 602beac
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jan 14 17:27:17 2018 -0500
+
+    Merge branch 'develop' of github.com:Mercury1089/Mercury2017 into develop
+
+[33mcommit b374030811a50ed584fe3bdeb0d9875764c72767[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Jan 14 17:25:33 2018 -0500
+
+    Fix gallery
+    
+    Responsive Lightbox would not work with the Google API version of jQuery,
+    so the version packaged with WordPress was used instead. Because of this,
+    the js scripts had to be changed to use jQuery in no conflict mode. The
+    gallery home was also finished, to look nice without having to load many
+    images. The gallery page also opens the modal for the album, so no
+    page redirection is needed.
+
+[33mcommit 602beacdaf7dc69b1b56be8b6d924fc1e7276c9f[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jan 13 15:15:51 2018 -0500
+
+    Update README.md
+
+[33mcommit 958a9f21a31ad54bf16d76485560eb5a87455aee[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jan 13 13:52:36 2018 -0500
+
+    Create README.md
+
+[33mcommit bf360b3c3462efabf7e8dcc92772e962b64e0e40[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sat Jan 13 10:15:33 2018 -0500
+
+    Change format and fix bugs
+    
+    Padding for the front page was too big, and the fonts were too default,
+    so all of that was edited. Along with this, there was a bug where all
+    comments were being displayed instead of comments for an individual post.
+    That was fixed as well.
+
+[33mcommit 2450488797cd72e40f080c9a2a9cffac54e00d7a[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Fri Jan 12 22:05:46 2018 -0500
+
+    Change style of front page and other things
+    
+    Changed the font to Cabin, a much less blocky font. The layout of the
+    front page has also been chaged to maximize size and screen. The default
+    template now selects the class ".page__selection" to differentiate from the
+    front page.
+
+[33mcommit 85d84d2ff2f88084cd9361d13fe0c8770af5d6c2[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Jan 9 22:13:56 2018 -0500
+
+    Make changes to project
+    
+    More edits to project, also update .gitignore to ignore sass cache.
+
+[33mcommit 094f234a54038de52262e700ab0288def0101e38[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Sun Sep 24 14:13:21 2017 -0400
+
+    Lots of changes to theme
+    
+    The changes include new templates for pages, additions to the footer,
+    css changes, and other changes.
+
+[33mcommit 15ec858421c5b62686649fc75dc1d0026201821f[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Thu Sep 7 23:09:44 2017 -0400
+
+    Update theme to incorporate featured images
+    
+    The theme can now support changing the hero image per-post.
+    This is accomplished by using the "Featured Image" option when
+    making posts or pages. This, however, has been disabled on the
+    landing/front page and blog posts page.
+    
+    The home template was also added.
+
+[33mcommit 80c3c04fabb376ef71cda90a7d1b8c8619c3bc85[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Sep 6 09:00:02 2017 -0400
+
+    Edit styles
+
+[33mcommit 8cb743380f9586dc919aedeaaf890f21a759ef92[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Wed Sep 6 00:18:04 2017 -0400
+
+    Convert to BEM methodology
+    
+    This allows for better control over CSS manipulation.
+    This is also cleaner than regular off-the-cuff CSS by comparison.
+
+[33mcommit 3b01dcc2c418a9b51b122ae9840442dbef66a327[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Sep 5 21:12:44 2017 -0400
+
+    Update style
+
+[33mcommit 615e68c4aa978ac65a960e4ab107935d8eb2841f[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Tue Sep 5 18:26:07 2017 -0400
+
+    Remove *.zip
+
+[33mcommit e71c13f8101e1608ca9472c176117cd9e8b9f3cb[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Sep 4 22:35:04 2017 -0400
+
+    Add .gitignore
+    
+    This just ignores the .zip file for the theme.
+
+[33mcommit 7140623da44faee6b21ec5cc6881c8313dbea992[m
+Author: Jared Tulayan <2lyNJ.E@gmail.com>
+Date:   Mon Sep 4 22:24:10 2017 -0400
+
+    Moved current WIP to GitHub
+    
+    This is just an initial commit,
+    the only "finished" part of the site is the front-page.
