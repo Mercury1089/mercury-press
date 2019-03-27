@@ -5,10 +5,6 @@ function get_title() {
         
     if (is_front_page())
         $title_string = "";
-    else if (is_home())
-        $title_string = "Team Blog | ";
-    else if (is_post_type_archive( 'robot' ))
-        $title_string = "Our Robots | ";
     else 
         $title_string = single_post_title() . " | ";
     
